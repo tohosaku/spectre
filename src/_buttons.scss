@@ -156,6 +156,26 @@
   }
 }
 
+a {
+  &.btn {
+    &:visited,
+    &:hover {
+      color: $primary-color;
+    }
+    &:active {
+      color: $light-color;
+    }
+    &.btn-primary,
+    &.btn-error,
+    &.btn-success {
+      &:visited,
+      &:hover {
+        color: $light-color;
+      }
+    }
+  }
+}
+
 // Button groups
 .btn-group {
   display: inline-flex;
