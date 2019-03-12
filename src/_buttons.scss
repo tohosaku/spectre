@@ -18,7 +18,7 @@
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
-  font-weight:normal;
+  font-weight: normal;
   &:focus {
     @include control-shadow();
   }
