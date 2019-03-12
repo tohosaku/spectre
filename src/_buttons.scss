@@ -162,9 +162,11 @@ a {
     &:hover {
       color: $primary-color;
     }
+    
     &:active {
       color: $light-color;
     }
+    
     &.btn-primary,
     &.btn-error,
     &.btn-success {
