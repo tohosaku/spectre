@@ -159,6 +159,7 @@
 .btn-group {
   display: inline-flex;
   flex-wrap: wrap;
+  vertical-align: middle;
 
   .btn {
     flex: 1 0 auto;
