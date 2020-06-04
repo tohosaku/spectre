@@ -1,67 +1,77 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var cleancss = require('gulp-clean-css');
-var csscomb = require('gulp-csscomb');
-var rename = require('gulp-rename');
-var autoprefixer = require('gulp-autoprefixer');
-var pug = require('gulp-pug');
+const { src, dest, watch, parallel } = require("gulp");
+const sass = require("gulp-sass");
+const cleancss = require("gulp-clean-css");
+const csscomb = require("gulp-csscomb");
+const rename = require("gulp-rename");
+const autoprefixer = require("gulp-autoprefixer");
+const pug = require("gulp-pug");
 
-var paths = {
-  source: './src/*.scss',
-  doc: './docs/src/scss/*.scss'
+const paths = {
+  source: "./src/*.scss",
+  doc: "./docs/src/scss/*.scss",
 };
 
-gulp.task('watch', function() {
-  gulp.watch('./**/*.scss', ['build']);
-  gulp.watch('./**/*.scss', ['docs']);
-  gulp.watch('./**/*.pug', ['docs']);
-});
+const watchFunc = () =>
+  parallel(
+    () => watch("./**/*.scss", ["build"]),
+    () => watch("./**/*.scss", ["docs"]),
+    () => watch("./**/*.pug", ["docs"])
+  );
 
-gulp.task('build', function() {
-  gulp.src(paths.source)
-    .pipe(sass({outputStyle: 'compact', precision: 10})
-      .on('error', sass.logError)
+const build = () =>
+  src(paths.source)
+    .pipe(
+      sass({ outputStyle: "compact", precision: 10 }).on("error", sass.logError)
     )
     .pipe(autoprefixer())
     .pipe(csscomb())
-    .pipe(gulp.dest('./dist'))
+    .pipe(dest("./dist"))
     .pipe(cleancss())
-    .pipe(rename({
-      suffix: '.min'
-    }))
-    .pipe(gulp.dest('./dist'));
-});
+    .pipe(
+      rename({
+        suffix: ".min",
+      })
+    )
+    .pipe(dest("./dist"));
 
-gulp.task('docs', function() {
-  gulp.src(paths.doc)
-    .pipe(sass({outputStyle: 'compact', precision: 10})
-      .on('error', sass.logError)
+const docs = () =>
+  src(paths.doc)
+    .pipe(
+      sass({ outputStyle: "compact", precision: 10 }).on("error", sass.logError)
     )
     .pipe(autoprefixer())
     .pipe(csscomb())
-    .pipe(gulp.dest('./docs/dist'))
+    .pipe(dest("./docs/dist"))
     .pipe(cleancss())
-    .pipe(rename({
-      suffix: '.min'
-    }))
-    .pipe(gulp.dest('./docs/dist'));
-  gulp.src(paths.source)
-    .pipe(sass({outputStyle: 'compact', precision: 10})
-      .on('error', sass.logError)
+    .pipe(
+      rename({
+        suffix: ".min",
+      })
     )
-    .pipe(autoprefixer())
-    .pipe(csscomb())
-    .pipe(gulp.dest('./docs/dist'))
-    .pipe(cleancss())
-    .pipe(rename({
-      suffix: '.min'
-    }))
-    .pipe(gulp.dest('./docs/dist'));
-  gulp.src('docs/src/**/!(_)*.pug')
-    .pipe(pug({
-      pretty: true
-    }))
-    .pipe(gulp.dest('./docs/'));
-});
+    .pipe(dest("./docs/dist"));
+src(paths.source)
+  .pipe(
+    sass({ outputStyle: "compact", precision: 10 }).on("error", sass.logError)
+  )
+  .pipe(autoprefixer())
+  .pipe(csscomb())
+  .pipe(dest("./docs/dist"))
+  .pipe(cleancss())
+  .pipe(
+    rename({
+      suffix: ".min",
+    })
+  )
+  .pipe(dest("./docs/dist"));
+src("docs/src/**/!(_)*.pug")
+  .pipe(
+    pug({
+      pretty: true,
+    })
+  )
+  .pipe(dest("./docs/"));
 
-gulp.task('default', ['build']);
+exports.watch = watchFunc;
+exports.docs = docs;
+
+exports.default = build;
