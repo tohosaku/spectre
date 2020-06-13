@@ -1,5 +1,13 @@
 #### Spectre.css Changelog
 
+##### v0.5.9-current
+
+- Migrate to gulp4
+- Fix: Correct a typo in docs (#563)
+- Fixes for buttons (#572)
+- Fixed issue #561 (#578)
+- Fix modal scroll on IE (#591)
+
 ##### v0.5.8 [#](https://github.com/picturepan2/spectre/releases/tag/v0.5.8)
 
 - IMPORTANT: Moving 
