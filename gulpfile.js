@@ -8,8 +8,10 @@ const pug = require("gulp-pug");
 
 const paths = {
   source: "./src/*.scss",
-  doc: "./docs/src/scss/*.scss",
+  doc: "./docs/scss/*.scss",
 };
+
+const doc_dist = "./docs/html/dist"
 
 const watchFunc = () =>
   parallel(
@@ -34,44 +36,54 @@ const build = () =>
     )
     .pipe(dest("./dist"));
 
-const docs = () =>
+const docs_scss = (done) => {
   src(paths.doc)
     .pipe(
       sass({ outputStyle: "compact", precision: 10 }).on("error", sass.logError)
     )
     .pipe(autoprefixer())
     .pipe(csscomb())
-    .pipe(dest("./docs/dist"))
+    .pipe(dest(doc_dist))
     .pipe(cleancss())
     .pipe(
       rename({
         suffix: ".min",
       })
     )
-    .pipe(dest("./docs/dist"));
-src(paths.source)
-  .pipe(
-    sass({ outputStyle: "compact", precision: 10 }).on("error", sass.logError)
-  )
-  .pipe(autoprefixer())
-  .pipe(csscomb())
-  .pipe(dest("./docs/dist"))
-  .pipe(cleancss())
-  .pipe(
-    rename({
-      suffix: ".min",
-    })
-  )
-  .pipe(dest("./docs/dist"));
-src("docs/src/**/!(_)*.pug")
-  .pipe(
-    pug({
-      pretty: true,
-    })
-  )
-  .pipe(dest("./docs/"));
+    .pipe(dest(doc_dist));
+  done();
+}
+
+const docs_scss_min = (done) => {
+  src(paths.source)
+    .pipe(
+      sass({ outputStyle: "compact", precision: 10 }).on("error", sass.logError)
+    )
+    .pipe(autoprefixer())
+    .pipe(csscomb())
+    .pipe(dest(doc_dist))
+    .pipe(cleancss())
+    .pipe(
+      rename({
+        suffix: ".min",
+      })
+    )
+    .pipe(dest(doc_dist));
+  done();
+}
+
+const pugs = (done) => {
+  src("docs/**/!(_)*.pug")
+    .pipe(
+      pug({
+        pretty: true,
+      })
+    )
+    .pipe(dest("./docs/html"));
+  done();
+}
 
 exports.watch = watchFunc;
-exports.docs = docs;
+exports.docs = parallel(docs_scss, docs_scss_min, pugs);
 
 exports.default = build;
