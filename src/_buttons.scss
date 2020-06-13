@@ -18,6 +18,7 @@
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
+  font-weight: normal;
   &:focus {
     @include control-shadow();
   }
@@ -151,6 +152,28 @@
 
     &::before {
       content: "\2715";
+    }
+  }
+}
+
+a {
+  &.btn {
+    &:visited,
+    &:hover {
+      color: $primary-color;
+    }
+    
+    &:active {
+      color: $light-color;
+    }
+    
+    &.btn-primary,
+    &.btn-error,
+    &.btn-success {
+      &:visited,
+      &:hover {
+        color: $light-color;
+      }
     }
   }
 }
