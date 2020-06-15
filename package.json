@@ -32,7 +32,9 @@
     "gulp-rename": "latest",
     "gulp-sass": "latest",
     "jstransformer-highlight": "latest",
-    "jstransformer-markdown-it": "latest"
+    "jstransformer-markdown-it": "latest",
+    "fibers": "^5.0.0",
+    "sass": "^1.26.8"
   },
   "browserslist": [
     "last 4 Chrome versions",

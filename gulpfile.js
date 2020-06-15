@@ -5,6 +5,9 @@ const csscomb = require("gulp-csscomb");
 const rename = require("gulp-rename");
 const autoprefixer = require("gulp-autoprefixer");
 const pug = require("gulp-pug");
+const Fibers = require('fibers');
+sass.compiler = require('sass');
+const options = { precision: 10, fiber: Fibers }
 
 const paths = {
   source: "./src/*.scss",
@@ -23,7 +26,7 @@ const watchFunc = () =>
 const build = () =>
   src(paths.source)
     .pipe(
-      sass({ outputStyle: "compact", precision: 10 }).on("error", sass.logError)
+      sass(options).on("error", sass.logError)
     )
     .pipe(autoprefixer())
     .pipe(csscomb())
@@ -39,7 +42,7 @@ const build = () =>
 const docs_scss = (done) => {
   src(paths.doc)
     .pipe(
-      sass({ outputStyle: "compact", precision: 10 }).on("error", sass.logError)
+      sass(options).on("error", sass.logError)
     )
     .pipe(autoprefixer())
     .pipe(csscomb())
@@ -57,7 +60,7 @@ const docs_scss = (done) => {
 const docs_scss_min = (done) => {
   src(paths.source)
     .pipe(
-      sass({ outputStyle: "compact", precision: 10 }).on("error", sass.logError)
+      sass(options).on("error", sass.logError)
     )
     .pipe(autoprefixer())
     .pipe(csscomb())
@@ -85,5 +88,5 @@ const pugs = (done) => {
 
 exports.watch = watchFunc;
 exports.docs = parallel(docs_scss, docs_scss_min, pugs);
-
+exports.build = build;
 exports.default = build;
