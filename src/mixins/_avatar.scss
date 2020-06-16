@@ -1,4 +1,4 @@
-@use "variables" as var;
+@use "../variables" as var;
 
 // Avatar mixin
 @mixin avatar-base($size: var.$unit-8) {

@@ -1,6 +1,6 @@
-@use "variables" as var;
-@use "mixins/clearfix" as clearfix;
-@use "mixins/position" as position;
+@use "../variables" as var;
+@use "../mixins/clearfix" as clearfix;
+@use "../mixins/position" as position;
 
 // Position
 .clearfix {

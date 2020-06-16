@@ -1,5 +1,5 @@
-@use "variables" as var;
-@use "mixins/color" as color;
+@use "../variables" as var;
+@use "../mixins/color" as color;
 
 // Text colors
 @include color.text-color-variant(".text-primary", var.$primary-color);
