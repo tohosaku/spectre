@@ -1,4 +1,5 @@
 @use "variables" as var;
+@use "mixins/shadow" as shadow;
 
 // Modals
 .modal {
@@ -57,7 +58,7 @@
 }
 
 .modal-container {
-  @include shadow-variant(.2rem);
+  @include shadow.shadow-variant(.2rem);
   background: var.$bg-color-light;
   border-radius: var.$border-radius;
   display: flex;

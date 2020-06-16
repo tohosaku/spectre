@@ -1,31 +1,34 @@
+@use "variables" as var;
+@use "mixins/color" as color;
+
 // Text colors
-@include text-color-variant(".text-primary", $primary-color);
+@include color.text-color-variant(".text-primary", var.$primary-color);
 
-@include text-color-variant(".text-secondary", $secondary-color-dark);
+@include color.text-color-variant(".text-secondary", var.$secondary-color-dark);
 
-@include text-color-variant(".text-gray", $gray-color);
+@include color.text-color-variant(".text-gray", var.$gray-color);
 
-@include text-color-variant(".text-light", $light-color);
+@include color.text-color-variant(".text-light", var.$light-color);
 
-@include text-color-variant(".text-dark", $body-font-color);
+@include color.text-color-variant(".text-dark", var.$body-font-color);
 
-@include text-color-variant(".text-success", $success-color);
+@include color.text-color-variant(".text-success", var.$success-color);
 
-@include text-color-variant(".text-warning", $warning-color);
+@include color.text-color-variant(".text-warning", var.$warning-color);
 
-@include text-color-variant(".text-error", $error-color);
+@include color.text-color-variant(".text-error", var.$error-color);
 
 // Background colors
-@include bg-color-variant(".bg-primary", $primary-color);
+@include color.bg-color-variant(".bg-primary", var.$primary-color);
 
-@include bg-color-variant(".bg-secondary", $secondary-color);
+@include color.bg-color-variant(".bg-secondary", var.$secondary-color);
 
-@include bg-color-variant(".bg-dark", $dark-color);
+@include color.bg-color-variant(".bg-dark", var.$dark-color);
 
-@include bg-color-variant(".bg-gray", $bg-color);
+@include color.bg-color-variant(".bg-gray", var.$bg-color);
 
-@include bg-color-variant(".bg-success", $success-color);
+@include color.bg-color-variant(".bg-success", var.$success-color);
 
-@include bg-color-variant(".bg-warning", $warning-color);
+@include color.bg-color-variant(".bg-warning", var.$warning-color);
 
-@include bg-color-variant(".bg-error", $error-color);
+@include color.bg-color-variant(".bg-error", var.$error-color);

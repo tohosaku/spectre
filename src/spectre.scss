@@ -33,18 +33,18 @@
 @use "chips";
 @use "dropdowns";
 @use "empty";
-@import "menus";
-@import "modals";
-@import "navs";
-@import "pagination";
-@import "panels";
-@import "popovers";
-@import "steps";
-@import "tabs";
-@import "tiles";
-@import "toasts";
-@import "tooltips";
+@use "menus";
+@use "modals";
+@use "navs";
+@use "pagination";
+@use "panels";
+@use "popovers";
+@use "steps";
+@use "tabs";
+@use "tiles";
+@use "toasts";
+@use "tooltips";
 
 // Utility classes
-@import "animations";
-@import "utilities";
+@use "animations";
+@use "utilities";

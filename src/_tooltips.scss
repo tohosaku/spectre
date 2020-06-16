@@ -1,32 +1,34 @@
+@use "variables" as var;
+
 // Tooltips
 .tooltip {
   position: relative;
   &::after {
-    background: rgba($dark-color, .95);
-    border-radius: $border-radius;
+    background: rgba(var.$dark-color, .95);
+    border-radius: var.$border-radius;
     bottom: 100%;
-    color: $light-color;
+    color: var.$light-color;
     content: attr(data-tooltip);
     display: block;
-    font-size: $font-size-sm;
+    font-size: var.$font-size-sm;
     left: 50%;
-    max-width: $control-width-sm;
+    max-width: var.$control-width-sm;
     opacity: 0;
     overflow: hidden;
-    padding: $unit-1 $unit-2;
+    padding: var.$unit-1 var.$unit-2;
     pointer-events: none;
     position: absolute;
     text-overflow: ellipsis;
-    transform: translate(-50%, $unit-2);
+    transform: translate(-50%, var.$unit-2);
     transition: opacity .2s, transform .2s;
     white-space: pre;
-    z-index: $zindex-3;
+    z-index: var.$zindex-3;
   }
   &:focus,
   &:hover {
     &::after {
       opacity: 1;
-      transform: translate(-50%, -$unit-1);
+      transform: translate(-50%, -1 * var.$unit-1);
     }
   }
   &[disabled],
@@ -38,12 +40,12 @@
     &::after {
       bottom: 50%;
       left: 100%;
-      transform: translate(-$unit-1, 50%);
+      transform: translate(-1 * var.$unit-1, 50%);
     }
     &:focus,
     &:hover {
       &::after {
-        transform: translate($unit-1, 50%);
+        transform: translate(var.$unit-1, 50%);
       }
     }
   }
@@ -52,12 +54,12 @@
     &::after {
       bottom: auto;
       top: 100%;
-      transform: translate(-50%, -$unit-2);
+      transform: translate(-50%, -1 * var.$unit-2);
     }
     &:focus,
     &:hover {
       &::after {
-        transform: translate(-50%, $unit-1);
+        transform: translate(-50%, var.$unit-1);
       }
     }
   }
@@ -67,12 +69,12 @@
       bottom: 50%;
       left: auto;
       right: 100%;
-      transform: translate($unit-2, 50%);
+      transform: translate(var.$unit-2, 50%);
     }
     &:focus,
     &:hover {
       &::after {
-        transform: translate(-$unit-1, 50%);
+        transform: translate(-1 * var.$unit-1, 50%);
       }
     }
   }

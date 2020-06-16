@@ -1,3 +1,5 @@
+@use "variables" as var;
+
 // Animations
 @keyframes loading {
   0% {
@@ -11,7 +13,7 @@
 @keyframes slide-down {
   0% {
     opacity: 0;
-    transform: translateY(-$unit-8);
+    transform: translateY(-1 * var.$unit-8);
   }
   100% {
     opacity: 1;
