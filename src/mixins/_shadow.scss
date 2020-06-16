@@ -1,9 +1,11 @@
+@use "variables" as var;
+
 // Component focus shadow
-@mixin control-shadow($color: $primary-color) {
+@mixin control-shadow($color: var.$primary-color) {
   box-shadow: 0 0 0 .1rem rgba($color, .2);
 }
 
 // Shadow mixin
 @mixin shadow-variant($offset) {
-  box-shadow: 0 $offset ($offset + .05rem) * 2 rgba($dark-color, .3);
+  box-shadow: 0 $offset ($offset + .05rem) * 2 rgba(var.$dark-color, .3);
 }

@@ -1,11 +1,12 @@
 // Variables and mixins
-@import "variables";
-@import "mixins";
+@use "variables";
+@forward "variables";
+@forward "mixins";
 
-/*! Spectre.css v#{$version} | MIT License | github.com/picturepan2/spectre */
+/*! Spectre.css v#{variables.$version} | MIT License | github.com/picturepan2/spectre */
 // Reset and dependencies
-@import "normalize";
-@import "base";
+@use "normalize";
+@use "base";
 
 // Elements
 @import "typography";
