@@ -1,9 +1,12 @@
+@use "variables" as var;
+@use "mixins/avatar" as avatar;
+
 // Avatars
 .avatar {
-  @include avatar-base();
-  background: $primary-color;
+  @include avatar.avatar-base();
+  background: var.$primary-color;
   border-radius: 50%;
-  color: rgba($light-color, .85);
+  color: rgba(var.$light-color, .85);
   display: inline-block;
   font-weight: 300;
   line-height: 1.25;
@@ -12,16 +15,16 @@
   vertical-align: middle;
 
   &.avatar-xs {
-    @include avatar-base($unit-4);
+    @include avatar.avatar-base(var.$unit-4);
   }
   &.avatar-sm {
-    @include avatar-base($unit-6);
+    @include avatar.avatar-base(var.$unit-6);
   }
   &.avatar-lg {
-    @include avatar-base($unit-12);
+    @include avatar.avatar-base(var.$unit-12);
   }
   &.avatar-xl {
-    @include avatar-base($unit-16);
+    @include avatar.avatar-base(var.$unit-16);
   }
 
   img {
@@ -29,39 +32,39 @@
     height: 100%;
     position: relative;
     width: 100%;
-    z-index: $zindex-0;
+    z-index: var.$zindex-0;
   }
 
   .avatar-icon,
   .avatar-presence {
-    background: $bg-color-light;
+    background: var.$bg-color-light;
     bottom: 14.64%;
     height: 50%;
-    padding: $border-width-lg;
+    padding: var.$border-width-lg;
     position: absolute;
     right: 14.64%;
     transform: translate(50%, 50%);
     width: 50%;
-    z-index: $zindex-0 + 1;
+    z-index: var.$zindex-0 + 1;
   }
 
   .avatar-presence {
-    background: $gray-color;
-    box-shadow: 0 0 0 $border-width-lg $light-color;
+    background: var.$gray-color;
+    box-shadow: 0 0 0 var.$border-width-lg var.$light-color;
     border-radius: 50%;
     height: .5em;
     width: .5em;
 
     &.online {
-      background: $success-color;
+      background: var.$success-color;
     }
 
     &.busy {
-      background: $error-color;
+      background: var.$error-color;
     }
 
     &.away {
-      background: $warning-color;
+      background: var.$warning-color;
     }
   }
 
@@ -72,6 +75,6 @@
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
-    z-index: $zindex-0;
+    z-index: var.$zindex-0;
   }
 }

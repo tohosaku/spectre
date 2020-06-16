@@ -1,19 +1,21 @@
+@use "variables" as var;
+
 // Cards
 .card {
-  background: $bg-color-light;
-  border: $border-width solid $border-color;
-  border-radius: $border-radius;
+  background: var.$bg-color-light;
+  border: var.$border-width solid var.$border-color;
+  border-radius: var.$border-radius;
   display: flex;
   flex-direction: column;
 
   .card-header,
   .card-body,
   .card-footer {
-    padding: $layout-spacing-lg;
+    padding: var.$layout-spacing-lg;
     padding-bottom: 0;
 
     &:last-child {
-      padding-bottom: $layout-spacing-lg;
+      padding-bottom: var.$layout-spacing-lg;
     }
   }
 
@@ -22,21 +24,21 @@
   }
 
   .card-image {
-    padding-top: $layout-spacing-lg;
+    padding-top: var.$layout-spacing-lg;
 
     &:first-child {
       padding-top: 0;
 
       img {
-        border-top-left-radius: $border-radius;
-        border-top-right-radius: $border-radius;
+        border-top-left-radius: var.$border-radius;
+        border-top-right-radius: var.$border-radius;
       }
     }
 
     &:last-child {
       img {
-        border-bottom-left-radius: $border-radius;
-        border-bottom-right-radius: $border-radius;
+        border-bottom-left-radius: var.$border-radius;
+        border-bottom-right-radius: var.$border-radius;
       }
     }
   }

@@ -1,74 +1,77 @@
+@use "variables" as var;
+@use "mixins/shadow" as shadow;
+
 // Forms
 .form-group {
   &:not(:last-child) {
-    margin-bottom: $layout-spacing;
+    margin-bottom: var.$layout-spacing;
   }
 }
 
 fieldset {
-  margin-bottom: $layout-spacing-lg;
+  margin-bottom: var.$layout-spacing-lg;
 }
 
 legend {
-  font-size: $font-size-lg;
+  font-size: var.$font-size-lg;
   font-weight: 500;
-  margin-bottom: $layout-spacing-lg;
+  margin-bottom: var.$layout-spacing-lg;
 }
 
 // Form element: Label
 .form-label {
   display: block;
-  line-height: $line-height;
-  padding: $control-padding-y + $border-width 0;
+  line-height: var.$line-height;
+  padding: var.$control-padding-y + var.$border-width 0;
 
   &.label-sm {
-    font-size: $font-size-sm;
-    padding: $control-padding-y-sm + $border-width 0;
+    font-size: var.$font-size-sm;
+    padding: var.$control-padding-y-sm + var.$border-width 0;
   }
 
   &.label-lg {
-    font-size: $font-size-lg;
-    padding: $control-padding-y-lg + $border-width 0;
+    font-size: var.$font-size-lg;
+    padding: var.$control-padding-y-lg + var.$border-width 0;
   }
 }
 
 // Form element: Input
 .form-input {
   appearance: none;
-  background: $bg-color-light;
+  background: var.$bg-color-light;
   background-image: none;
-  border: $border-width solid $border-color-dark;
-  border-radius: $border-radius;
-  color: $body-font-color;
+  border: var.$border-width solid var.$border-color-dark;
+  border-radius: var.$border-radius;
+  color: var.$body-font-color;
   display: block;
-  font-size: $font-size;
-  height: $control-size;
-  line-height: $line-height;
+  font-size: var.$font-size;
+  height: var.$control-size;
+  line-height: var.$line-height;
   max-width: 100%;
   outline: none;
-  padding: $control-padding-y $control-padding-x;
+  padding: var.$control-padding-y var.$control-padding-x;
   position: relative;
   transition: background .2s, border .2s, box-shadow .2s, color .2s;
   width: 100%;
   &:focus {
-    @include control-shadow();
-    border-color: $primary-color;
+    @include shadow.control-shadow();
+    border-color: var.$primary-color;
   }
   &::placeholder {
-    color: $gray-color;
+    color: var.$gray-color;
   }
 
   // Input sizes
   &.input-sm {
-    font-size: $font-size-sm;
-    height: $control-size-sm;
-    padding: $control-padding-y-sm $control-padding-x-sm;
+    font-size: var.$font-size-sm;
+    height: var.$control-size-sm;
+    padding: var.$control-padding-y-sm var.$control-padding-x-sm;
   }
 
   &.input-lg {
-    font-size: $font-size-lg;
-    height: $control-size-lg;
-    padding: $control-padding-y-lg $control-padding-x-lg;
+    font-size: var.$font-size-lg;
+    height: var.$control-size-lg;
+    padding: var.$control-padding-y-lg var.$control-padding-x-lg;
   }
 
   &.input-inline {
@@ -94,38 +97,38 @@ textarea.form-input {
 
 // Form element: Input hint
 .form-input-hint {
-  color: $gray-color;
-  font-size: $font-size-sm;
-  margin-top: $unit-1;
+  color: var.$gray-color;
+  font-size: var.$font-size-sm;
+  margin-top: var.$unit-1;
 
   .has-success &,
   .is-success + & {
-    color: $success-color;
+    color: var.$success-color;
   }
 
   .has-error &,
   .is-error + & {
-    color: $error-color;
+    color: var.$error-color;
   }
 }
 
 // Form element: Select
 .form-select {
   appearance: none;
-  border: $border-width solid $border-color-dark;
-  border-radius: $border-radius;
+  border: var.$border-width solid var.$border-color-dark;
+  border-radius: var.$border-radius;
   color: inherit;
-  font-size: $font-size;
-  height: $control-size;
-  line-height: $line-height;
+  font-size: var.$font-size;
+  height: var.$control-size;
+  line-height: var.$line-height;
   outline: none;
-  padding: $control-padding-y $control-padding-x;
+  padding: var.$control-padding-y var.$control-padding-x;
   vertical-align: middle;
   width: 100%;
-  background: $bg-color-light; 
+  background: var.$bg-color-light; 
   &:focus {
-    @include control-shadow();
-    border-color: $primary-color;
+    @include shadow.control-shadow();
+    border-color: var.$primary-color;
   }
   &::-ms-expand {
     display: none;
@@ -133,30 +136,30 @@ textarea.form-input {
 
   // Select sizes
   &.select-sm {
-    font-size: $font-size-sm;
-    height: $control-size-sm;
-    padding: $control-padding-y-sm ($control-icon-size + $control-padding-x-sm) $control-padding-y-sm $control-padding-x-sm;
+    font-size: var.$font-size-sm;
+    height: var.$control-size-sm;
+    padding: var.$control-padding-y-sm (var.$control-icon-size + var.$control-padding-x-sm) var.$control-padding-y-sm var.$control-padding-x-sm;
   }
 
   &.select-lg {
-    font-size: $font-size-lg;
-    height: $control-size-lg;
-    padding: $control-padding-y-lg ($control-icon-size + $control-padding-x-lg) $control-padding-y-lg $control-padding-x-lg;
+    font-size: var.$font-size-lg;
+    height: var.$control-size-lg;
+    padding: var.$control-padding-y-lg (var.$control-icon-size + var.$control-padding-x-lg) var.$control-padding-y-lg var.$control-padding-x-lg;
   }
 
   // Multiple select
   &[size],
   &[multiple] {
     height: auto;
-    padding: $control-padding-y $control-padding-x;
+    padding: var.$control-padding-y var.$control-padding-x;
 
     option {
-      padding: $unit-h $unit-1;
+      padding: var.$unit-h var.$unit-1;
     }
   }
   &:not([multiple]):not([size]) {
-    background: $bg-color-light url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204%205'%3E%3Cpath%20fill='%23667189'%20d='M2%200L0%202h4zm0%205L0%203h4z'/%3E%3C/svg%3E") no-repeat right .35rem center / .4rem .5rem;
-    padding-right: $control-icon-size + $control-padding-x;
+    background: var.$bg-color-light url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204%205'%3E%3Cpath%20fill='%23667189'%20d='M2%200L0%202h4zm0%205L0%203h4z'/%3E%3C/svg%3E") no-repeat right .35rem center / .4rem .5rem;
+    padding-right: var.$control-icon-size + var.$control-padding-x;
   }
 }
 
@@ -166,33 +169,33 @@ textarea.form-input {
   position: relative;
 
   .form-icon {
-    height: $control-icon-size;
-    margin: 0 $control-padding-y;
+    height: var.$control-icon-size;
+    margin: 0 var.$control-padding-y;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: $control-icon-size;
-    z-index: $zindex-0 + 1;
+    width: var.$control-icon-size;
+    z-index: var.$zindex-0 + 1;
   }
 }
 
 .has-icon-left {
   .form-icon {
-    left: $border-width;
+    left: var.$border-width;
   }
 
   .form-input {
-    padding-left: $control-icon-size + $control-padding-y * 2;
+    padding-left: var.$control-icon-size + var.$control-padding-y * 2;
   }
 }
 
 .has-icon-right {
   .form-icon {
-    right: $border-width;
+    right: var.$border-width;
   }
 
   .form-input {
-    padding-right: $control-icon-size + $control-padding-y * 2;
+    padding-right: var.$control-icon-size + var.$control-padding-y * 2;
   }
 }
 
@@ -201,10 +204,10 @@ textarea.form-input {
 .form-radio,
 .form-switch {
   display: block;
-  line-height: $line-height;
-  margin: ($control-size - $control-size-sm) / 2 0;
-  min-height: $control-size-sm;
-  padding: (($control-size-sm - $line-height) / 2) $control-padding-x (($control-size-sm - $line-height) / 2) ($control-icon-size + $control-padding-x);
+  line-height: var.$line-height;
+  margin: (var.$control-size - var.$control-size-sm) / 2 0;
+  min-height: var.$control-size-sm;
+  padding: ((var.$control-size-sm - var.$line-height) / 2) var.$control-padding-x ((var.$control-size-sm - var.$line-height) / 2) (var.$control-icon-size + var.$control-padding-x);
   position: relative;
 
   input {
@@ -215,17 +218,17 @@ textarea.form-input {
     position: absolute;
     width: 1px;
     &:focus + .form-icon {
-      @include control-shadow();
-      border-color: $primary-color;
+      @include shadow.control-shadow();
+      border-color: var.$primary-color;
     }
     &:checked + .form-icon {
-      background: $primary-color;
-      border-color: $primary-color;
+      background: var.$primary-color;
+      border-color: var.$primary-color;
     }
   }
 
   .form-icon {
-    border: $border-width solid $border-color-dark;
+    border: var.$border-width solid var.$border-color-dark;
     cursor: pointer;
     display: inline-block;
     position: absolute;
@@ -234,42 +237,42 @@ textarea.form-input {
 
   // Input checkbox, radio and switch sizes
   &.input-sm {
-    font-size: $font-size-sm;
+    font-size: var.$font-size-sm;
     margin: 0;
   }
 
   &.input-lg {
-    font-size: $font-size-lg;
-    margin: ($control-size-lg - $control-size-sm) / 2 0;
+    font-size: var.$font-size-lg;
+    margin: (var.$control-size-lg - var.$control-size-sm) / 2 0;
   }
 }
 
 .form-checkbox,
 .form-radio {
   .form-icon {
-    background: $bg-color-light;
-    height: $control-icon-size;
+    background: var.$bg-color-light;
+    height: var.$control-icon-size;
     left: 0;
-    top: ($control-size-sm - $control-icon-size) / 2;
-    width: $control-icon-size;
+    top: (var.$control-size-sm - var.$control-icon-size) / 2;
+    width: var.$control-icon-size;
   }
 
   input {
     &:active + .form-icon {
-      background: $bg-color-dark;
+      background: var.$bg-color-dark;
     }
   }
 }
 .form-checkbox {
   .form-icon {
-    border-radius: $border-radius;
+    border-radius: var.$border-radius;
   }
 
   input {
     &:checked + .form-icon {
       &::before {
         background-clip: padding-box;
-        border: $border-width-lg solid $light-color;
+        border: var.$border-width-lg solid var.$light-color;
         border-left-width: 0;
         border-top-width: 0;
         content: "";
@@ -284,10 +287,10 @@ textarea.form-input {
       }
     }
     &:indeterminate + .form-icon {
-      background: $primary-color;
-      border-color: $primary-color;
+      background: var.$primary-color;
+      border-color: var.$primary-color;
       &::before {
-        background: $bg-color-light;
+        background: var.$bg-color-light;
         content: "";
         height: 2px;
         left: 50%;
@@ -308,7 +311,7 @@ textarea.form-input {
   input {
     &:checked + .form-icon {
       &::before {
-        background: $bg-color-light;
+        background: var.$bg-color-light;
         border-radius: 50%;
         content: "";
         height: 6px;
@@ -324,27 +327,27 @@ textarea.form-input {
 
 // Form element: Switch
 .form-switch {
-  padding-left: ($unit-8 + $control-padding-x);
+  padding-left: (var.$unit-8 + var.$control-padding-x);
 
   .form-icon {
-    background: $gray-color;
+    background: var.$gray-color;
     background-clip: padding-box;
-    border-radius: $unit-2 + $border-width;
-    height: $unit-4 + $border-width * 2;
+    border-radius: var.$unit-2 + var.$border-width;
+    height: var.$unit-4 + var.$border-width * 2;
     left: 0;
-    top: ($control-size-sm - $unit-4) / 2 - $border-width;
-    width: $unit-8;
+    top: (var.$control-size-sm - var.$unit-4) / 2 - var.$border-width;
+    width: var.$unit-8;
     &::before {
-      background: $bg-color-light;
+      background: var.$bg-color-light;
       border-radius: 50%;
       content: "";
       display: block;
-      height: $unit-4;
+      height: var.$unit-4;
       left: 0;
       position: absolute;
       top: 0;
       transition: background .2s, border .2s, box-shadow .2s, color .2s, left .2s;
-      width: $unit-4;
+      width: var.$unit-4;
     }
   }
 
@@ -356,7 +359,7 @@ textarea.form-input {
     }
     &:active + .form-icon {
       &::before {
-        background: $bg-color;
+        background: var.$bg-color;
       }
     }
   }
@@ -367,21 +370,21 @@ textarea.form-input {
   display: flex;
 
   .input-group-addon {
-    background: $bg-color;
-    border: $border-width solid $border-color-dark;
-    border-radius: $border-radius;
-    line-height: $line-height;
-    padding: $control-padding-y $control-padding-x;
+    background: var.$bg-color;
+    border: var.$border-width solid var.$border-color-dark;
+    border-radius: var.$border-radius;
+    line-height: var.$line-height;
+    padding: var.$control-padding-y var.$control-padding-x;
     white-space: nowrap;
 
     &.addon-sm {
-      font-size: $font-size-sm;
-      padding: $control-padding-y-sm $control-padding-x-sm;
+      font-size: var.$font-size-sm;
+      padding: var.$control-padding-y-sm var.$control-padding-x-sm;
     }
 
     &.addon-lg {
-      font-size: $font-size-lg;
-      padding: $control-padding-y-lg $control-padding-x-lg;
+      font-size: var.$font-size-lg;
+      padding: var.$control-padding-y-lg var.$control-padding-x-lg;
     }
   }
 
@@ -392,7 +395,7 @@ textarea.form-input {
   }
 
   .input-group-btn {
-    z-index: $zindex-0;
+    z-index: var.$zindex-0;
   }
 
   .form-input,
@@ -405,15 +408,15 @@ textarea.form-input {
     }
     &:not(:first-child):not(:last-child) {
       border-radius: 0;
-      margin-left: -$border-width;
+      margin-left: -1 * var.$border-width;
     }
     &:last-child:not(:first-child) {
       border-bottom-left-radius: 0;
       border-top-left-radius: 0;
-      margin-left: -$border-width;
+      margin-left: -1 * var.$border-width;
     }
     &:focus {
-      z-index: $zindex-0 + 1;
+      z-index: var.$zindex-0 + 1;
     }
   }
 
@@ -431,19 +434,19 @@ textarea.form-input {
 .form-select {
   .has-success &,
   &.is-success {
-    background: lighten($success-color, 53%);
-    border-color: $success-color;
+    background: lighten(var.$success-color, 53%);
+    border-color: var.$success-color;
     &:focus {
-      @include control-shadow($success-color);
+      @include shadow.control-shadow(var.$success-color);
     }
   }
 
   .has-error &,
   &.is-error {
-    background: lighten($error-color, 53%);
-    border-color: $error-color;
+    background: lighten(var.$error-color, 53%);
+    border-color: var.$error-color;
     &:focus {
-      @include control-shadow($error-color);
+      @include shadow.control-shadow(var.$error-color);
     }
   }
 }
@@ -454,18 +457,18 @@ textarea.form-input {
   .has-error &,
   &.is-error {
     .form-icon {
-      border-color: $error-color;
+      border-color: var.$error-color;
     }
 
     input {
       &:checked + .form-icon {
-        background: $error-color;
-        border-color: $error-color;
+        background: var.$error-color;
+        border-color: var.$error-color;
       }
 
       &:focus + .form-icon {
-        @include control-shadow($error-color);
-        border-color: $error-color;
+        @include shadow.control-shadow(var.$error-color);
+        border-color: var.$error-color;
       }
     }
   }
@@ -476,8 +479,8 @@ textarea.form-input {
   &.is-error {
     input {
       &:indeterminate + .form-icon {
-        background: $error-color;
-        border-color: $error-color;
+        background: var.$error-color;
+        border-color: var.$error-color;
       }
     }
   }
@@ -487,14 +490,14 @@ textarea.form-input {
 .form-input {
   &:not(:placeholder-shown) {
     &:invalid {
-      border-color: $error-color;
+      border-color: var.$error-color;
       &:focus {
-        @include control-shadow($error-color);
-        background: lighten($error-color, 53%);
+        @include shadow.control-shadow(var.$error-color);
+        background: lighten(var.$error-color, 53%);
       }
 
       & + .form-input-hint {
-        color: $error-color;
+        color: var.$error-color;
       }
     }
   }
@@ -505,7 +508,7 @@ textarea.form-input {
 .form-select {
   &:disabled,
   &.disabled {
-    background-color: $bg-color-dark;
+    background-color: var.$bg-color-dark;
     cursor: not-allowed;
     opacity: .5;
   }
@@ -513,7 +516,7 @@ textarea.form-input {
 
 .form-input {
   &[readonly] {
-    background-color: $bg-color;
+    background-color: var.$bg-color;
   }
 }
 
@@ -521,7 +524,7 @@ input {
   &:disabled,
   &.disabled {
     & + .form-icon {
-      background: $bg-color-dark;
+      background: var.$bg-color-dark;
       cursor: not-allowed;
       opacity: .5;
     }
@@ -533,7 +536,7 @@ input {
     &:disabled,
     &.disabled {
       & + .form-icon::before {
-        background: $bg-color-light;
+        background: var.$bg-color-light;
       }
     }
   }
@@ -541,7 +544,7 @@ input {
 
 // Form horizontal
 .form-horizontal {
-  padding: $layout-spacing 0;
+  padding: var.$layout-spacing 0;
 
   .form-group {
     display: flex;

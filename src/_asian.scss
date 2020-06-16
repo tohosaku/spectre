@@ -1,3 +1,10 @@
+@use "variables" as var;
+
+$cjk-zh-hans-font-family: var.$base-font-family, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", var.$fallback-font-family !default;
+$cjk-zh-hant-font-family: var.$base-font-family, "PingFang TC", "Hiragino Sans CNS", "Microsoft JhengHei", var.$fallback-font-family !default;
+$cjk-jp-font-family: var.$base-font-family, "Hiragino Sans", "Hiragino Kaku Gothic Pro", "Yu Gothic", YuGothic, Meiryo, var.$fallback-font-family !default;
+$cjk-ko-font-family: var.$base-font-family, "Malgun Gothic", var.$fallback-font-family !default;
+
 // Optimized for East Asian CJK
 html:lang(zh),
 html:lang(zh-Hans),
@@ -26,7 +33,7 @@ html:lang(ko),
 .lang-cjk {
   ins,
   u {
-    border-bottom: $border-width solid;
+    border-bottom: var.$border-width solid;
     text-decoration: none;
   }
 

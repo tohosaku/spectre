@@ -1,21 +1,23 @@
+@use "variables" as var;
+
 // Empty states (or Blank slates)
 .empty {
-  background: $bg-color;
-  border-radius: $border-radius;
-  color: $gray-color-dark;
+  background: var.$bg-color;
+  border-radius: var.$border-radius;
+  color: var.$gray-color-dark;
   text-align: center;
-  padding: $unit-16 $unit-8;
+  padding: var.$unit-16 var.$unit-8;
 
   .empty-icon {
-    margin-bottom: $layout-spacing-lg;
+    margin-bottom: var.$layout-spacing-lg;
   }
 
   .empty-title,
   .empty-subtitle {
-    margin: $layout-spacing auto;
+    margin: var.$layout-spacing auto;
   }
 
   .empty-action {
-    margin-top: $layout-spacing-lg;
+    margin-top: var.$layout-spacing-lg;
   }
 }

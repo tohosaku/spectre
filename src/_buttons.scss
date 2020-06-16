@@ -1,17 +1,20 @@
+@use "variables" as var;
+@use "mixins";
+
 // Buttons
 .btn {
   appearance: none;
-  background: $bg-color-light;
-  border: $border-width solid $primary-color;
-  border-radius: $border-radius;
-  color: $primary-color;
+  background: var.$bg-color-light;
+  border: var.$border-width solid var.$primary-color;
+  border-radius: var.$border-radius;
+  color: var.$primary-color;
   cursor: pointer;
   display: inline-block;
-  font-size: $font-size;
-  height: $control-size;
-  line-height: $line-height;
+  font-size: var.$font-size;
+  height: var.$control-size;
+  line-height: var.$line-height;
   outline: none;
-  padding: $control-padding-y $control-padding-x;
+  padding: var.$control-padding-y var.$control-padding-x;
   text-align: center;
   text-decoration: none;
   transition: background .2s, border .2s, box-shadow .2s, color .2s;
@@ -20,24 +23,24 @@
   white-space: nowrap;
   font-weight: normal;
   &:focus {
-    @include control-shadow();
+    @include mixins.control-shadow();
   }
   &:focus,
   &:hover {
-    background: $secondary-color;
-    border-color: $primary-color-dark;
+    background: var.$secondary-color;
+    border-color: var.$primary-color-dark;
     text-decoration: none;
   }
   &:active,
   &.active {
-    background: $primary-color-dark;
-    border-color: darken($primary-color-dark, 5%);
-    color: $light-color;
+    background: var.$primary-color-dark;
+    border-color: darken(var.$primary-color-dark, 5%);
+    color: var.$light-color;
     text-decoration: none;
     &.loading {
       &::after {
-        border-bottom-color: $light-color;
-        border-left-color: $light-color;
+        border-bottom-color: var.$light-color;
+        border-left-color: var.$light-color;
       }
     }
   }
@@ -51,62 +54,62 @@
 
   // Button Primary
   &.btn-primary {
-    background: $primary-color;
-    border-color: $primary-color-dark;
-    color: $light-color;
+    background: var.$primary-color;
+    border-color: var.$primary-color-dark;
+    color: var.$light-color;
     &:focus,
     &:hover {
-      background: darken($primary-color-dark, 2%);
-      border-color: darken($primary-color-dark, 5%);
-      color: $light-color;
+      background: darken(var.$primary-color-dark, 2%);
+      border-color: darken(var.$primary-color-dark, 5%);
+      color: var.$light-color;
     }
     &:active,
     &.active {
-      background: darken($primary-color-dark, 4%);
-      border-color: darken($primary-color-dark, 7%);
-      color: $light-color;
+      background: darken(var.$primary-color-dark, 4%);
+      border-color: darken(var.$primary-color-dark, 7%);
+      color: var.$light-color;
     }
     &.loading {
       &::after {
-        border-bottom-color: $light-color;
-        border-left-color: $light-color;
+        border-bottom-color: var.$light-color;
+        border-left-color: var.$light-color;
       }
     }
   }
 
   // Button Colors
   &.btn-success {
-    @include button-variant($success-color);
+    @include mixins.button-variant(var.$success-color);
   }
 
   &.btn-error {
-    @include button-variant($error-color);
+    @include mixins.button-variant(var.$error-color);
   }
 
   // Button Link
   &.btn-link {
     background: transparent;
     border-color: transparent;
-    color: $link-color;
+    color: var.$link-color;
     &:focus,
     &:hover,
     &:active,
     &.active {
-      color: $link-color-dark;
+      color: var.$link-color-dark;
     }
   }
 
   // Button Sizes
   &.btn-sm {
-    font-size: $font-size-sm;
-    height: $control-size-sm;
-    padding: $control-padding-y-sm $control-padding-x-sm;
+    font-size: var.$font-size-sm;
+    height: var.$control-size-sm;
+    padding: var.$control-padding-y-sm var.$control-padding-x-sm;
   }
 
   &.btn-lg {
-    font-size: $font-size-lg;
-    height: $control-size-lg;
-    padding: $control-padding-y-lg $control-padding-x-lg;
+    font-size: var.$font-size-lg;
+    height: var.$control-size-lg;
+    padding: var.$control-padding-y-lg var.$control-padding-x-lg;
   }
 
   // Button Block
@@ -117,16 +120,16 @@
 
   // Button Action
   &.btn-action {
-    width: $control-size;
+    width: var.$control-size;
     padding-left: 0;
     padding-right: 0;
 
     &.btn-sm {
-      width: $control-size-sm;
+      width: var.$control-size-sm;
     }
 
     &.btn-lg {
-      width: $control-size-lg;
+      width: var.$control-size-lg;
     }
   }
 
@@ -135,18 +138,18 @@
     background: transparent;
     border: 0;
     color: currentColor;
-    height: $unit-5;
-    line-height: $unit-4;
-    margin-left: $unit-1;
+    height: var.$unit-5;
+    line-height: var.$unit-4;
+    margin-left: var.$unit-1;
     margin-right: -2px;
     opacity: 1;
-    padding: $unit-h;
+    padding: var.$unit-h;
     text-decoration: none;
-    width: $unit-5;
+    width: var.$unit-5;
 
     &:focus,
     &:hover {
-      background: rgba($bg-color, .5);
+      background: rgba(var.$bg-color, .5);
       opacity: .95;
     }
 
@@ -160,11 +163,11 @@ a {
   &.btn {
     &:visited,
     &:hover {
-      color: $primary-color;
+      color: var.$primary-color;
     }
     
     &:active {
-      color: $light-color;
+      color: var.$light-color;
     }
     
     &.btn-primary,
@@ -172,7 +175,7 @@ a {
     &.btn-success {
       &:visited,
       &:hover {
-        color: $light-color;
+        color: var.$light-color;
       }
     }
   }
@@ -192,18 +195,18 @@ a {
     }
     &:not(:first-child):not(:last-child) {
       border-radius: 0;
-      margin-left: -$border-width;
+      margin-left: -1 * var.$border-width;
     }
     &:last-child:not(:first-child) {
       border-bottom-left-radius: 0;
       border-top-left-radius: 0;
-      margin-left: -$border-width;
+      margin-left: -1 * var.$border-width;
     }
     &:focus,
     &:hover,
     &:active,
     &.active {
-      z-index: $zindex-0;
+      z-index: var.$zindex-0;
     }
   }
 
