@@ -2,6 +2,7 @@
 @use "variables/color" as color;
 @use "variables/font" as font;
 @use "variables/layout" as layout;
+@use "variables/border" as border;
 @use "mixins/label" as label;
 
 // Codes
@@ -12,7 +13,7 @@ code {
 }
 
 .code {
-  border-radius: var.$border-radius;
+  border-radius: border.$border-radius;
   color: color.$body-font-color;
   position: relative;
 

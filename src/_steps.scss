@@ -1,5 +1,6 @@
 @use "variables" as var;
 @use "variables/color" as color;
+@use "variables/border" as border;
 
 // Steps
 .step {
@@ -34,7 +35,7 @@
 
       &::before {
         background: color.$primary-color;
-        border: var.$border-width-lg solid color.$light-color;
+        border: border.$border-width-lg solid color.$light-color;
         border-radius: 50%;
         content: "";
         display: block;
@@ -52,7 +53,7 @@
       a {
         &::before {
           background: color.$light-color;
-          border: var.$border-width-lg solid color.$primary-color;
+          border: border.$border-width-lg solid color.$primary-color;
         }
       }
 

@@ -1,5 +1,6 @@
 @use "variables" as var;
 @use "variables/color" as color;
+@use "variables/border" as border;
 @use "mixins/avatar" as avatar;
 
 // Avatars
@@ -41,7 +42,7 @@
     background: color.$bg-color-light;
     bottom: 14.64%;
     height: 50%;
-    padding: var.$border-width-lg;
+    padding: border.$border-width-lg;
     position: absolute;
     right: 14.64%;
     transform: translate(50%, 50%);
@@ -51,7 +52,7 @@
 
   .avatar-presence {
     background: color.$gray-color;
-    box-shadow: 0 0 0 var.$border-width-lg color.$light-color;
+    box-shadow: 0 0 0 border.$border-width-lg color.$light-color;
     border-radius: 50%;
     height: .5em;
     width: .5em;

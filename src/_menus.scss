@@ -2,13 +2,14 @@
 @use "variables/color" as color;
 @use "variables/control" as control;  
 @use "variables/layout" as layout;
+@use "variables/border" as border;
 @use "mixins/shadow" as shadow;
 
 // Menus
 .menu {
   @include shadow.shadow-variant(.05rem);
   background: color.$bg-color-light;
-  border-radius: var.$border-radius;
+  border-radius: border.$border-radius;
   list-style: none;
   margin: 0;
   min-width: control.$control-width-xs;
@@ -28,7 +29,7 @@
     text-decoration: none;
 
     & > a {
-      border-radius: var.$border-radius;
+      border-radius: border.$border-radius;
       color: inherit;
       display: block;
       margin: 0 (-1 * var.$unit-2);

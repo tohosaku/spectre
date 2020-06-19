@@ -1,6 +1,7 @@
 @use "variables" as var;
 @use "variables/color" as color;
 @use "variables/font" as font;
+@use "variables/border" as border;
 @use "mixins";
 
 // Typography
@@ -63,7 +64,7 @@ u {
 }
 
 abbr[title] {
-  border-bottom: var.$border-width dotted;
+  border-bottom: border.$border-width dotted;
   cursor: help;
   text-decoration: none;
 }
@@ -77,13 +78,13 @@ kbd {
 mark {
   @include mixins.label-variant(color.$body-font-color, color.$highlight-color);
   border-bottom: var.$unit-o solid darken(color.$highlight-color, 15%);
-  border-radius: var.$border-radius;
+  border-radius: border.$border-radius;
   padding: var.$unit-o var.$unit-h 0;
 }
 
 // Blockquote
 blockquote {
-  border-left: var.$border-width-lg solid color.$border-color;
+  border-left: border.$border-width-lg solid color.$border-color;
   margin-left: 0;
   padding: var.$unit-2 var.$unit-4;
 

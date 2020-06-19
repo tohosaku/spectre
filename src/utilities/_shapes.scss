@@ -1,8 +1,8 @@
-@use "../variables" as var;
+@use "../variables/border" as border;
 
 // Shapes
 .s-rounded {
-  border-radius: var.$border-radius;
+  border-radius: border.$border-radius;
 }
 
 .s-circle {

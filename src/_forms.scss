@@ -3,6 +3,7 @@
 @use "variables/font" as font;
 @use "variables/control" as control;
 @use "variables/layout" as layout;
+@use "variables/border" as border;
 @use "mixins/shadow" as shadow;
 
 // Forms
@@ -26,16 +27,16 @@ legend {
 .form-label {
   display: block;
   line-height: font.$line-height;
-  padding: control.$control-padding-y + var.$border-width 0;
+  padding: control.$control-padding-y + border.$border-width 0;
 
   &.label-sm {
     font-size: font.$font-size-sm;
-    padding: control.$control-padding-y-sm + var.$border-width 0;
+    padding: control.$control-padding-y-sm + border.$border-width 0;
   }
 
   &.label-lg {
     font-size: font.$font-size-lg;
-    padding: control.$control-padding-y-lg + var.$border-width 0;
+    padding: control.$control-padding-y-lg + border.$border-width 0;
   }
 }
 
@@ -44,8 +45,8 @@ legend {
   appearance: none;
   background: color.$bg-color-light;
   background-image: none;
-  border: var.$border-width solid color.$border-color-dark;
-  border-radius: var.$border-radius;
+  border: border.$border-width solid color.$border-color-dark;
+  border-radius: border.$border-radius;
   color: color.$body-font-color;
   display: block;
   font-size: font.$font-size;
@@ -119,8 +120,8 @@ textarea.form-input {
 // Form element: Select
 .form-select {
   appearance: none;
-  border: var.$border-width solid color.$border-color-dark;
-  border-radius: var.$border-radius;
+  border: border.$border-width solid color.$border-color-dark;
+  border-radius: border.$border-radius;
   color: inherit;
   font-size: font.$font-size;
   height: control.$control-size;
@@ -185,7 +186,7 @@ textarea.form-input {
 
 .has-icon-left {
   .form-icon {
-    left: var.$border-width;
+    left: border.$border-width;
   }
 
   .form-input {
@@ -195,7 +196,7 @@ textarea.form-input {
 
 .has-icon-right {
   .form-icon {
-    right: var.$border-width;
+    right: border.$border-width;
   }
 
   .form-input {
@@ -232,7 +233,7 @@ textarea.form-input {
   }
 
   .form-icon {
-    border: var.$border-width solid color.$border-color-dark;
+    border: border.$border-width solid color.$border-color-dark;
     cursor: pointer;
     display: inline-block;
     position: absolute;
@@ -269,14 +270,14 @@ textarea.form-input {
 }
 .form-checkbox {
   .form-icon {
-    border-radius: var.$border-radius;
+    border-radius: border.$border-radius;
   }
 
   input {
     &:checked + .form-icon {
       &::before {
         background-clip: padding-box;
-        border: var.$border-width-lg solid color.$light-color;
+        border: border.$border-width-lg solid color.$light-color;
         border-left-width: 0;
         border-top-width: 0;
         content: "";
@@ -336,10 +337,10 @@ textarea.form-input {
   .form-icon {
     background: color.$gray-color;
     background-clip: padding-box;
-    border-radius: var.$unit-2 + var.$border-width;
-    height: var.$unit-4 + var.$border-width * 2;
+    border-radius: var.$unit-2 + border.$border-width;
+    height: var.$unit-4 + border.$border-width * 2;
     left: 0;
-    top: (control.$control-size-sm - var.$unit-4) / 2 - var.$border-width;
+    top: (control.$control-size-sm - var.$unit-4) / 2 - border.$border-width;
     width: var.$unit-8;
     &::before {
       background: color.$bg-color-light;
@@ -375,8 +376,8 @@ textarea.form-input {
 
   .input-group-addon {
     background: color.$bg-color;
-    border: var.$border-width solid color.$border-color-dark;
-    border-radius: var.$border-radius;
+    border: border.$border-width solid color.$border-color-dark;
+    border-radius: border.$border-radius;
     line-height: font.$line-height;
     padding: control.$control-padding-y control.$control-padding-x;
     white-space: nowrap;
@@ -412,12 +413,12 @@ textarea.form-input {
     }
     &:not(:first-child):not(:last-child) {
       border-radius: 0;
-      margin-left: -1 * var.$border-width;
+      margin-left: -1 * border.$border-width;
     }
     &:last-child:not(:first-child) {
       border-bottom-left-radius: 0;
       border-top-left-radius: 0;
-      margin-left: -1 * var.$border-width;
+      margin-left: -1 * border.$border-width;
     }
     &:focus {
       z-index: var.$zindex-0 + 1;

@@ -1,6 +1,7 @@
 @use "../variables" as var;
 @use "../variables/color" as color;
-@use "variables/font" as font;
+@use "../variables/font" as font;
+@use "../variables/border" as border;
 
 // Divider
 .divider,
@@ -15,13 +16,13 @@
     display: inline-block;
     font-size: font.$font-size-sm;
     padding: 0 var.$unit-2;
-    transform: translateY(-1 * font.$font-size-sm + var.$border-width);
+    transform: translateY(-1 * font.$font-size-sm + border.$border-width);
   }
 }
 
 .divider {
-  border-top: var.$border-width solid color.$border-color-light;
-  height: var.$border-width;
+  border-top: border.$border-width solid color.$border-color-light;
+  height: border.$border-width;
   margin: var.$unit-2 0;
 
   &[data-content] {
@@ -34,7 +35,7 @@
   padding: var.$unit-4;
 
   &::before {
-    border-left: var.$border-width solid color.$border-color;
+    border-left: border.$border-width solid color.$border-color;
     bottom: var.$unit-2;
     content: "";
     display: block;

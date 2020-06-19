@@ -1,4 +1,4 @@
-@use "variables" as var;
+@use "variables/border" as border;
 
 // Dropdown
 .dropdown {
@@ -31,8 +31,8 @@
   // Fix dropdown-toggle border radius in button groups
   .btn-group {
     .dropdown-toggle:nth-last-child(2) {
-      border-bottom-right-radius: var.$border-radius;
-      border-top-right-radius: var.$border-radius;
+      border-bottom-right-radius: border.$border-radius;
+      border-top-right-radius: border.$border-radius;
     }
   }
 }

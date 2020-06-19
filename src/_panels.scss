@@ -1,11 +1,11 @@
-@use "variables" as var;
 @use "variables/color" as color;
 @use "variables/layout" as layout;
+@use "variables/border" as border;
 
 // Panels
 .panel {
-  border: var.$border-width solid color.$border-color;
-  border-radius: var.$border-radius;
+  border: border.$border-width solid color.$border-color;
+  border-radius: border.$border-radius;
   display: flex;
   flex-direction: column;
 

@@ -2,13 +2,14 @@
 @use "variables/color" as color;
 @use "variables/font" as font;
 @use "variables/control" as control;
+@use "variables/border" as border;
 
 // Tooltips
 .tooltip {
   position: relative;
   &::after {
     background: rgba(color.$dark-color, .95);
-    border-radius: var.$border-radius;
+    border-radius: border.$border-radius;
     bottom: 100%;
     color: color.$light-color;
     content: attr(data-tooltip);

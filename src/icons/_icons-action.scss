@@ -1,4 +1,4 @@
-@use "variables" as var;
+@use "../variables/border" as border;
 @use "icons-core" as core;
 
 // Icon resize
@@ -183,8 +183,8 @@
 .icon-delete {
   &::before {
     border: core.$icon-border-width solid currentColor;
-    border-bottom-left-radius: var.$border-radius;
-    border-bottom-right-radius: var.$border-radius;
+    border-bottom-left-radius: border.$border-radius;
+    border-bottom-right-radius: border.$border-radius;
     border-top: 0;
     height: .75em;
     top: 60%;
@@ -202,7 +202,7 @@
 // Icon share
 .icon-share {
   border: core.$icon-border-width solid currentColor;
-  border-radius: var.$border-radius;
+  border-radius: border.$border-radius;
   border-right: 0;
   border-top: 0;
   &::before {
@@ -235,9 +235,9 @@
   }
   &::after {
     border: core.$icon-border-width solid currentColor;
-    border-bottom-right-radius: var.$border-radius;
+    border-bottom-right-radius: border.$border-radius;
     border-left: 0;
-    border-top-right-radius: var.$border-radius;
+    border-top-right-radius: border.$border-radius;
     height: .65em;
     top: 35%;
     left: 60%;
@@ -250,8 +250,8 @@
   &::before {
     border: core.$icon-border-width solid currentColor;
     border-bottom: 0;
-    border-top-left-radius: var.$border-radius;
-    border-top-right-radius: var.$border-radius;
+    border-top-left-radius: border.$border-radius;
+    border-top-right-radius: border.$border-radius;
     height: .9em;
     width: .8em;
   }
@@ -259,7 +259,7 @@
     border: core.$icon-border-width solid currentColor;
     border-bottom: 0;
     border-left: 0;
-    border-radius: var.$border-radius;
+    border-radius: border.$border-radius;
     height: .5em;
     transform: translate(-50%, 35%) rotate(-45deg) skew(15deg, 15deg);
     width: .5em;
@@ -299,7 +299,7 @@
 .icon-copy {
   &::before {
     border: core.$icon-border-width solid currentColor;
-    border-radius: var.$border-radius;
+    border-radius: border.$border-radius;
     border-right: 0;
     border-bottom: 0;
     height: .8em;
@@ -309,7 +309,7 @@
   }
   &::after {
     border: core.$icon-border-width solid currentColor;
-    border-radius: var.$border-radius;
+    border-radius: border.$border-radius;
     height: .8em;
     left: 60%;
     top: 60%;

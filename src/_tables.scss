@@ -1,5 +1,6 @@
 @use "variables" as var;
 @use "variables/color" as color;
+@use "variables/border" as border;
 
 // Tables
 .table {
@@ -51,10 +52,10 @@
 
   td,
   th {
-    border-bottom: var.$border-width solid color.$border-color;
+    border-bottom: border.$border-width solid color.$border-color;
     padding: var.$unit-3 var.$unit-2;
   }
   th {
-    border-bottom-width: var.$border-width-lg;
+    border-bottom-width: border.$border-width-lg;
   }
 }

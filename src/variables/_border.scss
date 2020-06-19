@@ -1,0 +1,6 @@
+@use "../variables" as var;
+
+// Sizes
+$border-radius: var.$unit-h !default;
+$border-width: var.$unit-o !default;
+$border-width-lg: var.$unit-h !default;

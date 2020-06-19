@@ -1,13 +1,14 @@
 @use "variables" as var;
 @use "variables/color" as color;
 @use "variables/layout" as layout;
+@use "variables/border" as border;
 @use "mixins/toast" as toast;
 
 // Toasts
 .toast {
   @include toast.toast-variant(color.$dark-color);
-  border: var.$border-width solid color.$dark-color;
-  border-radius: var.$border-radius;
+  border: border.$border-width solid color.$dark-color;
+  border-radius: border.$border-radius;
   color: color.$light-color;
   display: block;
   padding: layout.$layout-spacing;

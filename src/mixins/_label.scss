@@ -1,13 +1,14 @@
-@use "../variables" as var;
+@use "variables/color" as color;
+@use "variables/border" as border;
 
 // Label base style
 @mixin label-base() {
-  border-radius: var.$border-radius;
+  border-radius: border.$border-radius;
   line-height: 1.25;
   padding: .1rem .2rem;
 }
 
-@mixin label-variant($color: var.$light-color, $bg-color: var.$primary-color) {
+@mixin label-variant($color: color.$light-color, $bg-color: color.$primary-color) {
   background: $bg-color;
   color: $color;
 }

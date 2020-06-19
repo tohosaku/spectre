@@ -1,5 +1,5 @@
 @use "variables/font" as font;
-@use "variables" as var;
+@use "variables/border" as border;
 
 $cjk-zh-hans-font-family: font.$base-font-family, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", font.$fallback-font-family !default;
 $cjk-zh-hant-font-family: font.$base-font-family, "PingFang TC", "Hiragino Sans CNS", "Microsoft JhengHei", font.$fallback-font-family !default;
@@ -34,7 +34,7 @@ html:lang(ko),
 .lang-cjk {
   ins,
   u {
-    border-bottom: var.$border-width solid;
+    border-bottom: border.$border-width solid;
     text-decoration: none;
   }
 

@@ -1,11 +1,12 @@
 @use "variables" as var;
 @use "variables/color" as color;
 @use "variables/layout" as layout;
+@use "variables/border" as border;
 
 // Empty states (or Blank slates)
 .empty {
   background: color.$bg-color;
-  border-radius: var.$border-radius;
+  border-radius: border.$border-radius;
   color: color.$gray-color-dark;
   text-align: center;
   padding: var.$unit-16 var.$unit-8;

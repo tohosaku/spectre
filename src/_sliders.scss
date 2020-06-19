@@ -1,5 +1,6 @@
 @use "variables" as var;
 @use "variables/color" as color;
+@use "variables/border" as border;
 @use "mixins/shadow" as shadow;
 
 // Sliders
@@ -81,19 +82,19 @@
   // Slider Track
   &::-webkit-slider-runnable-track {
     background: color.$bg-color-dark;
-    border-radius: var.$border-radius;
+    border-radius: border.$border-radius;
     height: var.$unit-h;
     width: 100%;
   }
   &::-moz-range-track {
     background: color.$bg-color-dark;
-    border-radius: var.$border-radius;
+    border-radius: border.$border-radius;
     height: var.$unit-h;
     width: 100%;
   }
   &::-ms-track {
     background: color.$bg-color-dark;
-    border-radius: var.$border-radius;
+    border-radius: border.$border-radius;
     height: var.$unit-h;
     width: 100%;
   }

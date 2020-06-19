@@ -2,6 +2,7 @@
 @use "variables/color" as color;
 @use "variables/font" as font;
 @use "variables/layout" as layout;
+@use "variables/border" as border;
 
 // Timelines
 .timeline {
@@ -38,7 +39,7 @@
       text-align: center;
       width: var.$unit-6;
       &::before {
-        border: var.$border-width-lg solid color.$primary-color;
+        border: border.$border-width-lg solid color.$primary-color;
         border-radius: 50%;
         content: "";
         display: block;

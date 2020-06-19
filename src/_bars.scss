@@ -2,11 +2,12 @@
 @use "variables/color" as color;
 @use "variables/font" as font;
 @use "variables/layout" as layout;
+@use "variables/border" as border;
 
 // Bars
 .bar {
   background: color.$bg-color-dark;
-  border-radius: var.$border-radius;
+  border-radius: border.$border-radius;
   display: flex;
   flex-wrap: nowrap;
   height: var.$unit-4;
@@ -30,12 +31,12 @@
     width: 0;
 
     &:first-child {
-      border-bottom-left-radius: var.$border-radius;
-      border-top-left-radius: var.$border-radius;
+      border-bottom-left-radius: border.$border-radius;
+      border-top-left-radius: border.$border-radius;
     }
     &:last-child {
-      border-bottom-right-radius: var.$border-radius;
-      border-top-right-radius: var.$border-radius;
+      border-bottom-right-radius: border.$border-radius;
+      border-top-right-radius: border.$border-radius;
       flex-shrink: 1;
     }
   }
@@ -43,7 +44,7 @@
 
 // Slider bar
 .bar-slider {
-  height: var.$border-width-lg;
+  height: border.$border-width-lg;
   margin: layout.$layout-spacing 0;
   position: relative;
 

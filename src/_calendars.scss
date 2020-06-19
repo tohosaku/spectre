@@ -2,20 +2,21 @@
 @use "variables/color" as color;
 @use "variables/font" as font;
 @use "variables/layout" as layout;
+@use "variables/border" as border;
 @use "mixins/shadow" as shadow;
 
 // Calendars
 .calendar {
-  border: var.$border-width solid color.$border-color;
-  border-radius: var.$border-radius;
+  border: border.$border-width solid color.$border-color;
+  border-radius: border.$border-radius;
   display: block;
   min-width: 280px;
 
   .calendar-nav {
     align-items: center;
     background: color.$bg-color;
-    border-top-left-radius: var.$border-radius;
-    border-top-right-radius: var.$border-radius;
+    border-top-left-radius: border.$border-radius;
+    border-top-right-radius: border.$border-radius;
     display: flex;
     font-size: font.$font-size-lg;
     padding: layout.$layout-spacing;
@@ -36,7 +37,7 @@
 
   .calendar-header {
     background: color.$bg-color;
-    border-bottom: var.$border-width solid color.$border-color;
+    border-bottom: border.$border-width solid color.$border-color;
     color: color.$gray-color;
     font-size: font.$font-size-sm;
     text-align: center;
@@ -53,7 +54,7 @@
     .date-item {
       appearance: none;
       background: transparent;
-      border: var.$border-width solid transparent;
+      border: border.$border-width solid transparent;
       border-radius: 50%;
       color: color.$gray-color-dark;
       cursor: pointer;
@@ -167,8 +168,8 @@
       padding: 0;
 
       .calendar-date {
-        border-bottom: var.$border-width solid color.$border-color;
-        border-right: var.$border-width solid color.$border-color;
+        border-bottom: border.$border-width solid color.$border-color;
+        border-right: border.$border-width solid color.$border-color;
         display: flex;
         flex-direction: column;
         height: 5.5rem;
@@ -215,7 +216,7 @@
     }
 
     .calendar-event {
-      border-radius: var.$border-radius;
+      border-radius: border.$border-radius;
       font-size: font.$font-size-sm;
       display: block;
       margin: var.$unit-h auto;

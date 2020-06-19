@@ -1,5 +1,6 @@
 @use "variables" as var;
 @use "variables/color" as color;
+@use "variables/border" as border;
 
 // Progress
 // Credit: https://css-tricks.com/html5-progress-element/
@@ -7,7 +8,7 @@
   appearance: none;
   background: color.$bg-color-dark;
   border: 0;
-  border-radius: var.$border-radius;
+  border-radius: border.$border-radius;
   color: color.$primary-color;
   height: var.$unit-1;
   position: relative;
@@ -15,17 +16,17 @@
 
   &::-webkit-progress-bar {
     background: transparent;
-    border-radius: var.$border-radius;
+    border-radius: border.$border-radius;
   }
 
   &::-webkit-progress-value {
     background: color.$primary-color;
-    border-radius: var.$border-radius;
+    border-radius: border.$border-radius;
   }
 
   &::-moz-progress-bar {
     background: color.$primary-color;
-    border-radius: var.$border-radius;
+    border-radius: border.$border-radius;
   }
 
   &:indeterminate {

@@ -2,6 +2,7 @@
 @use "variables/color" as color;
 @use "variables/control" as control;
 @use "variables/layout" as layout;
+@use "variables/border" as border;
 @use "mixins/shadow" as shadow;
 
 // Modals
@@ -63,7 +64,7 @@
 .modal-container {
   @include shadow.shadow-variant(.2rem);
   background: color.$bg-color-light;
-  border-radius: var.$border-radius;
+  border-radius: border.$border-radius;
   display: flex;
   flex-direction: column;
   height: 100%;

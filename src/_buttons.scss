@@ -2,14 +2,15 @@
 @use "variables/color" as color;
 @use "variables/font" as font;
 @use "variables/control" as control;
+@use "variables/border" as border;
 @use "mixins";
 
 // Buttons
 .btn {
   appearance: none;
   background: color.$bg-color-light;
-  border: var.$border-width solid color.$primary-color;
-  border-radius: var.$border-radius;
+  border: border.$border-width solid color.$primary-color;
+  border-radius: border.$border-radius;
   color: color.$primary-color;
   cursor: pointer;
   display: inline-block;
@@ -198,12 +199,12 @@ a {
     }
     &:not(:first-child):not(:last-child) {
       border-radius: 0;
-      margin-left: -1 * var.$border-width;
+      margin-left: -1 * border.$border-width;
     }
     &:last-child:not(:first-child) {
       border-bottom-left-radius: 0;
       border-top-left-radius: 0;
-      margin-left: -1 * var.$border-width;
+      margin-left: -1 * border.$border-width;
     }
     &:focus,
     &:hover,

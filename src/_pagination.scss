@@ -1,5 +1,6 @@
 @use "variables" as var;
 @use "variables/color" as color;
+@use "variables/border" as border;
 
 // Pagination
 .pagination {
@@ -17,7 +18,7 @@
     }
 
     a {
-      border-radius: var.$border-radius;
+      border-radius: border.$border-radius;
       display: inline-block;
       padding: var.$unit-1 var.$unit-2;
       text-decoration: none;
