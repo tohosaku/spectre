@@ -1,4 +1,5 @@
 @use "variables" as var;
+@use "variables/control" as control;
 @use "mixins/shadow" as shadow;
 
 // Popovers
@@ -14,7 +15,7 @@
     top: 0;
     transform: translate(-50%, -50%) scale(0);
     transition: transform .2s;
-    width: var.$control-width-sm;
+    width: control.$control-width-sm;
     z-index: var.$zindex-3;
   }
 

@@ -1,5 +1,6 @@
 @use "variables" as var;
 @use "variables/color" as color;
+@use "variables/control" as control;
 @use "mixins/shadow" as shadow;
 
 // Modals
@@ -41,7 +42,7 @@
 
   &.modal-sm {
     .modal-container {
-      max-width: var.$control-width-sm;
+      max-width: control.$control-width-sm;
       padding: 0 var.$unit-2;
     }
   }
@@ -53,7 +54,7 @@
 
     .modal-container {
       box-shadow: none;
-      max-width: var.$control-width-lg;
+      max-width: control.$control-width-lg;
     }
   }
 }
@@ -66,7 +67,7 @@
   flex-direction: column;
   height: 100%;
   max-height: 75vh;
-  max-width: var.$control-width-md;
+  max-width: control.$control-width-md;
   padding: 0 var.$unit-4;
   width: 100%;
 

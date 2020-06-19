@@ -1,5 +1,3 @@
-@use "variables/font" as font;
-
 // Core variables
 $version: "0.5.8";
 
@@ -29,22 +27,6 @@ $layout-spacing-lg: $unit-4 !default;
 $border-radius: $unit-h !default;
 $border-width: $unit-o !default;
 $border-width-lg: $unit-h !default;
-$control-size: $unit-9 !default;
-$control-size-sm: $unit-7 !default;
-$control-size-lg: $unit-10 !default;
-$control-padding-x: $unit-2 !default;
-$control-padding-x-sm: $unit-2 * .75 !default;
-$control-padding-x-lg: $unit-2 * 1.5 !default;
-$control-padding-y: ($control-size - font.$line-height) / 2 - $border-width !default;
-$control-padding-y-sm: ($control-size-sm - font.$line-height) / 2 - $border-width !default;
-$control-padding-y-lg: ($control-size-lg - font.$line-height) / 2 - $border-width !default;
-$control-icon-size: .8rem !default;
-
-$control-width-xs: 180px !default;
-$control-width-sm: 320px !default;
-$control-width-md: 640px !default;
-$control-width-lg: 960px !default;
-$control-width-xl: 1280px !default;
 
 // Responsive breakpoints
 $size-xs: 480px !default;

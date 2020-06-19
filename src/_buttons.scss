@@ -1,6 +1,7 @@
 @use "variables" as var;
 @use "variables/color" as color;
 @use "variables/font" as font;
+@use "variables/control" as control;
 @use "mixins";
 
 // Buttons
@@ -13,10 +14,10 @@
   cursor: pointer;
   display: inline-block;
   font-size: font.$font-size;
-  height: var.$control-size;
+  height: control.$control-size;
   line-height: font.$line-height;
   outline: none;
-  padding: var.$control-padding-y var.$control-padding-x;
+  padding: control.$control-padding-y control.$control-padding-x;
   text-align: center;
   text-decoration: none;
   transition: background .2s, border .2s, box-shadow .2s, color .2s;
@@ -104,14 +105,14 @@
   // Button Sizes
   &.btn-sm {
     font-size: font.$font-size-sm;
-    height: var.$control-size-sm;
-    padding: var.$control-padding-y-sm var.$control-padding-x-sm;
+    height: control.$control-size-sm;
+    padding: control.$control-padding-y-sm control.$control-padding-x-sm;
   }
 
   &.btn-lg {
     font-size: font.$font-size-lg;
-    height: var.$control-size-lg;
-    padding: var.$control-padding-y-lg var.$control-padding-x-lg;
+    height: control.$control-size-lg;
+    padding: control.$control-padding-y-lg control.$control-padding-x-lg;
   }
 
   // Button Block
@@ -122,16 +123,16 @@
 
   // Button Action
   &.btn-action {
-    width: var.$control-size;
+    width: control.$control-size;
     padding-left: 0;
     padding-right: 0;
 
     &.btn-sm {
-      width: var.$control-size-sm;
+      width: control.$control-size-sm;
     }
 
     &.btn-lg {
-      width: var.$control-size-lg;
+      width: control.$control-size-lg;
     }
   }
 
