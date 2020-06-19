@@ -1,5 +1,5 @@
-@use "variables" as var;
 @use "variables/color" as color;
+@use "variables/font" as font;
 @use "mixins";
 
 // Base
@@ -11,16 +11,16 @@
 
 html {
   box-sizing: border-box;
-  font-size: var.$html-font-size;
-  line-height: var.$html-line-height;
+  font-size: font.$html-font-size;
+  line-height: font.$html-line-height;
   -webkit-tap-highlight-color: transparent;
 }
 
 body {
   background: color.$body-bg;
   color: color.$body-font-color;
-  font-family: var.$body-font-family;
-  font-size: var.$font-size;
+  font-family: font.$body-font-family;
+  font-size: font.$font-size;
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
 }

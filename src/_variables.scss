@@ -1,15 +1,10 @@
+@use "variables/font" as font;
+
 // Core variables
 $version: "0.5.8";
 
 // Core features
 $rtl: false !default;
-
-// Fonts
-// Credit: https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/
-$base-font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto !default;
-$mono-font-family: "SF Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Courier, monospace !default;
-$fallback-font-family: "Helvetica Neue", sans-serif !default;
-$body-font-family: $base-font-family, $fallback-font-family !default;
 
 // Unit sizes
 $unit-o: .05rem !default;
@@ -27,14 +22,6 @@ $unit-10: 2rem !default;
 $unit-12: 2.4rem !default;
 $unit-16: 3.2rem !default;
 
-// Font sizes
-$html-font-size: 20px !default;
-$html-line-height: 1.5 !default;
-$font-size: .8rem !default;
-$font-size-sm: .7rem !default;
-$font-size-lg: .9rem !default;
-$line-height: 1.2rem !default;
-
 // Sizes
 $layout-spacing: $unit-2 !default;
 $layout-spacing-sm: $unit-1 !default;
@@ -48,9 +35,9 @@ $control-size-lg: $unit-10 !default;
 $control-padding-x: $unit-2 !default;
 $control-padding-x-sm: $unit-2 * .75 !default;
 $control-padding-x-lg: $unit-2 * 1.5 !default;
-$control-padding-y: ($control-size - $line-height) / 2 - $border-width !default;
-$control-padding-y-sm: ($control-size-sm - $line-height) / 2 - $border-width !default;
-$control-padding-y-lg: ($control-size-lg - $line-height) / 2 - $border-width !default;
+$control-padding-y: ($control-size - font.$line-height) / 2 - $border-width !default;
+$control-padding-y-sm: ($control-size-sm - font.$line-height) / 2 - $border-width !default;
+$control-padding-y-lg: ($control-size-lg - font.$line-height) / 2 - $border-width !default;
 $control-icon-size: .8rem !default;
 
 $control-width-xs: 180px !default;

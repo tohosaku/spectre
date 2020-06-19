@@ -1,9 +1,10 @@
+@use "variables/font" as font;
 @use "variables" as var;
 
-$cjk-zh-hans-font-family: var.$base-font-family, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", var.$fallback-font-family !default;
-$cjk-zh-hant-font-family: var.$base-font-family, "PingFang TC", "Hiragino Sans CNS", "Microsoft JhengHei", var.$fallback-font-family !default;
-$cjk-jp-font-family: var.$base-font-family, "Hiragino Sans", "Hiragino Kaku Gothic Pro", "Yu Gothic", YuGothic, Meiryo, var.$fallback-font-family !default;
-$cjk-ko-font-family: var.$base-font-family, "Malgun Gothic", var.$fallback-font-family !default;
+$cjk-zh-hans-font-family: font.$base-font-family, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", font.$fallback-font-family !default;
+$cjk-zh-hant-font-family: font.$base-font-family, "PingFang TC", "Hiragino Sans CNS", "Microsoft JhengHei", font.$fallback-font-family !default;
+$cjk-jp-font-family: font.$base-font-family, "Hiragino Sans", "Hiragino Kaku Gothic Pro", "Yu Gothic", YuGothic, Meiryo, font.$fallback-font-family !default;
+$cjk-ko-font-family: font.$base-font-family, "Malgun Gothic", font.$fallback-font-family !default;
 
 // Optimized for East Asian CJK
 html:lang(zh),

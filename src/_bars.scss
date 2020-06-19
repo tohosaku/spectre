@@ -1,5 +1,6 @@
 @use "variables" as var;
 @use "variables/color" as color;
+@use "variables/font" as font;
 
 // Bars
 .bar {
@@ -19,7 +20,7 @@
     background: color.$primary-color;
     color: color.$light-color;
     display: block;
-    font-size: var.$font-size-sm;
+    font-size: font.$font-size-sm;
     flex-shrink: 0;
     line-height: var.$unit-4;
     height: 100%;

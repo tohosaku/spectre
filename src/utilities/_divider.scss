@@ -1,5 +1,6 @@
 @use "../variables" as var;
 @use "../variables/color" as color;
+@use "variables/font" as font;
 
 // Divider
 .divider,
@@ -12,9 +13,9 @@
     color: color.$gray-color;
     content: attr(data-content);
     display: inline-block;
-    font-size: var.$font-size-sm;
+    font-size: font.$font-size-sm;
     padding: 0 var.$unit-2;
-    transform: translateY(-1 * var.$font-size-sm + var.$border-width);
+    transform: translateY(-1 * font.$font-size-sm + var.$border-width);
   }
 }
 

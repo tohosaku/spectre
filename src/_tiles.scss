@@ -1,4 +1,5 @@
 @use "variables" as var;
+@use "variables/font" as font;
 @use "mixins/text" as text;
 
 // Tiles
@@ -22,7 +23,7 @@
   }
   .tile-title,
   .tile-subtitle {
-    line-height: var.$line-height;
+    line-height: font.$line-height;
   }
 
   &.tile-centered {

@@ -1,5 +1,6 @@
 @use "variables" as var;
 @use "variables/color" as color;
+@use "variables/font" as font;
 @use "mixins/shadow" as shadow;
 
 // Forms
@@ -14,7 +15,7 @@ fieldset {
 }
 
 legend {
-  font-size: var.$font-size-lg;
+  font-size: font.$font-size-lg;
   font-weight: 500;
   margin-bottom: var.$layout-spacing-lg;
 }
@@ -22,16 +23,16 @@ legend {
 // Form element: Label
 .form-label {
   display: block;
-  line-height: var.$line-height;
+  line-height: font.$line-height;
   padding: var.$control-padding-y + var.$border-width 0;
 
   &.label-sm {
-    font-size: var.$font-size-sm;
+    font-size: font.$font-size-sm;
     padding: var.$control-padding-y-sm + var.$border-width 0;
   }
 
   &.label-lg {
-    font-size: var.$font-size-lg;
+    font-size: font.$font-size-lg;
     padding: var.$control-padding-y-lg + var.$border-width 0;
   }
 }
@@ -45,9 +46,9 @@ legend {
   border-radius: var.$border-radius;
   color: color.$body-font-color;
   display: block;
-  font-size: var.$font-size;
+  font-size: font.$font-size;
   height: var.$control-size;
-  line-height: var.$line-height;
+  line-height: font.$line-height;
   max-width: 100%;
   outline: none;
   padding: var.$control-padding-y var.$control-padding-x;
@@ -64,13 +65,13 @@ legend {
 
   // Input sizes
   &.input-sm {
-    font-size: var.$font-size-sm;
+    font-size: font.$font-size-sm;
     height: var.$control-size-sm;
     padding: var.$control-padding-y-sm var.$control-padding-x-sm;
   }
 
   &.input-lg {
-    font-size: var.$font-size-lg;
+    font-size: font.$font-size-lg;
     height: var.$control-size-lg;
     padding: var.$control-padding-y-lg var.$control-padding-x-lg;
   }
@@ -99,7 +100,7 @@ textarea.form-input {
 // Form element: Input hint
 .form-input-hint {
   color: color.$gray-color;
-  font-size: var.$font-size-sm;
+  font-size: font.$font-size-sm;
   margin-top: var.$unit-1;
 
   .has-success &,
@@ -119,9 +120,9 @@ textarea.form-input {
   border: var.$border-width solid color.$border-color-dark;
   border-radius: var.$border-radius;
   color: inherit;
-  font-size: var.$font-size;
+  font-size: font.$font-size;
   height: var.$control-size;
-  line-height: var.$line-height;
+  line-height: font.$line-height;
   outline: none;
   padding: var.$control-padding-y var.$control-padding-x;
   vertical-align: middle;
@@ -137,13 +138,13 @@ textarea.form-input {
 
   // Select sizes
   &.select-sm {
-    font-size: var.$font-size-sm;
+    font-size: font.$font-size-sm;
     height: var.$control-size-sm;
     padding: var.$control-padding-y-sm (var.$control-icon-size + var.$control-padding-x-sm) var.$control-padding-y-sm var.$control-padding-x-sm;
   }
 
   &.select-lg {
-    font-size: var.$font-size-lg;
+    font-size: font.$font-size-lg;
     height: var.$control-size-lg;
     padding: var.$control-padding-y-lg (var.$control-icon-size + var.$control-padding-x-lg) var.$control-padding-y-lg var.$control-padding-x-lg;
   }
@@ -205,10 +206,10 @@ textarea.form-input {
 .form-radio,
 .form-switch {
   display: block;
-  line-height: var.$line-height;
+  line-height: font.$line-height;
   margin: (var.$control-size - var.$control-size-sm) / 2 0;
   min-height: var.$control-size-sm;
-  padding: ((var.$control-size-sm - var.$line-height) / 2) var.$control-padding-x ((var.$control-size-sm - var.$line-height) / 2) (var.$control-icon-size + var.$control-padding-x);
+  padding: ((var.$control-size-sm - font.$line-height) / 2) var.$control-padding-x ((var.$control-size-sm - font.$line-height) / 2) (var.$control-icon-size + var.$control-padding-x);
   position: relative;
 
   input {
@@ -238,12 +239,12 @@ textarea.form-input {
 
   // Input checkbox, radio and switch sizes
   &.input-sm {
-    font-size: var.$font-size-sm;
+    font-size: font.$font-size-sm;
     margin: 0;
   }
 
   &.input-lg {
-    font-size: var.$font-size-lg;
+    font-size: font.$font-size-lg;
     margin: (var.$control-size-lg - var.$control-size-sm) / 2 0;
   }
 }
@@ -374,17 +375,17 @@ textarea.form-input {
     background: color.$bg-color;
     border: var.$border-width solid color.$border-color-dark;
     border-radius: var.$border-radius;
-    line-height: var.$line-height;
+    line-height: font.$line-height;
     padding: var.$control-padding-y var.$control-padding-x;
     white-space: nowrap;
 
     &.addon-sm {
-      font-size: var.$font-size-sm;
+      font-size: font.$font-size-sm;
       padding: var.$control-padding-y-sm var.$control-padding-x-sm;
     }
 
     &.addon-lg {
-      font-size: var.$font-size-lg;
+      font-size: font.$font-size-lg;
       padding: var.$control-padding-y-lg var.$control-padding-x-lg;
     }
   }

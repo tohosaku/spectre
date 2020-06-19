@@ -1,5 +1,6 @@
 @use "variables" as var;
 @use "variables/color" as color;
+@use "variables/font" as font;
 
 // Timelines
 .timeline {
@@ -49,7 +50,7 @@
 
       &.icon-lg {
         background: color.$primary-color;
-        line-height: var.$line-height;
+        line-height: font.$line-height;
         &::before {
           content: none;
         }

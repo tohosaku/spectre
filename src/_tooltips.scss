@@ -1,5 +1,6 @@
 @use "variables" as var;
 @use "variables/color" as color;
+@use "variables/font" as font;
 
 // Tooltips
 .tooltip {
@@ -11,7 +12,7 @@
     color: color.$light-color;
     content: attr(data-tooltip);
     display: block;
-    font-size: var.$font-size-sm;
+    font-size: font.$font-size-sm;
     left: 50%;
     max-width: var.$control-width-sm;
     opacity: 0;

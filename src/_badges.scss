@@ -1,5 +1,6 @@
 @use "variables" as var;
 @use "variables/color" as color;
+@use "variables/font" as font;
 
 // Badges
 .badge {
@@ -21,7 +22,7 @@
   }
   &[data-badge] {
     &::after {
-      font-size: var.$font-size-sm;
+      font-size: font.$font-size-sm;
       height: .9rem;
       line-height: 1;
       min-width: .9rem;

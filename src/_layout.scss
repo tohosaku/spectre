@@ -1,4 +1,5 @@
 @use "variables" as var;
+@use "variables/font" as font;
 
 // Layout
 .container {
@@ -8,7 +9,7 @@
   padding-right: var.$layout-spacing;
   width: 100%;
 
-  $grid-spacing: (var.$layout-spacing / (var.$layout-spacing * 0 + 1)) * var.$html-font-size;
+  $grid-spacing: (var.$layout-spacing / (var.$layout-spacing * 0 + 1)) * font.$html-font-size;
 
   &.grid-xl {
     max-width: $grid-spacing * 2 + var.$size-xl;

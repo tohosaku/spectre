@@ -1,5 +1,6 @@
 @use "variables" as var;
 @use "variables/color" as color;
+@use "variables/font" as font;
 @use "mixins/shadow" as shadow;
 
 // Calendars
@@ -15,7 +16,7 @@
     border-top-left-radius: var.$border-radius;
     border-top-right-radius: var.$border-radius;
     display: flex;
-    font-size: var.$font-size-lg;
+    font-size: font.$font-size-lg;
     padding: var.$layout-spacing;
   }
 
@@ -36,7 +37,7 @@
     background: color.$bg-color;
     border-bottom: var.$border-width solid color.$border-color;
     color: color.$gray-color;
-    font-size: var.$font-size-sm;
+    font-size: font.$font-size-sm;
     text-align: center;
   }
 
@@ -55,7 +56,7 @@
       border-radius: 50%;
       color: color.$gray-color-dark;
       cursor: pointer;
-      font-size: var.$font-size-sm;
+      font-size: font.$font-size-sm;
       height: var.$unit-7;
       line-height: var.$unit-5;
       outline: none;
@@ -214,7 +215,7 @@
 
     .calendar-event {
       border-radius: var.$border-radius;
-      font-size: var.$font-size-sm;
+      font-size: font.$font-size-sm;
       display: block;
       margin: var.$unit-h auto;
       overflow: hidden;
