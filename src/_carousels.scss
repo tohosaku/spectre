@@ -13,11 +13,11 @@ $carousel-number: 8;
 }
 
 %carousel-nav-checked { 
-  color: color.$gray-color-light;
+  color: color.$gray-light;
 }
 
 .carousel {
-  background: color.$bg-color;
+  background: color.$bg;
   display: block;
   overflow: hidden;
   position: relative;
@@ -55,9 +55,9 @@ $carousel-number: 8;
 
     .item-prev,
     .item-next {
-      background: rgba(color.$gray-color-light, .25);
-      border-color: rgba(color.$gray-color-light, .5);
-      color: color.$gray-color-light;
+      background: rgba(color.$gray-light, .25);
+      border-color: rgba(color.$gray-light, .5);
+      color: color.$gray-light;
       opacity: 0;
       position: absolute;
       top: 50%;
@@ -88,7 +88,7 @@ $carousel-number: 8;
   }
 
   .carousel-nav {
-    bottom: layout.$layout-spacing;
+    bottom: layout.$spacing;
     display: flex;
     justify-content: center;
     left: 50%;
@@ -98,7 +98,7 @@ $carousel-number: 8;
     z-index: var.$zindex-1;
 
     .nav-item {
-      color: rgba(color.$gray-color-light, .5);
+      color: rgba(color.$gray-light, .5);
       display: block;
       flex: 1 0 auto;
       height: var.$unit-8;

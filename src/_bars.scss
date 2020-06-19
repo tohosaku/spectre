@@ -6,8 +6,8 @@
 
 // Bars
 .bar {
-  background: color.$bg-color-dark;
-  border-radius: border.$border-radius;
+  background: color.$bg-dark;
+  border-radius: border.$radius;
   display: flex;
   flex-wrap: nowrap;
   height: var.$unit-4;
@@ -19,10 +19,10 @@
 
   // TODO: attr() support
   .bar-item {
-    background: color.$primary-color;
-    color: color.$light-color;
+    background: color.$primary;
+    color: color.$light;
     display: block;
-    font-size: font.$font-size-sm;
+    font-size: font.$size-sm;
     flex-shrink: 0;
     line-height: var.$unit-4;
     height: 100%;
@@ -31,12 +31,12 @@
     width: 0;
 
     &:first-child {
-      border-bottom-left-radius: border.$border-radius;
-      border-top-left-radius: border.$border-radius;
+      border-bottom-left-radius: border.$radius;
+      border-top-left-radius: border.$radius;
     }
     &:last-child {
-      border-bottom-right-radius: border.$border-radius;
-      border-top-right-radius: border.$border-radius;
+      border-bottom-right-radius: border.$radius;
+      border-top-right-radius: border.$radius;
       flex-shrink: 1;
     }
   }
@@ -44,8 +44,8 @@
 
 // Slider bar
 .bar-slider {
-  height: border.$border-width-lg;
-  margin: layout.$layout-spacing 0;
+  height: border.$width-lg;
+  margin: layout.$spacing 0;
   position: relative;
 
   .bar-item {
@@ -53,13 +53,13 @@
     padding: 0;
     position: absolute;
     &:not(:last-child):first-child {
-      background: color.$bg-color-dark;
+      background: color.$bg-dark;
       z-index: var.$zindex-0;
     }
   }
 
   .bar-slider-btn {
-    background: color.$primary-color;
+    background: color.$primary;
     border: 0;
     border-radius: 50%;
     height: var.$unit-3;
@@ -71,7 +71,7 @@
     width: var.$unit-3;
 
     &:active {
-      box-shadow: 0 0 0 .1rem color.$primary-color;
+      box-shadow: 0 0 0 .1rem color.$primary;
     }
   }
 }

@@ -7,19 +7,19 @@
 
 // Calendars
 .calendar {
-  border: border.$border-width solid color.$border-color;
-  border-radius: border.$border-radius;
+  border: border.$width solid color.$border;
+  border-radius: border.$radius;
   display: block;
   min-width: 280px;
 
   .calendar-nav {
     align-items: center;
-    background: color.$bg-color;
-    border-top-left-radius: border.$border-radius;
-    border-top-right-radius: border.$border-radius;
+    background: color.$bg;
+    border-top-left-radius: border.$radius;
+    border-top-right-radius: border.$radius;
     display: flex;
-    font-size: font.$font-size-lg;
-    padding: layout.$layout-spacing;
+    font-size: font.$size-lg;
+    padding: layout.$spacing;
   }
 
   .calendar-header,
@@ -27,7 +27,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: layout.$layout-spacing 0;
+    padding: layout.$spacing 0;
 
     .calendar-date {
       flex: 0 0 14.28%; // 7 calendar-items each row
@@ -36,15 +36,15 @@
   }
 
   .calendar-header {
-    background: color.$bg-color;
-    border-bottom: border.$border-width solid color.$border-color;
-    color: color.$gray-color;
-    font-size: font.$font-size-sm;
+    background: color.$bg;
+    border-bottom: border.$width solid color.$border;
+    color: color.$gray;
+    font-size: font.$size-sm;
     text-align: center;
   }
 
   .calendar-body {
-    color: color.$gray-color-dark;
+    color: color.$gray-dark;
   }
 
   .calendar-date {
@@ -54,11 +54,11 @@
     .date-item {
       appearance: none;
       background: transparent;
-      border: border.$border-width solid transparent;
+      border: border.$width solid transparent;
       border-radius: 50%;
-      color: color.$gray-color-dark;
+      color: color.$gray-dark;
       cursor: pointer;
-      font-size: font.$font-size-sm;
+      font-size: font.$size-sm;
       height: var.$unit-7;
       line-height: var.$unit-5;
       outline: none;
@@ -72,8 +72,8 @@
       width: var.$unit-7;
 
       &.date-today {
-        border-color: color.$secondary-color-dark;
-        color: color.$primary-color;
+        border-color: color.$secondary-dark;
+        color: color.$primary;
       }
 
       &:focus {
@@ -82,16 +82,16 @@
 
       &:focus,
       &:hover {
-        background: color.$secondary-color-light;
-        border-color: color.$secondary-color-dark;
-        color: color.$primary-color;
+        background: color.$secondary-light;
+        border-color: color.$secondary-dark;
+        color: color.$primary;
         text-decoration: none;
       }
       &:active,
       &.active {
-        background: color.$primary-color-dark;
-        border-color: darken(color.$primary-color-dark, 5%);
-        color: color.$light-color;
+        background: color.$primary-dark;
+        border-color: darken(color.$primary-dark, 5%);
+        color: color.$light;
       }
 
       // Calendar badge support
@@ -128,7 +128,7 @@
     position: relative;
 
     &::before {
-      background: color.$secondary-color;
+      background: color.$secondary;
       content: "";
       height: var.$unit-7;
       left: 0;
@@ -151,14 +151,14 @@
     &.range-start,
     &.range-end {
       .date-item {
-        background: color.$primary-color-dark;
-        border-color: darken(color.$primary-color-dark, 5%);
-        color: color.$light-color;
+        background: color.$primary-dark;
+        border-color: darken(color.$primary-dark, 5%);
+        color: color.$light;
       }
     }
 
     .date-item {
-      color: color.$primary-color;
+      color: color.$primary;
     }
   }
 
@@ -168,8 +168,8 @@
       padding: 0;
 
       .calendar-date {
-        border-bottom: border.$border-width solid color.$border-color;
-        border-right: border.$border-width solid color.$border-color;
+        border-bottom: border.$width solid color.$border;
+        border-right: border.$width solid color.$border;
         display: flex;
         flex-direction: column;
         height: 5.5rem;
@@ -187,8 +187,8 @@
     .date-item {
       align-self: flex-end;
       height: var.$unit-7;
-      margin-right: layout.$layout-spacing-sm;
-      margin-top: layout.$layout-spacing-sm;
+      margin-right: layout.$spacing-sm;
+      margin-top: layout.$spacing-sm;
     }
 
     .calendar-range {
@@ -212,12 +212,12 @@
       flex-grow: 1;
       line-height: 1;
       overflow-y: auto;
-      padding: layout.$layout-spacing-sm;
+      padding: layout.$spacing-sm;
     }
 
     .calendar-event {
-      border-radius: border.$border-radius;
-      font-size: font.$font-size-sm;
+      border-radius: border.$radius;
+      font-size: font.$size-sm;
       display: block;
       margin: var.$unit-h auto;
       overflow: hidden;

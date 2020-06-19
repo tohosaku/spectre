@@ -5,14 +5,14 @@
 // Chips
 .chip {
   align-items: center;
-  background: color.$bg-color-dark;
+  background: color.$bg-dark;
   border-radius: 5rem;
   display: inline-flex;
   font-size: 90%;
   height: var.$unit-6;
   line-height: var.$unit-4;
   margin: var.$unit-h;
-  max-width: control.$control-width-sm;
+  max-width: control.$width-sm;
   overflow: hidden;
   padding: var.$unit-1 var.$unit-2;
   text-decoration: none;
@@ -21,8 +21,8 @@
   white-space: nowrap;
 
   &.active {
-    background: color.$primary-color;
-    color: color.$light-color;
+    background: color.$primary;
+    color: color.$light;
   }
 
   .avatar {

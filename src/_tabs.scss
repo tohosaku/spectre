@@ -5,31 +5,31 @@
 // Tabs
 .tab {
   align-items: center;
-  border-bottom: border.$border-width solid color.$border-color;
+  border-bottom: border.$width solid color.$border;
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  margin: var.$unit-1 0 (var.$unit-1 - border.$border-width) 0;
+  margin: var.$unit-1 0 (var.$unit-1 - border.$width) 0;
 
   .tab-item {
     margin-top: 0;
 
     a {
-      border-bottom: border.$border-width-lg solid transparent;
+      border-bottom: border.$width-lg solid transparent;
       color: inherit;
       display: block;
       margin: 0 var.$unit-2 0 0;
-      padding: var.$unit-2 var.$unit-1 var.$unit-2 - border.$border-width-lg var.$unit-1;
+      padding: var.$unit-2 var.$unit-1 var.$unit-2 - border.$width-lg var.$unit-1;
       text-decoration: none;
       &:focus,
       &:hover {
-        color: color.$link-color;
+        color: color.$link;
       }
     }
     &.active a,
     a.active {
-      border-bottom-color: color.$primary-color;
-      color: color.$link-color;
+      border-bottom-color: color.$primary;
+      color: color.$link;
     }
 
     &.tab-action {

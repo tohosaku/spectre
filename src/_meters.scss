@@ -6,9 +6,9 @@
 // Credit: https://css-tricks.com/html5-meter-element/
 .meter {
   appearance: none;
-  background: color.$bg-color;
+  background: color.$bg;
   border: 0;
-  border-radius: border.$border-radius;
+  border-radius: border.$radius;
   display: block;
   width: 100%;
   height: var.$unit-4;
@@ -21,41 +21,41 @@
   &::-webkit-meter-optimum-value,
   &::-webkit-meter-suboptimum-value,
   &::-webkit-meter-even-less-good-value {
-    border-radius: border.$border-radius;
+    border-radius: border.$radius;
   }
 
   &::-webkit-meter-bar {
-    background: color.$bg-color;
+    background: color.$bg;
   }
 
   &::-webkit-meter-optimum-value {
-    background: color.$success-color;
+    background: color.$success;
   }
 
   &::-webkit-meter-suboptimum-value {
-    background: color.$warning-color;
+    background: color.$warning;
   }
 
   &::-webkit-meter-even-less-good-value {
-    background: color.$error-color;
+    background: color.$error;
   }
 
   &::-moz-meter-bar,
   &:-moz-meter-optimum,
   &:-moz-meter-sub-optimum,
   &:-moz-meter-sub-sub-optimum {
-    border-radius: border.$border-radius;
+    border-radius: border.$radius;
   }
 
   &:-moz-meter-optimum::-moz-meter-bar {
-    background: color.$success-color;
+    background: color.$success;
   }
 
   &:-moz-meter-sub-optimum::-moz-meter-bar {
-    background: color.$warning-color;
+    background: color.$warning;
   }
 
   &:-moz-meter-sub-sub-optimum::-moz-meter-bar {
-    background: color.$error-color;
+    background: color.$error;
   }
 }

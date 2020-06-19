@@ -1,5 +1,5 @@
 @use "../variables" as var;
 
-$layout-spacing: var.$unit-2 !default;
-$layout-spacing-sm: var.$unit-1 !default;
-$layout-spacing-lg: var.$unit-4 !default;
+$spacing: var.$unit-2 !default;
+$spacing-sm: var.$unit-1 !default;
+$spacing-lg: var.$unit-4 !default;

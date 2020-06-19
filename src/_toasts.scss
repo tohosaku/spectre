@@ -6,32 +6,32 @@
 
 // Toasts
 .toast {
-  @include toast.toast-variant(color.$dark-color);
-  border: border.$border-width solid color.$dark-color;
-  border-radius: border.$border-radius;
-  color: color.$light-color;
+  @include toast.toast-variant(color.$dark);
+  border: border.$width solid color.$dark;
+  border-radius: border.$radius;
+  color: color.$light;
   display: block;
-  padding: layout.$layout-spacing;
+  padding: layout.$spacing;
   width: 100%;
 
   &.toast-primary {
-    @include toast.toast-variant(color.$primary-color);
+    @include toast.toast-variant(color.$primary);
   }
 
   &.toast-success {
-    @include toast.toast-variant(color.$success-color);
+    @include toast.toast-variant(color.$success);
   }
 
   &.toast-warning {
-    @include toast.toast-variant(color.$warning-color);
+    @include toast.toast-variant(color.$warning);
   }
 
   &.toast-error {
-    @include toast.toast-variant(color.$error-color);
+    @include toast.toast-variant(color.$error);
   }
 
   a {
-    color: color.$light-color;
+    color: color.$light;
     text-decoration: underline;
     
     &:focus,

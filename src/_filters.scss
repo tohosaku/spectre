@@ -6,8 +6,8 @@
 $filter-number: 8 !default;
 
 %filter-checked-nav { 
-  background: color.$primary-color;
-  color: color.$light-color;
+  background: color.$primary;
+  color: color.$light;
 }
 
 %filter-checked-body { 
@@ -16,7 +16,7 @@ $filter-number: 8 !default;
 
 .filter {
   .filter-nav {
-    margin: layout.$layout-spacing 0;
+    margin: layout.$spacing 0;
   }
 
   .filter-body {

@@ -9,74 +9,74 @@
 // Forms
 .form-group {
   &:not(:last-child) {
-    margin-bottom: layout.$layout-spacing;
+    margin-bottom: layout.$spacing;
   }
 }
 
 fieldset {
-  margin-bottom: layout.$layout-spacing-lg;
+  margin-bottom: layout.$spacing-lg;
 }
 
 legend {
-  font-size: font.$font-size-lg;
+  font-size: font.$size-lg;
   font-weight: 500;
-  margin-bottom: layout.$layout-spacing-lg;
+  margin-bottom: layout.$spacing-lg;
 }
 
 // Form element: Label
 .form-label {
   display: block;
   line-height: font.$line-height;
-  padding: control.$control-padding-y + border.$border-width 0;
+  padding: control.$padding-y + border.$width 0;
 
   &.label-sm {
-    font-size: font.$font-size-sm;
-    padding: control.$control-padding-y-sm + border.$border-width 0;
+    font-size: font.$size-sm;
+    padding: control.$padding-y-sm + border.$width 0;
   }
 
   &.label-lg {
-    font-size: font.$font-size-lg;
-    padding: control.$control-padding-y-lg + border.$border-width 0;
+    font-size: font.$size-lg;
+    padding: control.$padding-y-lg + border.$width 0;
   }
 }
 
 // Form element: Input
 .form-input {
   appearance: none;
-  background: color.$bg-color-light;
+  background: color.$bg-light;
   background-image: none;
-  border: border.$border-width solid color.$border-color-dark;
-  border-radius: border.$border-radius;
-  color: color.$body-font-color;
+  border: border.$width solid color.$border-dark;
+  border-radius: border.$radius;
+  color: color.$body-font;
   display: block;
-  font-size: font.$font-size;
-  height: control.$control-size;
+  font-size: font.$size;
+  height: control.$size;
   line-height: font.$line-height;
   max-width: 100%;
   outline: none;
-  padding: control.$control-padding-y control.$control-padding-x;
+  padding: control.$padding-y control.$padding-x;
   position: relative;
   transition: background .2s, border .2s, box-shadow .2s, color .2s;
   width: 100%;
   &:focus {
     @include shadow.control-shadow();
-    border-color: color.$primary-color;
+    border-color: color.$primary;
   }
   &::placeholder {
-    color: color.$gray-color;
+    color: color.$gray;
   }
 
   // Input sizes
   &.input-sm {
-    font-size: font.$font-size-sm;
-    height: control.$control-size-sm;
-    padding: control.$control-padding-y-sm control.$control-padding-x-sm;
+    font-size: font.$size-sm;
+    height: control.$size-sm;
+    padding: control.$padding-y-sm control.$padding-x-sm;
   }
 
   &.input-lg {
-    font-size: font.$font-size-lg;
-    height: control.$control-size-lg;
-    padding: control.$control-padding-y-lg control.$control-padding-x-lg;
+    font-size: font.$size-lg;
+    height: control.$size-lg;
+    padding: control.$padding-y-lg control.$padding-x-lg;
   }
 
   &.input-inline {
@@ -102,38 +102,38 @@ textarea.form-input {
 
 // Form element: Input hint
 .form-input-hint {
-  color: color.$gray-color;
-  font-size: font.$font-size-sm;
+  color: color.$gray;
+  font-size: font.$size-sm;
   margin-top: var.$unit-1;
 
   .has-success &,
   .is-success + & {
-    color: color.$success-color;
+    color: color.$success;
   }
 
   .has-error &,
   .is-error + & {
-    color: color.$error-color;
+    color: color.$error;
   }
 }
 
 // Form element: Select
 .form-select {
   appearance: none;
-  border: border.$border-width solid color.$border-color-dark;
-  border-radius: border.$border-radius;
+  border: border.$width solid color.$border-dark;
+  border-radius: border.$radius;
   color: inherit;
-  font-size: font.$font-size;
-  height: control.$control-size;
+  font-size: font.$size;
+  height: control.$size;
   line-height: font.$line-height;
   outline: none;
-  padding: control.$control-padding-y control.$control-padding-x;
+  padding: control.$padding-y control.$padding-x;
   vertical-align: middle;
   width: 100%;
-  background: color.$bg-color-light; 
+  background: color.$bg-light; 
   &:focus {
     @include shadow.control-shadow();
-    border-color: color.$primary-color;
+    border-color: color.$primary;
   }
   &::-ms-expand {
     display: none;
@@ -141,30 +141,30 @@ textarea.form-input {
 
   // Select sizes
   &.select-sm {
-    font-size: font.$font-size-sm;
-    height: control.$control-size-sm;
-    padding: control.$control-padding-y-sm (control.$control-icon-size + control.$control-padding-x-sm) control.$control-padding-y-sm control.$control-padding-x-sm;
+    font-size: font.$size-sm;
+    height: control.$size-sm;
+    padding: control.$padding-y-sm (control.$icon-size + control.$padding-x-sm) control.$padding-y-sm control.$padding-x-sm;
   }
 
   &.select-lg {
-    font-size: font.$font-size-lg;
-    height: control.$control-size-lg;
-    padding: control.$control-padding-y-lg (control.$control-icon-size + control.$control-padding-x-lg) control.$control-padding-y-lg control.$control-padding-x-lg;
+    font-size: font.$size-lg;
+    height: control.$size-lg;
+    padding: control.$padding-y-lg (control.$icon-size + control.$padding-x-lg) control.$padding-y-lg control.$padding-x-lg;
   }
 
   // Multiple select
   &[size],
   &[multiple] {
     height: auto;
-    padding: control.$control-padding-y control.$control-padding-x;
+    padding: control.$padding-y control.$padding-x;
 
     option {
       padding: var.$unit-h var.$unit-1;
     }
   }
   &:not([multiple]):not([size]) {
-    background: color.$bg-color-light url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204%205'%3E%3Cpath%20fill='%23667189'%20d='M2%200L0%202h4zm0%205L0%203h4z'/%3E%3C/svg%3E") no-repeat right .35rem center / .4rem .5rem;
-    padding-right: control.$control-icon-size + control.$control-padding-x;
+    background: color.$bg-light url("data:image/svg+xml;charset=utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%204%205'%3E%3Cpath%20fill='%23667189'%20d='M2%200L0%202h4zm0%205L0%203h4z'/%3E%3C/svg%3E") no-repeat right .35rem center / .4rem .5rem;
+    padding-right: control.$icon-size + control.$padding-x;
   }
 }
 
@@ -174,33 +174,33 @@ textarea.form-input {
   position: relative;
 
   .form-icon {
-    height: control.$control-icon-size;
-    margin: 0 control.$control-padding-y;
+    height: control.$icon-size;
+    margin: 0 control.$padding-y;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: control.$control-icon-size;
+    width: control.$icon-size;
     z-index: var.$zindex-0 + 1;
   }
 }
 
 .has-icon-left {
   .form-icon {
-    left: border.$border-width;
+    left: border.$width;
   }
 
   .form-input {
-    padding-left: control.$control-icon-size + control.$control-padding-y * 2;
+    padding-left: control.$icon-size + control.$padding-y * 2;
   }
 }
 
 .has-icon-right {
   .form-icon {
-    right: border.$border-width;
+    right: border.$width;
   }
 
   .form-input {
-    padding-right: control.$control-icon-size + control.$control-padding-y * 2;
+    padding-right: control.$icon-size + control.$padding-y * 2;
   }
 }
 
@@ -210,9 +210,9 @@ textarea.form-input {
 .form-switch {
   display: block;
   line-height: font.$line-height;
-  margin: (control.$control-size - control.$control-size-sm) / 2 0;
-  min-height: control.$control-size-sm;
-  padding: ((control.$control-size-sm - font.$line-height) / 2) control.$control-padding-x ((control.$control-size-sm - font.$line-height) / 2) (control.$control-icon-size + control.$control-padding-x);
+  margin: (control.$size - control.$size-sm) / 2 0;
+  min-height: control.$size-sm;
+  padding: ((control.$size-sm - font.$line-height) / 2) control.$padding-x ((control.$size-sm - font.$line-height) / 2) (control.$icon-size + control.$padding-x);
   position: relative;
 
   input {
@@ -224,16 +224,16 @@ textarea.form-input {
     width: 1px;
     &:focus + .form-icon {
       @include shadow.control-shadow();
-      border-color: color.$primary-color;
+      border-color: color.$primary;
     }
     &:checked + .form-icon {
-      background: color.$primary-color;
-      border-color: color.$primary-color;
+      background: color.$primary;
+      border-color: color.$primary;
     }
   }
 
   .form-icon {
-    border: border.$border-width solid color.$border-color-dark;
+    border: border.$width solid color.$border-dark;
     cursor: pointer;
     display: inline-block;
     position: absolute;
@@ -242,42 +242,42 @@ textarea.form-input {
 
   // Input checkbox, radio and switch sizes
   &.input-sm {
-    font-size: font.$font-size-sm;
+    font-size: font.$size-sm;
     margin: 0;
   }
 
   &.input-lg {
-    font-size: font.$font-size-lg;
-    margin: (control.$control-size-lg - control.$control-size-sm) / 2 0;
+    font-size: font.$size-lg;
+    margin: (control.$size-lg - control.$size-sm) / 2 0;
   }
 }
 
 .form-checkbox,
 .form-radio {
   .form-icon {
-    background: color.$bg-color-light;
-    height: control.$control-icon-size;
+    background: color.$bg-light;
+    height: control.$icon-size;
     left: 0;
-    top: (control.$control-size-sm - control.$control-icon-size) / 2;
-    width: control.$control-icon-size;
+    top: (control.$size-sm - control.$icon-size) / 2;
+    width: control.$icon-size;
   }
 
   input {
     &:active + .form-icon {
-      background: color.$bg-color-dark;
+      background: color.$bg-dark;
     }
   }
 }
 .form-checkbox {
   .form-icon {
-    border-radius: border.$border-radius;
+    border-radius: border.$radius;
   }
 
   input {
     &:checked + .form-icon {
       &::before {
         background-clip: padding-box;
-        border: border.$border-width-lg solid color.$light-color;
+        border: border.$width-lg solid color.$light;
         border-left-width: 0;
         border-top-width: 0;
         content: "";
@@ -292,10 +292,10 @@ textarea.form-input {
       }
     }
     &:indeterminate + .form-icon {
-      background: color.$primary-color;
-      border-color: color.$primary-color;
+      background: color.$primary;
+      border-color: color.$primary;
       &::before {
-        background: color.$bg-color-light;
+        background: color.$bg-light;
         content: "";
         height: 2px;
         left: 50%;
@@ -316,7 +316,7 @@ textarea.form-input {
   input {
     &:checked + .form-icon {
       &::before {
-        background: color.$bg-color-light;
+        background: color.$bg-light;
         border-radius: 50%;
         content: "";
         height: 6px;
@@ -332,18 +332,18 @@ textarea.form-input {
 
 // Form element: Switch
 .form-switch {
-  padding-left: (var.$unit-8 + control.$control-padding-x);
+  padding-left: (var.$unit-8 + control.$padding-x);
 
   .form-icon {
-    background: color.$gray-color;
+    background: color.$gray;
     background-clip: padding-box;
-    border-radius: var.$unit-2 + border.$border-width;
-    height: var.$unit-4 + border.$border-width * 2;
+    border-radius: var.$unit-2 + border.$width;
+    height: var.$unit-4 + border.$width * 2;
     left: 0;
-    top: (control.$control-size-sm - var.$unit-4) / 2 - border.$border-width;
+    top: (control.$size-sm - var.$unit-4) / 2 - border.$width;
     width: var.$unit-8;
     &::before {
-      background: color.$bg-color-light;
+      background: color.$bg-light;
       border-radius: 50%;
       content: "";
       display: block;
@@ -364,7 +364,7 @@ textarea.form-input {
     }
     &:active + .form-icon {
       &::before {
-        background: color.$bg-color;
+        background: color.$bg;
       }
     }
   }
@@ -375,21 +375,21 @@ textarea.form-input {
   display: flex;
 
   .input-group-addon {
-    background: color.$bg-color;
-    border: border.$border-width solid color.$border-color-dark;
-    border-radius: border.$border-radius;
+    background: color.$bg;
+    border: border.$width solid color.$border-dark;
+    border-radius: border.$radius;
     line-height: font.$line-height;
-    padding: control.$control-padding-y control.$control-padding-x;
+    padding: control.$padding-y control.$padding-x;
     white-space: nowrap;
 
     &.addon-sm {
-      font-size: font.$font-size-sm;
-      padding: control.$control-padding-y-sm control.$control-padding-x-sm;
+      font-size: font.$size-sm;
+      padding: control.$padding-y-sm control.$padding-x-sm;
     }
 
     &.addon-lg {
-      font-size: font.$font-size-lg;
-      padding: control.$control-padding-y-lg control.$control-padding-x-lg;
+      font-size: font.$size-lg;
+      padding: control.$padding-y-lg control.$padding-x-lg;
     }
   }
 
@@ -413,12 +413,12 @@ textarea.form-input {
     }
     &:not(:first-child):not(:last-child) {
       border-radius: 0;
-      margin-left: -1 * border.$border-width;
+      margin-left: -1 * border.$width;
     }
     &:last-child:not(:first-child) {
       border-bottom-left-radius: 0;
       border-top-left-radius: 0;
-      margin-left: -1 * border.$border-width;
+      margin-left: -1 * border.$width;
     }
     &:focus {
       z-index: var.$zindex-0 + 1;
@@ -439,19 +439,19 @@ textarea.form-input {
 .form-select {
   .has-success &,
   &.is-success {
-    background: lighten(color.$success-color, 53%);
-    border-color: color.$success-color;
+    background: lighten(color.$success, 53%);
+    border-color: color.$success;
     &:focus {
-      @include shadow.control-shadow(color.$success-color);
+      @include shadow.control-shadow(color.$success);
     }
   }
 
   .has-error &,
   &.is-error {
-    background: lighten(color.$error-color, 53%);
-    border-color: color.$error-color;
+    background: lighten(color.$error, 53%);
+    border-color: color.$error;
     &:focus {
-      @include shadow.control-shadow(color.$error-color);
+      @include shadow.control-shadow(color.$error);
     }
   }
 }
@@ -462,18 +462,18 @@ textarea.form-input {
   .has-error &,
   &.is-error {
     .form-icon {
-      border-color: color.$error-color;
+      border-color: color.$error;
     }
 
     input {
       &:checked + .form-icon {
-        background: color.$error-color;
-        border-color: color.$error-color;
+        background: color.$error;
+        border-color: color.$error;
       }
 
       &:focus + .form-icon {
-        @include shadow.control-shadow(color.$error-color);
-        border-color: color.$error-color;
+        @include shadow.control-shadow(color.$error);
+        border-color: color.$error;
       }
     }
   }
@@ -484,8 +484,8 @@ textarea.form-input {
   &.is-error {
     input {
       &:indeterminate + .form-icon {
-        background: color.$error-color;
-        border-color: color.$error-color;
+        background: color.$error;
+        border-color: color.$error;
       }
     }
   }
@@ -495,14 +495,14 @@ textarea.form-input {
 .form-input {
   &:not(:placeholder-shown) {
     &:invalid {
-      border-color: color.$error-color;
+      border-color: color.$error;
       &:focus {
-        @include shadow.control-shadow(color.$error-color);
-        background: lighten(color.$error-color, 53%);
+        @include shadow.control-shadow(color.$error);
+        background: lighten(color.$error, 53%);
       }
 
       & + .form-input-hint {
-        color: color.$error-color;
+        color: color.$error;
       }
     }
   }
@@ -513,7 +513,7 @@ textarea.form-input {
 .form-select {
   &:disabled,
   &.disabled {
-    background-color: color.$bg-color-dark;
+    background-color: color.$bg-dark;
     cursor: not-allowed;
     opacity: .5;
   }
@@ -521,7 +521,7 @@ textarea.form-input {
 
 .form-input {
   &[readonly] {
-    background-color: color.$bg-color;
+    background-color: color.$bg;
   }
 }
 
@@ -529,7 +529,7 @@ input {
   &:disabled,
   &.disabled {
     & + .form-icon {
-      background: color.$bg-color-dark;
+      background: color.$bg-dark;
       cursor: not-allowed;
       opacity: .5;
     }
@@ -541,7 +541,7 @@ input {
     &:disabled,
     &.disabled {
       & + .form-icon::before {
-        background: color.$bg-color-light;
+        background: color.$bg-light;
       }
     }
   }
@@ -549,7 +549,7 @@ input {
 
 // Form horizontal
 .form-horizontal {
-  padding: layout.$layout-spacing 0;
+  padding: layout.$spacing 0;
 
   .form-group {
     display: flex;

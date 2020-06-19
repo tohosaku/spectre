@@ -8,15 +8,15 @@
 .tooltip {
   position: relative;
   &::after {
-    background: rgba(color.$dark-color, .95);
-    border-radius: border.$border-radius;
+    background: rgba(color.$dark, .95);
+    border-radius: border.$radius;
     bottom: 100%;
-    color: color.$light-color;
+    color: color.$light;
     content: attr(data-tooltip);
     display: block;
-    font-size: font.$font-size-sm;
+    font-size: font.$size-sm;
     left: 50%;
-    max-width: control.$control-width-sm;
+    max-width: control.$width-sm;
     opacity: 0;
     overflow: hidden;
     padding: var.$unit-1 var.$unit-2;

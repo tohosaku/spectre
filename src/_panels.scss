@@ -4,15 +4,15 @@
 
 // Panels
 .panel {
-  border: border.$border-width solid color.$border-color;
-  border-radius: border.$border-radius;
+  border: border.$width solid color.$border;
+  border-radius: border.$radius;
   display: flex;
   flex-direction: column;
 
   .panel-header,
   .panel-footer {
     flex: 0 0 auto;
-    padding: layout.$layout-spacing-lg;
+    padding: layout.$spacing-lg;
   }
 
   .panel-nav {
@@ -22,6 +22,6 @@
   .panel-body {
     flex: 1 1 auto;
     overflow-y: auto;
-    padding: 0 layout.$layout-spacing-lg;
+    padding: 0 layout.$spacing-lg;
   }
 }

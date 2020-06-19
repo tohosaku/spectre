@@ -31,8 +31,8 @@
   // Fix dropdown-toggle border radius in button groups
   .btn-group {
     .dropdown-toggle:nth-last-child(2) {
-      border-bottom-right-radius: border.$border-radius;
-      border-top-right-radius: border.$border-radius;
+      border-bottom-right-radius: border.$radius;
+      border-top-right-radius: border.$radius;
     }
   }
 }

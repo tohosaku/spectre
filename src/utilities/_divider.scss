@@ -10,19 +10,19 @@
   position: relative;
 
   &[data-content]::after {
-    background: color.$bg-color-light;
-    color: color.$gray-color;
+    background: color.$bg-light;
+    color: color.$gray;
     content: attr(data-content);
     display: inline-block;
-    font-size: font.$font-size-sm;
+    font-size: font.$size-sm;
     padding: 0 var.$unit-2;
-    transform: translateY(-1 * font.$font-size-sm + border.$border-width);
+    transform: translateY(-1 * font.$size-sm + border.$width);
   }
 }
 
 .divider {
-  border-top: border.$border-width solid color.$border-color-light;
-  height: border.$border-width;
+  border-top: border.$width solid color.$border-light;
+  height: border.$width;
   margin: var.$unit-2 0;
 
   &[data-content] {
@@ -35,7 +35,7 @@
   padding: var.$unit-4;
 
   &::before {
-    border-left: border.$border-width solid color.$border-color;
+    border-left: border.$width solid color.$border;
     bottom: var.$unit-2;
     content: "";
     display: block;

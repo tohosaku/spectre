@@ -26,7 +26,7 @@
   // Slider Thumb
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
-    background: color.$primary-color;
+    background: color.$primary;
     border: 0;
     border-radius: 50%;
     height: var.$unit-3;
@@ -35,7 +35,7 @@
     width: var.$unit-3;
   }
   &::-moz-range-thumb {
-    background: color.$primary-color;
+    background: color.$primary;
     border: 0;
     border-radius: 50%;
     height: var.$unit-3;
@@ -43,7 +43,7 @@
     width: var.$unit-3;
   }
   &::-ms-thumb {
-    background: color.$primary-color;
+    background: color.$primary;
     border: 0;
     border-radius: 50%;
     height: var.$unit-3;
@@ -66,39 +66,39 @@
   &:disabled,
   &.disabled {
     &::-webkit-slider-thumb {
-      background: color.$gray-color-light;
+      background: color.$gray-light;
       transform: scale(1);
     }
     &::-moz-range-thumb {
-      background: color.$gray-color-light;
+      background: color.$gray-light;
       transform: scale(1);
     }
     &::-ms-thumb {
-      background: color.$gray-color-light;
+      background: color.$gray-light;
       transform: scale(1);
     }
   }
 
   // Slider Track
   &::-webkit-slider-runnable-track {
-    background: color.$bg-color-dark;
-    border-radius: border.$border-radius;
+    background: color.$bg-dark;
+    border-radius: border.$radius;
     height: var.$unit-h;
     width: 100%;
   }
   &::-moz-range-track {
-    background: color.$bg-color-dark;
-    border-radius: border.$border-radius;
+    background: color.$bg-dark;
+    border-radius: border.$radius;
     height: var.$unit-h;
     width: 100%;
   }
   &::-ms-track {
-    background: color.$bg-color-dark;
-    border-radius: border.$border-radius;
+    background: color.$bg-dark;
+    border-radius: border.$radius;
     height: var.$unit-h;
     width: 100%;
   }
   &::-ms-fill-lower {
-    background: color.$primary-color;
+    background: color.$primary;
   }
 }

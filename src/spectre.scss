@@ -1,11 +1,11 @@
 // Variables and mixins
 @use "variables";
 @forward "variables";
-@forward "variables/color";
-@forward "variables/font";
-@forward "variables/control";
-@forward "variables/layout";
-@forward "variables/border";
+@forward "variables/color" as color-*;
+@forward "variables/font" as font-*;
+@forward "variables/control" as control-*;
+@forward "variables/layout" as layout-*;
+@forward "variables/border" as border-*;
 @forward "mixins";
 
 /*! Spectre.css v#{variables.$version} | MIT License | github.com/picturepan2/spectre */

@@ -1,14 +1,14 @@
 // Fonts
 // Credit: https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/
-$base-font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto !default;
-$mono-font-family: "SF Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Courier, monospace !default;
-$fallback-font-family: "Helvetica Neue", sans-serif !default;
-$body-font-family: $base-font-family, $fallback-font-family !default;
+$base-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto !default;
+$mono-family: "SF Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Courier, monospace !default;
+$fallback-family: "Helvetica Neue", sans-serif !default;
+$body-family: $base-family, $fallback-family !default;
 
 // Font sizes
-$html-font-size: 20px !default;
+$html-size: 20px !default;
 $html-line-height: 1.5 !default;
-$font-size: .8rem !default;
-$font-size-sm: .7rem !default;
-$font-size-lg: .9rem !default;
+$size: .8rem !default;
+$size-sm: .7rem !default;
+$size-lg: .9rem !default;
 $line-height: 1.2rem !default;

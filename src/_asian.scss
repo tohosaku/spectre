@@ -1,10 +1,10 @@
 @use "variables/font" as font;
 @use "variables/border" as border;
 
-$cjk-zh-hans-font-family: font.$base-font-family, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", font.$fallback-font-family !default;
-$cjk-zh-hant-font-family: font.$base-font-family, "PingFang TC", "Hiragino Sans CNS", "Microsoft JhengHei", font.$fallback-font-family !default;
-$cjk-jp-font-family: font.$base-font-family, "Hiragino Sans", "Hiragino Kaku Gothic Pro", "Yu Gothic", YuGothic, Meiryo, font.$fallback-font-family !default;
-$cjk-ko-font-family: font.$base-font-family, "Malgun Gothic", font.$fallback-font-family !default;
+$cjk-zh-hans-font-family: font.$base-family, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", font.$fallback-family !default;
+$cjk-zh-hant-font-family: font.$base-family, "PingFang TC", "Hiragino Sans CNS", "Microsoft JhengHei", font.$fallback-family !default;
+$cjk-jp-font-family: font.$base-family, "Hiragino Sans", "Hiragino Kaku Gothic Pro", "Yu Gothic", YuGothic, Meiryo, font.$fallback-family !default;
+$cjk-ko-font-family: font.$base-family, "Malgun Gothic", font.$fallback-family !default;
 
 // Optimized for East Asian CJK
 html:lang(zh),
@@ -34,7 +34,7 @@ html:lang(ko),
 .lang-cjk {
   ins,
   u {
-    border-bottom: border.$border-width solid;
+    border-bottom: border.$width solid;
     text-decoration: none;
   }
 

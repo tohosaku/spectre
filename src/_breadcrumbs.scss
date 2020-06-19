@@ -8,7 +8,7 @@
   padding: var.$unit-1 0;
 
   .breadcrumb-item {
-    color: color.$gray-color-dark;
+    color: color.$gray-dark;
     display: inline-block;
     margin: 0;
     padding: var.$unit-1 0;
@@ -17,13 +17,13 @@
       margin-right: var.$unit-1;
 
       a {
-        color: color.$gray-color-dark;
+        color: color.$gray-dark;
       }
     }
 
     &:not(:first-child) {
       &::before {
-        color: color.$gray-color-dark;
+        color: color.$gray-dark;
         content: "/";
         padding-right: var.$unit-2;
       }

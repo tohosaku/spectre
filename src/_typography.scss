@@ -64,27 +64,27 @@ u {
 }
 
 abbr[title] {
-  border-bottom: border.$border-width dotted;
+  border-bottom: border.$width dotted;
   cursor: help;
   text-decoration: none;
 }
 
 kbd {
   @include mixins.label-base();
-  @include mixins.label-variant(color.$light-color, color.$dark-color);
-  font-size: font.$font-size-sm;
+  @include mixins.label-variant(color.$light, color.$dark);
+  font-size: font.$size-sm;
 }
 
 mark {
-  @include mixins.label-variant(color.$body-font-color, color.$highlight-color);
-  border-bottom: var.$unit-o solid darken(color.$highlight-color, 15%);
-  border-radius: border.$border-radius;
+  @include mixins.label-variant(color.$body-font, color.$highlight);
+  border-bottom: var.$unit-o solid darken(color.$highlight, 15%);
+  border-radius: border.$radius;
   padding: var.$unit-o var.$unit-h 0;
 }
 
 // Blockquote
 blockquote {
-  border-left: border.$border-width-lg solid color.$border-color;
+  border-left: border.$width-lg solid color.$border;
   margin-left: 0;
   padding: var.$unit-2 var.$unit-4;
 

@@ -58,7 +58,7 @@
       background: currentColor;
       border-radius: 50%;
       box-shadow: 0 -5px, 0 5px;
-      color: color.$light-color;
+      color: color.$light;
       content: "";
       height: 3px;
       position: absolute;
@@ -90,9 +90,9 @@
   }
 
   .comparison-label {
-    background: rgba(color.$dark-color, .5);
+    background: rgba(color.$dark, .5);
     bottom: var.$unit-4;
-    color: color.$light-color;
+    color: color.$light;
     padding: var.$unit-1 var.$unit-2;
     position: absolute;
     user-select: none;

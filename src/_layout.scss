@@ -6,11 +6,11 @@
 .container {
   margin-left: auto;
   margin-right: auto;
-  padding-left: layout.$layout-spacing;
-  padding-right: layout.$layout-spacing;
+  padding-left: layout.$spacing;
+  padding-right: layout.$spacing;
   width: 100%;
 
-  $grid-spacing: (layout.$layout-spacing / (layout.$layout-spacing * 0 + 1)) * font.$html-font-size;
+  $grid-spacing: (layout.$spacing / (layout.$spacing * 0 + 1)) * font.$html-size;
 
   &.grid-xl {
     max-width: $grid-spacing * 2 + var.$size-xl;
@@ -46,8 +46,8 @@
 .columns {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -1 * layout.$layout-spacing;
-  margin-right: -1 * layout.$layout-spacing;
+  margin-left: -1 * layout.$spacing;
+  margin-right: -1 * layout.$spacing;
 
   &.col-gapless {
     margin-left: 0;
@@ -66,8 +66,8 @@
 .column {
   flex: 1;
   max-width: 100%;
-  padding-left: layout.$layout-spacing;
-  padding-right: layout.$layout-spacing;
+  padding-left: layout.$spacing;
+  padding-right: layout.$spacing;
 
   &.col-12,
   &.col-11,

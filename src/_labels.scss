@@ -5,7 +5,7 @@
 // Labels
 .label {
   @include label.label-base();
-  @include label.label-variant(lighten(color.$body-font-color, 5%), color.$bg-color-dark);
+  @include label.label-variant(lighten(color.$body-font, 5%), color.$bg-dark);
   display: inline-block;
 
   // Label rounded
@@ -17,22 +17,22 @@
 
   // Label colors
   &.label-primary {
-    @include label.label-variant(color.$light-color, color.$primary-color);
+    @include label.label-variant(color.$light, color.$primary);
   }
 
   &.label-secondary {
-    @include label.label-variant(color.$primary-color, color.$secondary-color);
+    @include label.label-variant(color.$primary, color.$secondary);
   }
 
   &.label-success {
-    @include label.label-variant(color.$light-color, color.$success-color);
+    @include label.label-variant(color.$light, color.$success);
   }
 
   &.label-warning {
-    @include label.label-variant(color.$light-color, color.$warning-color);
+    @include label.label-variant(color.$light, color.$warning);
   }
 
   &.label-error {
-    @include label.label-variant(color.$light-color, color.$error-color);
+    @include label.label-variant(color.$light, color.$error);
   }
 }

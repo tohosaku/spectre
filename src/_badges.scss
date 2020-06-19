@@ -10,11 +10,11 @@
   &[data-badge],
   &:not([data-badge]) {
     &::after {
-      background: color.$primary-color;
+      background: color.$primary;
       background-clip: padding-box;
       border-radius: .5rem;
-      box-shadow: 0 0 0 .1rem color.$bg-color-light;
-      color: color.$light-color;
+      box-shadow: 0 0 0 .1rem color.$bg-light;
+      color: color.$light;
       content: attr(data-badge);
       display: inline-block;
       transform: translate(-.05rem, -.5rem);
@@ -22,7 +22,7 @@
   }
   &[data-badge] {
     &::after {
-      font-size: font.$font-size-sm;
+      font-size: font.$size-sm;
       height: .9rem;
       line-height: 1;
       min-width: .9rem;

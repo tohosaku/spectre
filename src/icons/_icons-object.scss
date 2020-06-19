@@ -24,7 +24,7 @@
 .icon-mail {
   &::before {
     border: core.$icon-border-width solid currentColor;
-    border-radius: border.$border-radius;
+    border-radius: border.$radius;
     height: .8em;
     width: 1em;
   }
@@ -60,11 +60,11 @@
 .icon-message {
   border: core.$icon-border-width solid currentColor;
   border-bottom: 0;
-  border-radius: border.$border-radius;
+  border-radius: border.$radius;
   border-right: 0;
   &::before {
     border: core.$icon-border-width solid currentColor;
-    border-bottom-right-radius: border.$border-radius;
+    border-bottom-right-radius: border.$radius;
     border-left: 0;
     border-top: 0;
     height: .8em;
@@ -74,7 +74,7 @@
   }
   &::after {
     background: currentColor;
-    border-radius: border.$border-radius;
+    border-radius: border.$radius;
     height: .3em;
     left: 10%;
     top: 100%;
@@ -86,7 +86,7 @@
 // Icon photo
 .icon-photo {
   border: core.$icon-border-width solid currentColor;
-  border-radius: border.$border-radius;
+  border-radius: border.$radius;
   &::before {
     border: core.$icon-border-width solid currentColor;
     border-radius: 50%;

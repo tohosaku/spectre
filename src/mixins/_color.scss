@@ -1,18 +1,18 @@
 @use "../variables/color" as color;
 
 // Background color utility mixin
-@mixin bg-color-variant($name: ".bg-primary", $color: color.$primary-color) {
+@mixin bg-color-variant($name: ".bg-primary", $color: color.$primary) {
   #{$name} {
     background: $color !important;
 
     @if (lightness($color) < 60) {
-      color: color.$light-color;
+      color: color.$light;
     }
   }
 }
 
 // Text color utility mixin
-@mixin text-color-variant($name: ".text-primary", $color: color.$primary-color) {
+@mixin text-color-variant($name: ".text-primary", $color: color.$primary) {
   #{$name} {
     color: $color !important;
   }

@@ -2,19 +2,19 @@
 @use "font";
 @use "border";
 
-$control-size: var.$unit-9 !default;
-$control-size-sm: var.$unit-7 !default;
-$control-size-lg: var.$unit-10 !default;
-$control-padding-x: var.$unit-2 !default;
-$control-padding-x-sm: var.$unit-2 * .75 !default;
-$control-padding-x-lg: var.$unit-2 * 1.5 !default;
-$control-padding-y: ($control-size - font.$line-height) / 2 - border.$border-width !default;
-$control-padding-y-sm: ($control-size-sm - font.$line-height) / 2 - border.$border-width !default;
-$control-padding-y-lg: ($control-size-lg - font.$line-height) / 2 - border.$border-width !default;
-$control-icon-size: .8rem !default;
+$size: var.$unit-9 !default;
+$size-sm: var.$unit-7 !default;
+$size-lg: var.$unit-10 !default;
+$padding-x: var.$unit-2 !default;
+$padding-x-sm: var.$unit-2 * .75 !default;
+$padding-x-lg: var.$unit-2 * 1.5 !default;
+$padding-y: ($size - font.$line-height) / 2 - border.$width !default;
+$padding-y-sm: ($size-sm - font.$line-height) / 2 - border.$width !default;
+$padding-y-lg: ($size-lg - font.$line-height) / 2 - border.$width !default;
+$icon-size: .8rem !default;
 
-$control-width-xs: 180px !default;
-$control-width-sm: 320px !default;
-$control-width-md: 640px !default;
-$control-width-lg: 960px !default;
-$control-width-xl: 1280px !default;
+$width-xs: 180px !default;
+$width-sm: 320px !default;
+$width-md: 640px !default;
+$width-lg: 960px !default;
+$width-xl: 1280px !default;

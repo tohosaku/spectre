@@ -11,22 +11,22 @@
 
 html {
   box-sizing: border-box;
-  font-size: font.$html-font-size;
+  font-size: font.$html-size;
   line-height: font.$html-line-height;
   -webkit-tap-highlight-color: transparent;
 }
 
 body {
   background: color.$body-bg;
-  color: color.$body-font-color;
-  font-family: font.$body-font-family;
-  font-size: font.$font-size;
+  color: color.$body-font;
+  font-family: font.$body-family;
+  font-size: font.$size;
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
 }
 
 a {
-  color: color.$link-color;
+  color: color.$link;
   outline: none;
   text-decoration: none;
 
@@ -38,11 +38,11 @@ a {
   &:hover,
   &:active,
   &.active {
-    color: color.$link-color-dark;
+    color: color.$link-dark;
     text-decoration: underline;
   }
 
   &:visited {
-    color: color.$link-color-light;
+    color: color.$link-light;
   }
 }

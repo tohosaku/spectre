@@ -10,21 +10,21 @@
 
   .nav-item {
     a {
-      color: color.$gray-color-dark;
+      color: color.$gray-dark;
       padding: var.$unit-1 var.$unit-2;
       text-decoration: none;
       &:focus,
       &:hover {
-        color: color.$primary-color;
+        color: color.$primary;
       }
     }
     &.active {
       & > a {
-        color: darken(color.$gray-color-dark, 10%);
+        color: darken(color.$gray-dark, 10%);
         font-weight: bold;
         &:focus,
         &:hover {
-          color: color.$primary-color;
+          color: color.$primary;
         }
       }
     }

@@ -8,17 +8,17 @@
 // Buttons
 .btn {
   appearance: none;
-  background: color.$bg-color-light;
-  border: border.$border-width solid color.$primary-color;
-  border-radius: border.$border-radius;
-  color: color.$primary-color;
+  background: color.$bg-light;
+  border: border.$width solid color.$primary;
+  border-radius: border.$radius;
+  color: color.$primary;
   cursor: pointer;
   display: inline-block;
-  font-size: font.$font-size;
-  height: control.$control-size;
+  font-size: font.$size;
+  height: control.$size;
   line-height: font.$line-height;
   outline: none;
-  padding: control.$control-padding-y control.$control-padding-x;
+  padding: control.$padding-y control.$padding-x;
   text-align: center;
   text-decoration: none;
   transition: background .2s, border .2s, box-shadow .2s, color .2s;
@@ -31,20 +31,20 @@
   }
   &:focus,
   &:hover {
-    background: color.$secondary-color;
-    border-color: color.$primary-color-dark;
+    background: color.$secondary;
+    border-color: color.$primary-dark;
     text-decoration: none;
   }
   &:active,
   &.active {
-    background: color.$primary-color-dark;
-    border-color: darken(color.$primary-color-dark, 5%);
-    color: color.$light-color;
+    background: color.$primary-dark;
+    border-color: darken(color.$primary-dark, 5%);
+    color: color.$light;
     text-decoration: none;
     &.loading {
       &::after {
-        border-bottom-color: color.$light-color;
-        border-left-color: color.$light-color;
+        border-bottom-color: color.$light;
+        border-left-color: color.$light;
       }
     }
   }
@@ -58,62 +58,62 @@
 
   // Button Primary
   &.btn-primary {
-    background: color.$primary-color;
-    border-color: color.$primary-color-dark;
-    color: color.$light-color;
+    background: color.$primary;
+    border-color: color.$primary-dark;
+    color: color.$light;
     &:focus,
     &:hover {
-      background: darken(color.$primary-color-dark, 2%);
-      border-color: darken(color.$primary-color-dark, 5%);
-      color: color.$light-color;
+      background: darken(color.$primary-dark, 2%);
+      border-color: darken(color.$primary-dark, 5%);
+      color: color.$light;
     }
     &:active,
     &.active {
-      background: darken(color.$primary-color-dark, 4%);
-      border-color: darken(color.$primary-color-dark, 7%);
-      color: color.$light-color;
+      background: darken(color.$primary-dark, 4%);
+      border-color: darken(color.$primary-dark, 7%);
+      color: color.$light;
     }
     &.loading {
       &::after {
-        border-bottom-color: color.$light-color;
-        border-left-color: color.$light-color;
+        border-bottom-color: color.$light;
+        border-left-color: color.$light;
       }
     }
   }
 
   // Button Colors
   &.btn-success {
-    @include mixins.button-variant(color.$success-color);
+    @include mixins.button-variant(color.$success);
   }
 
   &.btn-error {
-    @include mixins.button-variant(color.$error-color);
+    @include mixins.button-variant(color.$error);
   }
 
   // Button Link
   &.btn-link {
     background: transparent;
     border-color: transparent;
-    color: color.$link-color;
+    color: color.$link;
     &:focus,
     &:hover,
     &:active,
     &.active {
-      color: color.$link-color-dark;
+      color: color.$link-dark;
     }
   }
 
   // Button Sizes
   &.btn-sm {
-    font-size: font.$font-size-sm;
-    height: control.$control-size-sm;
-    padding: control.$control-padding-y-sm control.$control-padding-x-sm;
+    font-size: font.$size-sm;
+    height: control.$size-sm;
+    padding: control.$padding-y-sm control.$padding-x-sm;
   }
 
   &.btn-lg {
-    font-size: font.$font-size-lg;
-    height: control.$control-size-lg;
-    padding: control.$control-padding-y-lg control.$control-padding-x-lg;
+    font-size: font.$size-lg;
+    height: control.$size-lg;
+    padding: control.$padding-y-lg control.$padding-x-lg;
   }
 
   // Button Block
@@ -124,16 +124,16 @@
 
   // Button Action
   &.btn-action {
-    width: control.$control-size;
+    width: control.$size;
     padding-left: 0;
     padding-right: 0;
 
     &.btn-sm {
-      width: control.$control-size-sm;
+      width: control.$size-sm;
     }
 
     &.btn-lg {
-      width: control.$control-size-lg;
+      width: control.$size-lg;
     }
   }
 
@@ -153,7 +153,7 @@
 
     &:focus,
     &:hover {
-      background: rgba(color.$bg-color, .5);
+      background: rgba(color.$bg, .5);
       opacity: .95;
     }
 
@@ -167,11 +167,11 @@ a {
   &.btn {
     &:visited,
     &:hover {
-      color: color.$primary-color;
+      color: color.$primary;
     }
     
     &:active {
-      color: color.$light-color;
+      color: color.$light;
     }
     
     &.btn-primary,
@@ -179,7 +179,7 @@ a {
     &.btn-success {
       &:visited,
       &:hover {
-        color: color.$light-color;
+        color: color.$light;
       }
     }
   }
@@ -199,12 +199,12 @@ a {
     }
     &:not(:first-child):not(:last-child) {
       border-radius: 0;
-      margin-left: -1 * border.$border-width;
+      margin-left: -1 * border.$width;
     }
     &:last-child:not(:first-child) {
       border-bottom-left-radius: 0;
       border-top-left-radius: 0;
-      margin-left: -1 * border.$border-width;
+      margin-left: -1 * border.$width;
     }
     &:focus,
     &:hover,

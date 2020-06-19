@@ -4,20 +4,20 @@
 
 // Cards
 .card {
-  background: color.$bg-color-light;
-  border: border.$border-width solid color.$border-color;
-  border-radius: border.$border-radius;
+  background: color.$bg-light;
+  border: border.$width solid color.$border;
+  border-radius: border.$radius;
   display: flex;
   flex-direction: column;
 
   .card-header,
   .card-body,
   .card-footer {
-    padding: layout.$layout-spacing-lg;
+    padding: layout.$spacing-lg;
     padding-bottom: 0;
 
     &:last-child {
-      padding-bottom: layout.$layout-spacing-lg;
+      padding-bottom: layout.$spacing-lg;
     }
   }
 
@@ -26,21 +26,21 @@
   }
 
   .card-image {
-    padding-top: layout.$layout-spacing-lg;
+    padding-top: layout.$spacing-lg;
 
     &:first-child {
       padding-top: 0;
 
       img {
-        border-top-left-radius: border.$border-radius;
-        border-top-right-radius: border.$border-radius;
+        border-top-left-radius: border.$radius;
+        border-top-right-radius: border.$radius;
       }
     }
 
     &:last-child {
       img {
-        border-bottom-left-radius: border.$border-radius;
-        border-bottom-right-radius: border.$border-radius;
+        border-bottom-left-radius: border.$radius;
+        border-bottom-right-radius: border.$radius;
       }
     }
   }

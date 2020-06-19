@@ -2,33 +2,33 @@
 @use "../mixins/color" as mixin;
 
 // Text colors
-@include mixin.text-color-variant(".text-primary", color.$primary-color);
+@include mixin.text-color-variant(".text-primary", color.$primary);
 
-@include mixin.text-color-variant(".text-secondary", color.$secondary-color-dark);
+@include mixin.text-color-variant(".text-secondary", color.$secondary-dark);
 
-@include mixin.text-color-variant(".text-gray", color.$gray-color);
+@include mixin.text-color-variant(".text-gray", color.$gray);
 
-@include mixin.text-color-variant(".text-light", color.$light-color);
+@include mixin.text-color-variant(".text-light", color.$light);
 
-@include mixin.text-color-variant(".text-dark", color.$body-font-color);
+@include mixin.text-color-variant(".text-dark", color.$body-font);
 
-@include mixin.text-color-variant(".text-success", color.$success-color);
+@include mixin.text-color-variant(".text-success", color.$success);
 
-@include mixin.text-color-variant(".text-warning", color.$warning-color);
+@include mixin.text-color-variant(".text-warning", color.$warning);
 
-@include mixin.text-color-variant(".text-error", color.$error-color);
+@include mixin.text-color-variant(".text-error", color.$error);
 
 // Background colors
-@include mixin.bg-color-variant(".bg-primary", color.$primary-color);
+@include mixin.bg-color-variant(".bg-primary", color.$primary);
 
-@include mixin.bg-color-variant(".bg-secondary", color.$secondary-color);
+@include mixin.bg-color-variant(".bg-secondary", color.$secondary);
 
-@include mixin.bg-color-variant(".bg-dark", color.$dark-color);
+@include mixin.bg-color-variant(".bg-dark", color.$dark);
 
-@include mixin.bg-color-variant(".bg-gray", color.$bg-color);
+@include mixin.bg-color-variant(".bg-gray", color.$bg);
 
-@include mixin.bg-color-variant(".bg-success", color.$success-color);
+@include mixin.bg-color-variant(".bg-success", color.$success);
 
-@include mixin.bg-color-variant(".bg-warning", color.$warning-color);
+@include mixin.bg-color-variant(".bg-warning", color.$warning);
 
-@include mixin.bg-color-variant(".bg-error", color.$error-color);
+@include mixin.bg-color-variant(".bg-error", color.$error);

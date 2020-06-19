@@ -16,7 +16,7 @@
 
     &.is-focused {
       @include shadow.control-shadow();
-      border-color: color.$primary-color;
+      border-color: color.$primary;
     }
 
     .form-input {

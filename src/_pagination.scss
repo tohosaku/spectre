@@ -18,13 +18,13 @@
     }
 
     a {
-      border-radius: border.$border-radius;
+      border-radius: border.$radius;
       display: inline-block;
       padding: var.$unit-1 var.$unit-2;
       text-decoration: none;
       &:focus,
       &:hover {
-        color: color.$primary-color;
+        color: color.$primary;
       }
     }
 
@@ -38,8 +38,8 @@
 
     &.active {
       a {
-        background: color.$primary-color;
-        color: color.$light-color;
+        background: color.$primary;
+        color: color.$light;
       }
     }
 

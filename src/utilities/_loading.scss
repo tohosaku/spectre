@@ -11,7 +11,7 @@
   &::after {
     animation: loading 500ms infinite linear;
     background: transparent;
-    border: border.$border-width-lg solid color.$primary-color;
+    border: border.$width-lg solid color.$primary;
     border-radius: 50%;
     border-right-color: transparent;
     border-top-color: transparent;

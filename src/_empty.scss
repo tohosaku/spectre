@@ -5,22 +5,22 @@
 
 // Empty states (or Blank slates)
 .empty {
-  background: color.$bg-color;
-  border-radius: border.$border-radius;
-  color: color.$gray-color-dark;
+  background: color.$bg;
+  border-radius: border.$radius;
+  color: color.$gray-dark;
   text-align: center;
   padding: var.$unit-16 var.$unit-8;
 
   .empty-icon {
-    margin-bottom: layout.$layout-spacing-lg;
+    margin-bottom: layout.$spacing-lg;
   }
 
   .empty-title,
   .empty-subtitle {
-    margin: layout.$layout-spacing auto;
+    margin: layout.$spacing auto;
   }
 
   .empty-action {
-    margin-top: layout.$layout-spacing-lg;
+    margin-top: layout.$spacing-lg;
   }
 }

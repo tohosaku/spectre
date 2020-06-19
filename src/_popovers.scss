@@ -11,12 +11,12 @@
   .popover-container {
     left: 50%;
     opacity: 0;
-    padding: layout.$layout-spacing;
+    padding: layout.$spacing;
     position: absolute;
     top: 0;
     transform: translate(-50%, -50%) scale(0);
     transition: transform .2s;
-    width: control.$control-width-sm;
+    width: control.$width-sm;
     z-index: var.$zindex-3;
   }
 

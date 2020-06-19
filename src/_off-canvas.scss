@@ -15,18 +15,18 @@ $off-canvas-breakpoint: var.$size-lg !default;
   .off-canvas-toggle {
     display: block;
     position: absolute;
-    top: layout.$layout-spacing;
+    top: layout.$spacing;
     transition: none;
     z-index: var.$zindex-0;
     @if var.$rtl == true {
-      right: layout.$layout-spacing;
+      right: layout.$spacing;
     } @else {
-      left: layout.$layout-spacing;
+      left: layout.$spacing;
     }
   }
 
   .off-canvas-sidebar {
-    background: color.$bg-color;
+    background: color.$bg;
     bottom: 0;
     min-width: 10rem;
     overflow-y: auto;
@@ -46,11 +46,11 @@ $off-canvas-breakpoint: var.$size-lg !default;
   .off-canvas-content {
     flex: 1 1 auto;
     height: 100%;
-    padding: layout.$layout-spacing layout.$layout-spacing layout.$layout-spacing 4rem;
+    padding: layout.$spacing layout.$spacing layout.$spacing 4rem;
   }
 
   .off-canvas-overlay {
-    background: rgba(color.$dark-color, .1);
+    background: rgba(color.$dark, .1);
     border-color: transparent;
     border-radius: 0;
     bottom: 0;

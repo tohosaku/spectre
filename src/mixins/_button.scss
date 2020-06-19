@@ -2,10 +2,10 @@
 @use "shadow";
 
 // Button variant mixin
-@mixin button-variant($color: color.$primary-color) {
+@mixin button-variant($color: color.$primary) {
   background: $color;
   border-color: darken($color, 3%);
-  color: color.$light-color;
+  color: color.$light;
   &:focus {
     @include shadow.control-shadow($color);
   }
@@ -13,24 +13,24 @@
   &:hover {
     background: darken($color, 2%);
     border-color: darken($color, 5%);
-    color: color.$light-color;
+    color: color.$light;
   }
   &:active,
   &.active {
     background: darken($color, 7%);
     border-color: darken($color, 10%);
-    color: color.$light-color;
+    color: color.$light;
   }
   &.loading {
     &::after {
-      border-bottom-color: color.$light-color;
-      border-left-color: color.$light-color;
+      border-bottom-color: color.$light;
+      border-left-color: color.$light;
     }
   }
 }
 
-@mixin button-outline-variant($color: color.$primary-color) {
-  background: color.$light-color;
+@mixin button-outline-variant($color: color.$primary) {
+  background: color.$light;
   border-color: $color;
   color: $color;
   &:focus {

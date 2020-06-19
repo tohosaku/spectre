@@ -6,9 +6,9 @@
 // Avatars
 .avatar {
   @include avatar.avatar-base();
-  background: color.$primary-color;
+  background: color.$primary;
   border-radius: 50%;
-  color: rgba(color.$light-color, .85);
+  color: rgba(color.$light, .85);
   display: inline-block;
   font-weight: 300;
   line-height: 1.25;
@@ -39,10 +39,10 @@
 
   .avatar-icon,
   .avatar-presence {
-    background: color.$bg-color-light;
+    background: color.$bg-light;
     bottom: 14.64%;
     height: 50%;
-    padding: border.$border-width-lg;
+    padding: border.$width-lg;
     position: absolute;
     right: 14.64%;
     transform: translate(50%, 50%);
@@ -51,22 +51,22 @@
   }
 
   .avatar-presence {
-    background: color.$gray-color;
-    box-shadow: 0 0 0 border.$border-width-lg color.$light-color;
+    background: color.$gray;
+    box-shadow: 0 0 0 border.$width-lg color.$light;
     border-radius: 50%;
     height: .5em;
     width: .5em;
 
     &.online {
-      background: color.$success-color;
+      background: color.$success;
     }
 
     &.busy {
-      background: color.$error-color;
+      background: color.$error;
     }
 
     &.away {
-      background: color.$warning-color;
+      background: color.$warning;
     }
   }
 

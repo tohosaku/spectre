@@ -69,10 +69,10 @@ video.video-responsive {
 
 // Figure
 .figure {
-  margin: 0 0 layout.$layout-spacing 0;
+  margin: 0 0 layout.$spacing 0;
 
   .figure-caption {
-    color: color.$gray-color-dark;
-    margin-top: layout.$layout-spacing;
+    color: color.$gray-dark;
+    margin-top: layout.$spacing;
   }
 }
