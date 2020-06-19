@@ -1,4 +1,5 @@
 @use "variables" as var;
+@use "variables/color" as color;
 
 // Navs
 .nav {
@@ -9,21 +10,21 @@
 
   .nav-item {
     a {
-      color: var.$gray-color-dark;
+      color: color.$gray-color-dark;
       padding: var.$unit-1 var.$unit-2;
       text-decoration: none;
       &:focus,
       &:hover {
-        color: var.$primary-color;
+        color: color.$primary-color;
       }
     }
     &.active {
       & > a {
-        color: darken(var.$gray-color-dark, 10%);
+        color: darken(color.$gray-color-dark, 10%);
         font-weight: bold;
         &:focus,
         &:hover {
-          color: var.$primary-color;
+          color: color.$primary-color;
         }
       }
     }

@@ -1,4 +1,5 @@
 @use "variables" as var;
+@use "variables/color" as color;
 @use "mixins";
 
 // Base
@@ -16,8 +17,8 @@ html {
 }
 
 body {
-  background: var.$body-bg;
-  color: var.$body-font-color;
+  background: color.$body-bg;
+  color: color.$body-font-color;
   font-family: var.$body-font-family;
   font-size: var.$font-size;
   overflow-x: hidden;
@@ -25,7 +26,7 @@ body {
 }
 
 a {
-  color: var.$link-color;
+  color: color.$link-color;
   outline: none;
   text-decoration: none;
 
@@ -37,11 +38,11 @@ a {
   &:hover,
   &:active,
   &.active {
-    color: var.$link-color-dark;
+    color: color.$link-color-dark;
     text-decoration: underline;
   }
 
   &:visited {
-    color: var.$link-color-light;
+    color: color.$link-color-light;
   }
 }

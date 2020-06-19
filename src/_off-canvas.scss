@@ -1,4 +1,5 @@
 @use "variables" as var;
+@use "variables/color" as color;
 
 // Off canvas menus
 $off-canvas-breakpoint: var.$size-lg !default;
@@ -24,7 +25,7 @@ $off-canvas-breakpoint: var.$size-lg !default;
   }
 
   .off-canvas-sidebar {
-    background: var.$bg-color;
+    background: color.$bg-color;
     bottom: 0;
     min-width: 10rem;
     overflow-y: auto;
@@ -48,7 +49,7 @@ $off-canvas-breakpoint: var.$size-lg !default;
   }
 
   .off-canvas-overlay {
-    background: rgba(var.$dark-color, .1);
+    background: rgba(color.$dark-color, .1);
     border-color: transparent;
     border-radius: 0;
     bottom: 0;

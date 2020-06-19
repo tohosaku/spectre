@@ -1,4 +1,5 @@
 @use "variables" as var;
+@use "variables/color" as color;
 
 // Badges
 .badge {
@@ -8,11 +9,11 @@
   &[data-badge],
   &:not([data-badge]) {
     &::after {
-      background: var.$primary-color;
+      background: color.$primary-color;
       background-clip: padding-box;
       border-radius: .5rem;
-      box-shadow: 0 0 0 .1rem var.$bg-color-light;
-      color: var.$light-color;
+      box-shadow: 0 0 0 .1rem color.$bg-color-light;
+      color: color.$light-color;
       content: attr(data-badge);
       display: inline-block;
       transform: translate(-.05rem, -.5rem);

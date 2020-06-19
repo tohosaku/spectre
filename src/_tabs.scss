@@ -1,9 +1,10 @@
 @use "variables" as var;
+@use "variables/color" as color;
 
 // Tabs
 .tab {
   align-items: center;
-  border-bottom: var.$border-width solid var.$border-color;
+  border-bottom: var.$border-width solid color.$border-color;
   display: flex;
   flex-wrap: wrap;
   list-style: none;
@@ -21,13 +22,13 @@
       text-decoration: none;
       &:focus,
       &:hover {
-        color: var.$link-color;
+        color: color.$link-color;
       }
     }
     &.active a,
     a.active {
-      border-bottom-color: var.$primary-color;
-      color: var.$link-color;
+      border-bottom-color: color.$primary-color;
+      color: color.$link-color;
     }
 
     &.tab-action {

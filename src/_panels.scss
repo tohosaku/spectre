@@ -1,8 +1,9 @@
 @use "variables" as var;
+@use "variables/color" as color;
 
 // Panels
 .panel {
-  border: var.$border-width solid var.$border-color;
+  border: var.$border-width solid color.$border-color;
   border-radius: var.$border-radius;
   display: flex;
   flex-direction: column;

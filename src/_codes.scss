@@ -1,20 +1,21 @@
 @use "variables" as var;
+@use "variables/color" as color;
 @use "mixins/label" as label;
 
 // Codes
 code {
   @include label.label-base();
-  @include label.label-variant(var.$code-color, lighten(var.$code-color, 42.5%));
+  @include label.label-variant(color.$code-color, lighten(color.$code-color, 42.5%));
   font-size: 85%;
 }
 
 .code {
   border-radius: var.$border-radius;
-  color: var.$body-font-color;
+  color: color.$body-font-color;
   position: relative;
 
   &::before {
-    color: var.$gray-color;
+    color: color.$gray-color;
     content: attr(data-lang);
     font-size: var.$font-size-sm;
     position: absolute;
@@ -23,7 +24,7 @@ code {
   }
 
   code {
-    background: var.$bg-color;
+    background: color.$bg-color;
     color: inherit;
     display: block;
     line-height: 1.5;

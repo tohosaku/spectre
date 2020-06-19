@@ -1,8 +1,9 @@
 @use "variables" as var;
+@use "variables/color" as color;
 
 // Bars
 .bar {
-  background: var.$bg-color-dark;
+  background: color.$bg-color-dark;
   border-radius: var.$border-radius;
   display: flex;
   flex-wrap: nowrap;
@@ -15,8 +16,8 @@
 
   // TODO: attr() support
   .bar-item {
-    background: var.$primary-color;
-    color: var.$light-color;
+    background: color.$primary-color;
+    color: color.$light-color;
     display: block;
     font-size: var.$font-size-sm;
     flex-shrink: 0;
@@ -49,13 +50,13 @@
     padding: 0;
     position: absolute;
     &:not(:last-child):first-child {
-      background: var.$bg-color-dark;
+      background: color.$bg-color-dark;
       z-index: var.$zindex-0;
     }
   }
 
   .bar-slider-btn {
-    background: var.$primary-color;
+    background: color.$primary-color;
     border: 0;
     border-radius: 50%;
     height: var.$unit-3;
@@ -67,7 +68,7 @@
     width: var.$unit-3;
 
     &:active {
-      box-shadow: 0 0 0 .1rem var.$primary-color;
+      box-shadow: 0 0 0 .1rem color.$primary-color;
     }
   }
 }

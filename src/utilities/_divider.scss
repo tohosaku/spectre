@@ -1,4 +1,5 @@
 @use "../variables" as var;
+@use "../variables/color" as color;
 
 // Divider
 .divider,
@@ -7,8 +8,8 @@
   position: relative;
 
   &[data-content]::after {
-    background: var.$bg-color-light;
-    color: var.$gray-color;
+    background: color.$bg-color-light;
+    color: color.$gray-color;
     content: attr(data-content);
     display: inline-block;
     font-size: var.$font-size-sm;
@@ -18,7 +19,7 @@
 }
 
 .divider {
-  border-top: var.$border-width solid var.$border-color-light;
+  border-top: var.$border-width solid color.$border-color-light;
   height: var.$border-width;
   margin: var.$unit-2 0;
 
@@ -32,7 +33,7 @@
   padding: var.$unit-4;
 
   &::before {
-    border-left: var.$border-width solid var.$border-color;
+    border-left: var.$border-width solid color.$border-color;
     bottom: var.$unit-2;
     content: "";
     display: block;

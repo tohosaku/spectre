@@ -1,12 +1,13 @@
 @use "variables" as var;
+@use "variables/color" as color;
 
 // Filters 
 // The number of filter options 
 $filter-number: 8 !default;
 
 %filter-checked-nav { 
-  background: var.$primary-color;
-  color: var.$light-color;
+  background: color.$primary-color;
+  color: color.$light-color;
 }
 
 %filter-checked-body { 

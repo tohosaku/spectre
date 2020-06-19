@@ -1,34 +1,35 @@
 @use "variables" as var;
+@use "variables/color" as color;
 @use "mixins/toast" as toast;
 
 // Toasts
 .toast {
-  @include toast.toast-variant(var.$dark-color);
-  border: var.$border-width solid var.$dark-color;
+  @include toast.toast-variant(color.$dark-color);
+  border: var.$border-width solid color.$dark-color;
   border-radius: var.$border-radius;
-  color: var.$light-color;
+  color: color.$light-color;
   display: block;
   padding: var.$layout-spacing;
   width: 100%;
 
   &.toast-primary {
-    @include toast.toast-variant(var.$primary-color);
+    @include toast.toast-variant(color.$primary-color);
   }
 
   &.toast-success {
-    @include toast.toast-variant(var.$success-color);
+    @include toast.toast-variant(color.$success-color);
   }
 
   &.toast-warning {
-    @include toast.toast-variant(var.$warning-color);
+    @include toast.toast-variant(color.$warning-color);
   }
 
   &.toast-error {
-    @include toast.toast-variant(var.$error-color);
+    @include toast.toast-variant(color.$error-color);
   }
 
   a {
-    color: var.$light-color;
+    color: color.$light-color;
     text-decoration: underline;
     
     &:focus,

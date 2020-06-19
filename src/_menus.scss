@@ -1,10 +1,11 @@
 @use "variables" as var;
+@use "variables/color" as color;
 @use "mixins/shadow" as shadow;
 
 // Menus
 .menu {
   @include shadow.shadow-variant(.05rem);
-  background: var.$bg-color-light;
+  background: color.$bg-color-light;
   border-radius: var.$border-radius;
   list-style: none;
   margin: 0;
@@ -33,13 +34,13 @@
       text-decoration: none;
       &:focus,
       &:hover {
-        background: var.$secondary-color;
-        color: var.$primary-color;
+        background: color.$secondary-color;
+        color: color.$primary-color;
       }
       &:active,
       &.active {
-        background: var.$secondary-color;
-        color: var.$primary-color;
+        background: color.$secondary-color;
+        color: color.$primary-color;
       }
     }
 

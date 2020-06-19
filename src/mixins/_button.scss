@@ -1,11 +1,11 @@
-@use "../variables" as var;
+@use "../variables/color" as color;
 @use "shadow";
 
 // Button variant mixin
-@mixin button-variant($color: var.$primary-color) {
+@mixin button-variant($color: color.$primary-color) {
   background: $color;
   border-color: darken($color, 3%);
-  color: var.$light-color;
+  color: color.$light-color;
   &:focus {
     @include shadow.control-shadow($color);
   }
@@ -13,24 +13,24 @@
   &:hover {
     background: darken($color, 2%);
     border-color: darken($color, 5%);
-    color: var.$light-color;
+    color: color.$light-color;
   }
   &:active,
   &.active {
     background: darken($color, 7%);
     border-color: darken($color, 10%);
-    color: var.$light-color;
+    color: color.$light-color;
   }
   &.loading {
     &::after {
-      border-bottom-color: var.$light-color;
-      border-left-color: var.$light-color;
+      border-bottom-color: color.$light-color;
+      border-left-color: color.$light-color;
     }
   }
 }
 
-@mixin button-outline-variant($color: var.$primary-color) {
-  background: var.$light-color;
+@mixin button-outline-variant($color: color.$primary-color) {
+  background: color.$light-color;
   border-color: $color;
   color: $color;
   &:focus {

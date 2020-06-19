@@ -1,4 +1,5 @@
 @use "variables" as var;
+@use "variables/color" as color;
 @use "mixins/shadow" as shadow;
 
 // Autocomplete
@@ -15,7 +16,7 @@
 
     &.is-focused {
       @include shadow.control-shadow();
-      border-color: var.$primary-color;
+      border-color: color.$primary-color;
     }
 
     .form-input {

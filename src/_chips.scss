@@ -1,9 +1,10 @@
 @use "variables" as var;
+@use "variables/color" as color;
 
 // Chips
 .chip {
   align-items: center;
-  background: var.$bg-color-dark;
+  background: color.$bg-color-dark;
   border-radius: 5rem;
   display: inline-flex;
   font-size: 90%;
@@ -19,8 +20,8 @@
   white-space: nowrap;
 
   &.active {
-    background: var.$primary-color;
-    color: var.$light-color;
+    background: color.$primary-color;
+    color: color.$light-color;
   }
 
   .avatar {

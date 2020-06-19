@@ -1,4 +1,5 @@
 @use "variables" as var;
+@use "variables/color" as color;
 
 // Steps
 .step {
@@ -16,7 +17,7 @@
     position: relative;
 
     &:not(:first-child)::before {
-      background: var.$primary-color;
+      background: color.$primary-color;
       content: "";
       height: 2px;
       left: -50%;
@@ -26,14 +27,14 @@
     }
 
     a {
-      color: var.$primary-color;
+      color: color.$primary-color;
       display: inline-block;
       padding: 20px 10px 0;
       text-decoration: none;
 
       &::before {
-        background: var.$primary-color;
-        border: var.$border-width-lg solid var.$light-color;
+        background: color.$primary-color;
+        border: var.$border-width-lg solid color.$light-color;
         border-radius: 50%;
         content: "";
         display: block;
@@ -50,21 +51,21 @@
     &.active {
       a {
         &::before {
-          background: var.$light-color;
-          border: var.$border-width-lg solid var.$primary-color;
+          background: color.$light-color;
+          border: var.$border-width-lg solid color.$primary-color;
         }
       }
 
       & ~ .step-item {
         &::before {
-          background: var.$border-color;
+          background: color.$border-color;
         }
 
         a {
-          color: var.$gray-color;
+          color: color.$gray-color;
 
           &::before {
-            background: var.$border-color;
+            background: color.$border-color;
           }
         }
       }

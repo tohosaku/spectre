@@ -1,13 +1,14 @@
 @use "variables" as var;
+@use "variables/color" as color;
 @use "mixins";
 
 // Buttons
 .btn {
   appearance: none;
-  background: var.$bg-color-light;
-  border: var.$border-width solid var.$primary-color;
+  background: color.$bg-color-light;
+  border: var.$border-width solid color.$primary-color;
   border-radius: var.$border-radius;
-  color: var.$primary-color;
+  color: color.$primary-color;
   cursor: pointer;
   display: inline-block;
   font-size: var.$font-size;
@@ -27,20 +28,20 @@
   }
   &:focus,
   &:hover {
-    background: var.$secondary-color;
-    border-color: var.$primary-color-dark;
+    background: color.$secondary-color;
+    border-color: color.$primary-color-dark;
     text-decoration: none;
   }
   &:active,
   &.active {
-    background: var.$primary-color-dark;
-    border-color: darken(var.$primary-color-dark, 5%);
-    color: var.$light-color;
+    background: color.$primary-color-dark;
+    border-color: darken(color.$primary-color-dark, 5%);
+    color: color.$light-color;
     text-decoration: none;
     &.loading {
       &::after {
-        border-bottom-color: var.$light-color;
-        border-left-color: var.$light-color;
+        border-bottom-color: color.$light-color;
+        border-left-color: color.$light-color;
       }
     }
   }
@@ -54,48 +55,48 @@
 
   // Button Primary
   &.btn-primary {
-    background: var.$primary-color;
-    border-color: var.$primary-color-dark;
-    color: var.$light-color;
+    background: color.$primary-color;
+    border-color: color.$primary-color-dark;
+    color: color.$light-color;
     &:focus,
     &:hover {
-      background: darken(var.$primary-color-dark, 2%);
-      border-color: darken(var.$primary-color-dark, 5%);
-      color: var.$light-color;
+      background: darken(color.$primary-color-dark, 2%);
+      border-color: darken(color.$primary-color-dark, 5%);
+      color: color.$light-color;
     }
     &:active,
     &.active {
-      background: darken(var.$primary-color-dark, 4%);
-      border-color: darken(var.$primary-color-dark, 7%);
-      color: var.$light-color;
+      background: darken(color.$primary-color-dark, 4%);
+      border-color: darken(color.$primary-color-dark, 7%);
+      color: color.$light-color;
     }
     &.loading {
       &::after {
-        border-bottom-color: var.$light-color;
-        border-left-color: var.$light-color;
+        border-bottom-color: color.$light-color;
+        border-left-color: color.$light-color;
       }
     }
   }
 
   // Button Colors
   &.btn-success {
-    @include mixins.button-variant(var.$success-color);
+    @include mixins.button-variant(color.$success-color);
   }
 
   &.btn-error {
-    @include mixins.button-variant(var.$error-color);
+    @include mixins.button-variant(color.$error-color);
   }
 
   // Button Link
   &.btn-link {
     background: transparent;
     border-color: transparent;
-    color: var.$link-color;
+    color: color.$link-color;
     &:focus,
     &:hover,
     &:active,
     &.active {
-      color: var.$link-color-dark;
+      color: color.$link-color-dark;
     }
   }
 
@@ -149,7 +150,7 @@
 
     &:focus,
     &:hover {
-      background: rgba(var.$bg-color, .5);
+      background: rgba(color.$bg-color, .5);
       opacity: .95;
     }
 
@@ -163,11 +164,11 @@ a {
   &.btn {
     &:visited,
     &:hover {
-      color: var.$primary-color;
+      color: color.$primary-color;
     }
     
     &:active {
-      color: var.$light-color;
+      color: color.$light-color;
     }
     
     &.btn-primary,
@@ -175,7 +176,7 @@ a {
     &.btn-success {
       &:visited,
       &:hover {
-        color: var.$light-color;
+        color: color.$light-color;
       }
     }
   }

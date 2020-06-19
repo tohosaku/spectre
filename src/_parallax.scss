@@ -1,4 +1,5 @@
 @use "variables" as var;
+@use "variables/color" as color;
 @use "mixins/shadow" as shadow;
 
 // Parallax
@@ -45,14 +46,14 @@ $parallax-fade-color: rgba(255, 255, 255, .35) !default;
 
   .parallax-front {
     align-items: center;
-    color: var.$light-color;
+    color: color.$light-color;
     display: flex;
     height: 100%;
     justify-content: center;
     left: 0;
     position: absolute;
     text-align: center;
-    text-shadow: 0 0 20px rgba(var.$dark-color, .75);
+    text-shadow: 0 0 20px rgba(color.$dark-color, .75);
     top: 0;
     transform: translateZ($parallax-offset-z) scale($parallax-scale);
     transition: transform .4s;

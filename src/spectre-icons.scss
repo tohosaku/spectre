@@ -1,6 +1,7 @@
 // Variables and mixins
 @use "variables" as var;
 @forward "variables";
+@forward "variables/color";
 @use "mixins";
 
 /*! Spectre.css Icons v#{var.$version} | MIT License | github.com/picturepan2/spectre */

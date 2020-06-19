@@ -1,4 +1,5 @@
 @use "variables" as var;
+@use "variables/color" as color;
 @use "mixins";
 
 // Typography
@@ -68,20 +69,20 @@ abbr[title] {
 
 kbd {
   @include mixins.label-base();
-  @include mixins.label-variant(var.$light-color, var.$dark-color);
+  @include mixins.label-variant(color.$light-color, color.$dark-color);
   font-size: var.$font-size-sm;
 }
 
 mark {
-  @include mixins.label-variant(var.$body-font-color, var.$highlight-color);
-  border-bottom: var.$unit-o solid darken(var.$highlight-color, 15%);
+  @include mixins.label-variant(color.$body-font-color, color.$highlight-color);
+  border-bottom: var.$unit-o solid darken(color.$highlight-color, 15%);
   border-radius: var.$border-radius;
   padding: var.$unit-o var.$unit-h 0;
 }
 
 // Blockquote
 blockquote {
-  border-left: var.$border-width-lg solid var.$border-color;
+  border-left: var.$border-width-lg solid color.$border-color;
   margin-left: 0;
   padding: var.$unit-2 var.$unit-4;
 

@@ -1,4 +1,5 @@
 @use "variables" as var;
+@use "variables/color" as color;
 @use "mixins/shadow" as shadow;
 
 // Modals
@@ -22,7 +23,7 @@
     z-index: var.$zindex-4;
 
     .modal-overlay {
-      background: rgba(var.$bg-color, .75);
+      background: rgba(color.$bg-color, .75);
       bottom: 0;
       cursor: default;
       display: block;
@@ -47,7 +48,7 @@
 
   &.modal-lg {
     .modal-overlay {
-      background: var.$bg-color-light;
+      background: color.$bg-color-light;
     }
 
     .modal-container {
@@ -59,7 +60,7 @@
 
 .modal-container {
   @include shadow.shadow-variant(.2rem);
-  background: var.$bg-color-light;
+  background: color.$bg-color-light;
   border-radius: var.$border-radius;
   display: flex;
   flex-direction: column;
@@ -74,7 +75,7 @@
   }
 
   .modal-header {
-    color: var.$dark-color;
+    color: color.$dark-color;
     flex: 0 0 auto;
     padding: var.$unit-4;
   }

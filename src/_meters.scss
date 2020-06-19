@@ -1,10 +1,11 @@
 @use "variables" as var;
+@use "variables/color" as color;
 
 // Meters
 // Credit: https://css-tricks.com/html5-meter-element/
 .meter {
   appearance: none;
-  background: var.$bg-color;
+  background: color.$bg-color;
   border: 0;
   border-radius: var.$border-radius;
   display: block;
@@ -23,19 +24,19 @@
   }
 
   &::-webkit-meter-bar {
-    background: var.$bg-color;
+    background: color.$bg-color;
   }
 
   &::-webkit-meter-optimum-value {
-    background: var.$success-color;
+    background: color.$success-color;
   }
 
   &::-webkit-meter-suboptimum-value {
-    background: var.$warning-color;
+    background: color.$warning-color;
   }
 
   &::-webkit-meter-even-less-good-value {
-    background: var.$error-color;
+    background: color.$error-color;
   }
 
   &::-moz-meter-bar,
@@ -46,14 +47,14 @@
   }
 
   &:-moz-meter-optimum::-moz-meter-bar {
-    background: var.$success-color;
+    background: color.$success-color;
   }
 
   &:-moz-meter-sub-optimum::-moz-meter-bar {
-    background: var.$warning-color;
+    background: color.$warning-color;
   }
 
   &:-moz-meter-sub-sub-optimum::-moz-meter-bar {
-    background: var.$error-color;
+    background: color.$error-color;
   }
 }

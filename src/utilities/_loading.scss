@@ -1,4 +1,5 @@
 @use "../variables" as var;
+@use "variables/color" as color;
 
 // Loading
 .loading {
@@ -9,7 +10,7 @@
   &::after {
     animation: loading 500ms infinite linear;
     background: transparent;
-    border: var.$border-width-lg solid var.$primary-color;
+    border: var.$border-width-lg solid color.$primary-color;
     border-radius: 50%;
     border-right-color: transparent;
     border-top-color: transparent;

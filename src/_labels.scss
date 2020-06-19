@@ -1,10 +1,11 @@
 @use "variables" as var;
+@use "variables/color" as color;
 @use "mixins/label" as label;
 
 // Labels
 .label {
   @include label.label-base();
-  @include label.label-variant(lighten(var.$body-font-color, 5%), var.$bg-color-dark);
+  @include label.label-variant(lighten(color.$body-font-color, 5%), color.$bg-color-dark);
   display: inline-block;
 
   // Label rounded
@@ -16,22 +17,22 @@
 
   // Label colors
   &.label-primary {
-    @include label.label-variant(var.$light-color, var.$primary-color);
+    @include label.label-variant(color.$light-color, color.$primary-color);
   }
 
   &.label-secondary {
-    @include label.label-variant(var.$primary-color, var.$secondary-color);
+    @include label.label-variant(color.$primary-color, color.$secondary-color);
   }
 
   &.label-success {
-    @include label.label-variant(var.$light-color, var.$success-color);
+    @include label.label-variant(color.$light-color, color.$success-color);
   }
 
   &.label-warning {
-    @include label.label-variant(var.$light-color, var.$warning-color);
+    @include label.label-variant(color.$light-color, color.$warning-color);
   }
 
   &.label-error {
-    @include label.label-variant(var.$light-color, var.$error-color);
+    @include label.label-variant(color.$light-color, color.$error-color);
   }
 }

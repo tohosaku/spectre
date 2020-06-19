@@ -1,12 +1,13 @@
 @use "variables" as var;
+@use "variables/color" as color;
 @use "mixins/avatar" as avatar;
 
 // Avatars
 .avatar {
   @include avatar.avatar-base();
-  background: var.$primary-color;
+  background: color.$primary-color;
   border-radius: 50%;
-  color: rgba(var.$light-color, .85);
+  color: rgba(color.$light-color, .85);
   display: inline-block;
   font-weight: 300;
   line-height: 1.25;
@@ -37,7 +38,7 @@
 
   .avatar-icon,
   .avatar-presence {
-    background: var.$bg-color-light;
+    background: color.$bg-color-light;
     bottom: 14.64%;
     height: 50%;
     padding: var.$border-width-lg;
@@ -49,22 +50,22 @@
   }
 
   .avatar-presence {
-    background: var.$gray-color;
-    box-shadow: 0 0 0 var.$border-width-lg var.$light-color;
+    background: color.$gray-color;
+    box-shadow: 0 0 0 var.$border-width-lg color.$light-color;
     border-radius: 50%;
     height: .5em;
     width: .5em;
 
     &.online {
-      background: var.$success-color;
+      background: color.$success-color;
     }
 
     &.busy {
-      background: var.$error-color;
+      background: color.$error-color;
     }
 
     &.away {
-      background: var.$warning-color;
+      background: color.$warning-color;
     }
   }
 

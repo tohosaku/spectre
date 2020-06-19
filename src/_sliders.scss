@@ -1,4 +1,5 @@
 @use "variables" as var;
+@use "variables/color" as color;
 @use "mixins/shadow" as shadow;
 
 // Sliders
@@ -24,7 +25,7 @@
   // Slider Thumb
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
-    background: var.$primary-color;
+    background: color.$primary-color;
     border: 0;
     border-radius: 50%;
     height: var.$unit-3;
@@ -33,7 +34,7 @@
     width: var.$unit-3;
   }
   &::-moz-range-thumb {
-    background: var.$primary-color;
+    background: color.$primary-color;
     border: 0;
     border-radius: 50%;
     height: var.$unit-3;
@@ -41,7 +42,7 @@
     width: var.$unit-3;
   }
   &::-ms-thumb {
-    background: var.$primary-color;
+    background: color.$primary-color;
     border: 0;
     border-radius: 50%;
     height: var.$unit-3;
@@ -64,39 +65,39 @@
   &:disabled,
   &.disabled {
     &::-webkit-slider-thumb {
-      background: var.$gray-color-light;
+      background: color.$gray-color-light;
       transform: scale(1);
     }
     &::-moz-range-thumb {
-      background: var.$gray-color-light;
+      background: color.$gray-color-light;
       transform: scale(1);
     }
     &::-ms-thumb {
-      background: var.$gray-color-light;
+      background: color.$gray-color-light;
       transform: scale(1);
     }
   }
 
   // Slider Track
   &::-webkit-slider-runnable-track {
-    background: var.$bg-color-dark;
+    background: color.$bg-color-dark;
     border-radius: var.$border-radius;
     height: var.$unit-h;
     width: 100%;
   }
   &::-moz-range-track {
-    background: var.$bg-color-dark;
+    background: color.$bg-color-dark;
     border-radius: var.$border-radius;
     height: var.$unit-h;
     width: 100%;
   }
   &::-ms-track {
-    background: var.$bg-color-dark;
+    background: color.$bg-color-dark;
     border-radius: var.$border-radius;
     height: var.$unit-h;
     width: 100%;
   }
   &::-ms-fill-lower {
-    background: var.$primary-color;
+    background: color.$primary-color;
   }
 }
