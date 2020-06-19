@@ -1,5 +1,5 @@
-@use "variables" as var;
 @use "variables/color" as color;
+@use "variables/layout" as layout;
 
 // Filters 
 // The number of filter options 
@@ -16,7 +16,7 @@ $filter-number: 8 !default;
 
 .filter {
   .filter-nav {
-    margin: var.$layout-spacing 0;
+    margin: layout.$layout-spacing 0;
   }
 
   .filter-body {

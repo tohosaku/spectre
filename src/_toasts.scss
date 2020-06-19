@@ -1,5 +1,6 @@
 @use "variables" as var;
 @use "variables/color" as color;
+@use "variables/layout" as layout;
 @use "mixins/toast" as toast;
 
 // Toasts
@@ -9,7 +10,7 @@
   border-radius: var.$border-radius;
   color: color.$light-color;
   display: block;
-  padding: var.$layout-spacing;
+  padding: layout.$layout-spacing;
   width: 100%;
 
   &.toast-primary {

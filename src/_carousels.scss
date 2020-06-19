@@ -1,6 +1,6 @@
 @use "variables" as var;
 @use "variables/color" as color;
-
+@use "variables/layout" as layout;
 
 // Carousels
 // The number of carousel images
@@ -88,7 +88,7 @@ $carousel-number: 8;
   }
 
   .carousel-nav {
-    bottom: var.$layout-spacing;
+    bottom: layout.$layout-spacing;
     display: flex;
     justify-content: center;
     left: 50%;

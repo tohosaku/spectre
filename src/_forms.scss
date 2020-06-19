@@ -2,23 +2,24 @@
 @use "variables/color" as color;
 @use "variables/font" as font;
 @use "variables/control" as control;
+@use "variables/layout" as layout;
 @use "mixins/shadow" as shadow;
 
 // Forms
 .form-group {
   &:not(:last-child) {
-    margin-bottom: var.$layout-spacing;
+    margin-bottom: layout.$layout-spacing;
   }
 }
 
 fieldset {
-  margin-bottom: var.$layout-spacing-lg;
+  margin-bottom: layout.$layout-spacing-lg;
 }
 
 legend {
   font-size: font.$font-size-lg;
   font-weight: 500;
-  margin-bottom: var.$layout-spacing-lg;
+  margin-bottom: layout.$layout-spacing-lg;
 }
 
 // Form element: Label
@@ -547,7 +548,7 @@ input {
 
 // Form horizontal
 .form-horizontal {
-  padding: var.$layout-spacing 0;
+  padding: layout.$layout-spacing 0;
 
   .form-group {
     display: flex;

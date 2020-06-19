@@ -1,5 +1,6 @@
 @use "variables" as var;
 @use "variables/control" as control;
+@use "variables/layout" as layout;
 @use "mixins/shadow" as shadow;
 
 // Popovers
@@ -10,7 +11,7 @@
   .popover-container {
     left: 50%;
     opacity: 0;
-    padding: var.$layout-spacing;
+    padding: layout.$layout-spacing;
     position: absolute;
     top: 0;
     transform: translate(-50%, -50%) scale(0);

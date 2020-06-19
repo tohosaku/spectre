@@ -1,4 +1,5 @@
 @use "variables" as var;
+@use "variables/layout" as layout;
 
 // Accordions
 .accordion {
@@ -25,7 +26,7 @@
   }
 
   .accordion-body {
-    margin-bottom: var.$layout-spacing;
+    margin-bottom: layout.$layout-spacing;
     max-height: 0;
     overflow: hidden;
     transition: max-height .25s;

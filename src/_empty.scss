@@ -1,5 +1,6 @@
 @use "variables" as var;
 @use "variables/color" as color;
+@use "variables/layout" as layout;
 
 // Empty states (or Blank slates)
 .empty {
@@ -10,15 +11,15 @@
   padding: var.$unit-16 var.$unit-8;
 
   .empty-icon {
-    margin-bottom: var.$layout-spacing-lg;
+    margin-bottom: layout.$layout-spacing-lg;
   }
 
   .empty-title,
   .empty-subtitle {
-    margin: var.$layout-spacing auto;
+    margin: layout.$layout-spacing auto;
   }
 
   .empty-action {
-    margin-top: var.$layout-spacing-lg;
+    margin-top: layout.$layout-spacing-lg;
   }
 }

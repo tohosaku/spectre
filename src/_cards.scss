@@ -1,5 +1,6 @@
 @use "variables" as var;
 @use "variables/color" as color;
+@use "variables/layout" as layout;
 
 // Cards
 .card {
@@ -12,11 +13,11 @@
   .card-header,
   .card-body,
   .card-footer {
-    padding: var.$layout-spacing-lg;
+    padding: layout.$layout-spacing-lg;
     padding-bottom: 0;
 
     &:last-child {
-      padding-bottom: var.$layout-spacing-lg;
+      padding-bottom: layout.$layout-spacing-lg;
     }
   }
 
@@ -25,7 +26,7 @@
   }
 
   .card-image {
-    padding-top: var.$layout-spacing-lg;
+    padding-top: layout.$layout-spacing-lg;
 
     &:first-child {
       padding-top: 0;

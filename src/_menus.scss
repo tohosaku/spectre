@@ -1,6 +1,7 @@
 @use "variables" as var;
 @use "variables/color" as color;
 @use "variables/control" as control;  
+@use "variables/layout" as layout;
 @use "mixins/shadow" as shadow;
 
 // Menus
@@ -12,7 +13,7 @@
   margin: 0;
   min-width: control.$control-width-xs;
   padding: var.$unit-2;
-  transform: translateY(var.$layout-spacing-sm);
+  transform: translateY(layout.$layout-spacing-sm);
   z-index: var.$zindex-3;
 
   &.menu-nav {

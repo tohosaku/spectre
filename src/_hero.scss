@@ -1,4 +1,4 @@
-@use "variables" as var;
+@use "variables/layout" as layout;
 
 // Hero
 .hero {
@@ -19,6 +19,6 @@
   }
 
   .hero-body {
-    padding: var.$layout-spacing;
+    padding: layout.$layout-spacing;
   }
 }

@@ -1,6 +1,7 @@
 @use "variables" as var;
 @use "variables/color" as color;
 @use "variables/font" as font;
+@use "variables/layout" as layout;
 @use "mixins/label" as label;
 
 // Codes
@@ -20,7 +21,7 @@ code {
     content: attr(data-lang);
     font-size: font.$font-size-sm;
     position: absolute;
-    right: var.$layout-spacing;
+    right: layout.$layout-spacing;
     top: var.$unit-h;
   }
 

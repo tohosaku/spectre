@@ -1,6 +1,7 @@
 @use "variables" as var;
 @use "variables/color" as color;
 @use "variables/control" as control;
+@use "variables/layout" as layout;
 @use "mixins/shadow" as shadow;
 
 // Modals
@@ -12,7 +13,7 @@
   left: 0;
   opacity: 0;
   overflow: hidden;
-  padding: var.$layout-spacing;
+  padding: layout.$layout-spacing;
   position: fixed;
   right: 0;
   top: 0;

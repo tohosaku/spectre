@@ -1,5 +1,6 @@
 @use "variables" as var;
 @use "variables/color" as color;
+@use "variables/layout" as layout;
 
 // Off canvas menus
 $off-canvas-breakpoint: var.$size-lg !default;
@@ -14,13 +15,13 @@ $off-canvas-breakpoint: var.$size-lg !default;
   .off-canvas-toggle {
     display: block;
     position: absolute;
-    top: var.$layout-spacing;
+    top: layout.$layout-spacing;
     transition: none;
     z-index: var.$zindex-0;
     @if var.$rtl == true {
-      right: var.$layout-spacing;
+      right: layout.$layout-spacing;
     } @else {
-      left: var.$layout-spacing;
+      left: layout.$layout-spacing;
     }
   }
 
@@ -45,7 +46,7 @@ $off-canvas-breakpoint: var.$size-lg !default;
   .off-canvas-content {
     flex: 1 1 auto;
     height: 100%;
-    padding: var.$layout-spacing var.$layout-spacing var.$layout-spacing 4rem;
+    padding: layout.$layout-spacing layout.$layout-spacing layout.$layout-spacing 4rem;
   }
 
   .off-canvas-overlay {

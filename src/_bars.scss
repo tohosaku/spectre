@@ -1,6 +1,7 @@
 @use "variables" as var;
 @use "variables/color" as color;
 @use "variables/font" as font;
+@use "variables/layout" as layout;
 
 // Bars
 .bar {
@@ -43,7 +44,7 @@
 // Slider bar
 .bar-slider {
   height: var.$border-width-lg;
-  margin: var.$layout-spacing 0;
+  margin: layout.$layout-spacing 0;
   position: relative;
 
   .bar-item {

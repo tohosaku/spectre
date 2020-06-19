@@ -1,6 +1,7 @@
 @use "variables" as var;
 @use "variables/color" as color;
 @use "variables/font" as font;
+@use "variables/layout" as layout;
 @use "mixins/shadow" as shadow;
 
 // Calendars
@@ -17,7 +18,7 @@
     border-top-right-radius: var.$border-radius;
     display: flex;
     font-size: font.$font-size-lg;
-    padding: var.$layout-spacing;
+    padding: layout.$layout-spacing;
   }
 
   .calendar-header,
@@ -25,7 +26,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: var.$layout-spacing 0;
+    padding: layout.$layout-spacing 0;
 
     .calendar-date {
       flex: 0 0 14.28%; // 7 calendar-items each row
@@ -185,8 +186,8 @@
     .date-item {
       align-self: flex-end;
       height: var.$unit-7;
-      margin-right: var.$layout-spacing-sm;
-      margin-top: var.$layout-spacing-sm;
+      margin-right: layout.$layout-spacing-sm;
+      margin-top: layout.$layout-spacing-sm;
     }
 
     .calendar-range {
@@ -210,7 +211,7 @@
       flex-grow: 1;
       line-height: 1;
       overflow-y: auto;
-      padding: var.$layout-spacing-sm;
+      padding: layout.$layout-spacing-sm;
     }
 
     .calendar-event {

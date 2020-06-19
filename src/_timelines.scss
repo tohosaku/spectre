@@ -1,6 +1,7 @@
 @use "variables" as var;
 @use "variables/color" as color;
 @use "variables/font" as font;
+@use "variables/layout" as layout;
 
 // Timelines
 .timeline {
@@ -24,7 +25,7 @@
 
     .timeline-content {
       flex: 1 1 auto;
-      padding: 2px 0 2px var.$layout-spacing-lg;
+      padding: 2px 0 2px layout.$layout-spacing-lg;
     }
 
     .timeline-icon {
