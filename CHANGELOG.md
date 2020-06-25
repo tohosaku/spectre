@@ -2,6 +2,7 @@
 
 ##### v0.5.9-current
 
+- Migrate to stylelint from scss-lint
 - Migrate to gulp4
 - Fix: Correct a typo in docs (#563)
 - Fixes for buttons (#572)
