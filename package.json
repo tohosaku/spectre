@@ -4,6 +4,9 @@
   "homepage": "http://picturepan2.github.io/spectre",
   "author": "Yan Zhu <picturepan2@hotmail.com>",
   "description": "Spectre.css: A lightweight, responsive and modern CSS framework",
+  "scripts": {
+    "lint": "stylelint --fix src/**/*.scss"
+  },
   "main": "dist/spectre.css",
   "repository": {
     "type": "git",
@@ -24,6 +27,7 @@
     "url": "https://github.com/picturepan2/spectre/issues"
   },
   "devDependencies": {
+    "fibers": "^5.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "latest",
     "gulp-clean-css": "latest",
@@ -33,8 +37,9 @@
     "gulp-sass": "latest",
     "jstransformer-highlight": "latest",
     "jstransformer-markdown-it": "latest",
-    "fibers": "^5.0.0",
-    "sass": "^1.26.8"
+    "sass": "^1.26.8",
+    "stylelint": "^13.6.1",
+    "stylelint-scss": "^3.18.0"
   },
   "browserslist": [
     "last 4 Chrome versions",

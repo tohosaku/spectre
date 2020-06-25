@@ -1,0 +1,296 @@
+plugins:
+  - stylelint-scss
+rules:
+# Default application configuration that all configurations inherit from.
+## List of gem names to load custom linters from (make sure they are already
+## installed)
+#plugin_gems: []
+#
+## Default severity of all linters.
+#severity: warning
+
+#linters:
+#  BangFormat:
+#    enabled: true
+#    space_before_bang: true
+#    space_after_bang: false
+  declaration-bang-space-before: always
+  declaration-bang-space-after: never
+
+#  # ?
+#  BemDepth:
+#    enabled: false
+#    max_elements: 1
+#
+#  BorderZero:
+#    enabled: true
+#    convention: zero # or `none`
+#
+#  ChainedClasses:
+#    enabled: false
+
+#  ColorKeyword:
+#    enabled: true
+  color-named: never
+
+#  # ?
+#  ColorVariable:
+#    enabled: true
+#
+#  # ?
+#  Comment:
+#    enabled: false
+#    style: silent
+#
+#  DebugStatement:
+#    enabled: true
+  at-rule-blacklist:
+    - debug
+#  # ?
+#  DeclarationOrder:
+#    enabled: true
+
+#  DisableLinterReason:
+#    enabled: false
+#  stylelint-disable-reason: never # deprecated
+
+#  DuplicateProperty:
+#    enabled: true
+#  # ?
+
+#  ElsePlacement:
+#    enabled: true
+#    style: same_line # or 'new_line'
+
+#  EmptyLineBetweenBlocks:
+#    enabled: true
+#    ignore_single_line_blocks: true
+
+#  EmptyRule:
+#    enabled: true
+  block-no-empty: true
+
+#  ExtendDirective:
+#    enabled: false
+
+#  FinalNewline:
+#    enabled: true
+#    present: true
+  no-missing-end-of-source-newline: true
+
+#  HexLength:
+#    enabled: false
+#    style: short # or 'long'
+  color-hex-length: short
+
+#  HexNotation:
+#    enabled: true
+#    style: lowercase # or 'uppercase'
+  color-hex-case: lower
+
+#  HexValidation:
+#    enabled: true
+  color-no-invalid-hex: true
+
+#  IdSelector:
+#    enabled: true
+
+#  ImportantRule:
+#    enabled: true
+
+#  ImportPath:
+#    enabled: true
+#    leading_underscore: false
+#    filename_extension: false
+
+#  Indentation:
+#    enabled: true
+#    allow_non_nested_indentation: false
+#    character: space # or 'tab'
+#    width: 2
+  indentation: 2
+
+#  LeadingZero:
+#    enabled: true
+#    style: exclude_zero # or 'include_zero'
+  number-leading-zero: never
+
+#  MergeableSelector:
+#    enabled: true
+#    force_nesting: true
+
+#  NameFormat:
+#    enabled: true
+#    allow_leading_underscore: true
+#    convention: hyphenated_lowercase # or 'camel_case', or 'snake_case', or a regex pattern
+  scss/at-function-pattern: ^[a-z]+([a-z0-9-]+[a-z0-9]+)?$
+  scss/at-mixin-pattern: ^[a-z]+([a-z0-9-]+[a-z0-9]+)?$
+  scss/dollar-variable-pattern: ^[a-z]+([a-z0-9-]+[a-z0-9]+)?$
+
+#  NestingDepth:
+#    enabled: true
+#    max_depth: 4
+#    ignore_parent_selectors: false
+#  max-nesting-depth: 4 # 1error
+
+#  PlaceholderInExtend:
+#    enabled: false
+
+#  PrivateNamingConvention:
+#    enabled: false
+#    prefix: _
+
+#  PropertyCount:
+#    enabled: true
+#    include_nested: false
+#    max_properties: 10
+
+#  PropertySortOrder:
+#    enabled: true
+#    ignore_unspecified: false
+#    min_properties: 2
+#    separate_groups: false
+
+#  PropertySpelling:
+#    enabled: true
+#    extra_properties: []
+#    disabled_properties: []
+
+#  PropertyUnits:
+#    enabled: true
+#    global: [
+#      'ch', 'em', 'ex', 'rem',                 # Font-relative lengths
+#      'cm', 'in', 'mm', 'pc', 'pt', 'px', 'q', # Absolute lengths
+#      'vh', 'vw', 'vmin', 'vmax',              # Viewport-percentage lengths
+#      'deg', 'grad', 'rad', 'turn',            # Angle
+#      'ms', 's',                               # Duration
+#      'Hz', 'kHz',                             # Frequency
+#      'dpi', 'dpcm', 'dppx',                   # Resolution
+#      '%']                                     # Other
+#    properties: {}
+
+#  PseudoElement:
+#    enabled: true
+  selector-pseudo-element-colon-notation: double
+  selector-pseudo-element-no-unknown: true
+
+#  QualifyingElement:
+#    enabled: true
+#    allow_element_with_attribute: false
+#    allow_element_with_class: false
+#    allow_element_with_id: false
+#  selector-no-qualifying-type: true # error
+
+#  SelectorDepth:
+#    enabled: true
+#    max_depth: 2
+#  selector-max-compound-selectors: 2 # error
+
+#  SelectorFormat:
+#    enabled: true
+#    convention: hyphenated_lowercase # or 'strict_BEM', or 'hyphenated_BEM', or 'snake_case', or 'camel_case', or a regex pattern
+
+#  Shorthand:
+#    enabled: false
+#    allowed_shorthands: [1, 2, 3, 4]
+  shorthand-property-no-redundant-values: true
+
+#  SingleLinePerProperty:
+#    enabled: true
+#    allow_single_line_rule_sets: true
+#  declaration-block-semicolon-newline-after: always
+  declaration-block-single-line-max-declarations: 1
+
+#  SingleLinePerSelector:
+#    enabled: true
+  selector-list-comma-newline-after: always
+
+#  SpaceAfterComma:
+#    enabled: true
+#    style: one_space # or 'no_space', or 'at_least_one_space'
+  function-comma-space-after: always-single-line
+
+#  SpaceAfterPropertyColon:
+#    enabled: true
+#    style: one_space # or 'no_space', or 'at_least_one_space', or 'aligned'
+  declaration-colon-space-after: always-single-line
+
+#  SpaceAfterPropertyName:
+#    enabled: true
+
+#  SpaceAfterVariableColon:
+#    enabled: false
+#    style: one_space # or 'no_space', 'at_least_one_space' or 'one_space_or_newline'
+#  declaration-colon-space-after: always-single-line (repeated)
+
+#  SpaceAfterVariableName:
+#    enabled: true
+  scss/dollar-variable-colon-space-before: never
+
+#  SpaceAroundOperator:
+#    enabled: true
+#    style: one_space # or 'at_least_one_space', or 'no_space'
+
+#  SpaceBeforeBrace:
+#    enabled: true
+#    style: space # or 'new_line'
+#    allow_single_line_padding: false
+  block-opening-brace-space-before: always
+
+#  SpaceBetweenParens:
+#    enabled: true
+#    spaces: 0
+  function-parentheses-space-inside: never
+
+#  StringQuotes:
+#    enabled: true
+#    style: double_quotes # or single_quotes
+  string-quotes: double
+
+#  TrailingSemicolon:
+#    enabled: true
+  declaration-block-trailing-semicolon: always
+  declaration-block-semicolon-space-before: never
+
+#  TrailingWhitespace:
+#    enabled: true
+
+#  TrailingZero:
+#    enabled: false
+  number-no-trailing-zeros: true
+
+#  TransitionAll:
+#    enabled: false
+
+#  UnnecessaryMantissa:
+#    enabled: true
+#  number-no-trailing-zeros: true
+
+#  UnnecessaryParentReference:
+#    enabled: true
+#  selector-no-redundant-nesting-selector: true
+
+#  UrlFormat:
+#    enabled: true
+
+#  UrlQuotes:
+#    enabled: true
+  function-url-quotes: always
+
+#  VariableForProperty:
+#    enabled: false
+#    properties: []
+
+
+#  VendorPrefix:
+#    enabled: true
+#    identifier_list: base
+#    additional_identifiers: []
+#    excluded_identifiers: []
+
+#  ZeroUnit:
+#    enabled: true
+  length-zero-no-unit: true
+
+#  Compass::*:
+#    enabled: false

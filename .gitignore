@@ -7,3 +7,4 @@ docs/html
 !.gitattributes
 !.hound.yml
 !.scss-lint.yml
+!.stylelintrc.yml
